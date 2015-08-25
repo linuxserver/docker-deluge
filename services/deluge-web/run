@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec /sbin/setuser abc /usr/bin/deluge-web -c /config --loglevel=info

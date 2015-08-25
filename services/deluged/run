@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec /sbin/setuser abc /usr/bin/deluged -c /config -d --loglevel=info -l /config/deluged.log
