@@ -27,3 +27,4 @@ ADD init/ /etc/my_init.d/
 ADD services/ /etc/service/
 RUN chmod -v +x /etc/service/*/run
 RUN chmod -v +x /etc/my_init.d/*.sh
+RUN sed -e 's/^UMASK.*022/UMASK 002/' /etc/login.defs
