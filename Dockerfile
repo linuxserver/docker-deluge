@@ -27,3 +27,6 @@ ADD init/ /etc/my_init.d/
 ADD services/ /etc/service/
 RUN chmod -v +x /etc/service/*/run
 RUN chmod -v +x /etc/my_init.d/*.sh
+
+#Add Deluge variable
+ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs"
