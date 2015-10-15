@@ -42,6 +42,11 @@ It is based on phusion-baseimage with ssh removed, for shell access whilst the c
 
 Part of what makes our containers work so well is by allowing you to specify your own `PUID` and `PGID`. This avoids nasty permissions errors with relation to data volumes (`-v` flags). When an application is installed on the host OS it is normally added to the common group called users, Docker apps due to the nature of the technology can't be added to this group. So we added this feature to let you easily choose when running your containers.
 
+## Setting up the application 
+
+The admin interface is available at http://<ip>:8112 with a default user/password of admin/deluge.
+To change the password (recommended) log in to the web interface and go to Preferences->Interface->Password.
+
 ## Updates / Monitoring
 
 * Upgrade to the latest version of deluge simply `docker restart deluge`.
