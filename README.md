@@ -20,7 +20,7 @@ docker create \
   --name deluge \
   --net=host \
   -e PUID=<UID> -e PGID=<GID> \
-  -v </path/to/your/torrents>:/torrents \
+  -v </path/to/your/downloads>:/downloads \
   -v </path/to/deluge/config>:/config \
   -v /etc/localtime:/etc/localtime:ro \
   linuxserver/deluge
@@ -30,7 +30,7 @@ docker create \
 
 * `--net=host` - Shares host networking with container, **required**.
 * `-v /config` - deluge configs
-* `-v /torrents` - torrent download directory
+* `-v /downloads` - torrent download directory
 * `-e PGID` for for GroupID - see below for explanation
 * `-e PUID` for for UserID - see below for explanation
 
