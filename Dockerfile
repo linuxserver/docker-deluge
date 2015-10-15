@@ -18,5 +18,5 @@ ADD services/ /etc/service/
 RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh
 
 #Ports and Volumes
-VOLUME /config /downloads /incomplete-downloads
+VOLUME /config /downloads
 EXPOSE 8112 58846 58946 58946/udp
