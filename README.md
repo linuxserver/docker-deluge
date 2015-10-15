@@ -1,8 +1,57 @@
 ![http://linuxserver.io](http://www.linuxserver.io/wp-content/uploads/2015/06/linuxserver_medium.png)
 
-## This is a Container in active development, and should not be used by the general public.
-If you are curious about the current progress or want to comment\contribute to this work, feel free to join us at out irc channel:
-[IRC](https://www.linuxserver.io/index.php/irc/) on freenode at `#linuxserver.io`.
+The [LinuxServer.io](https://www.linuxserver.io/) team brings you another quality container release featuring auto-update of dependencies on startup, easy user mapping and community support. Be sure to checkout our [forums](https://forum.linuxserver.io/index.php) or for real-time support our [IRC](https://www.linuxserver.io/index.php/irc/) on freenode at `#linuxserver.io`.
 
-or visit our website at [https://linuxserver.io](https://www.linuxserver.io/)
+# linuxserver/deluge
 
+![](https://avatars2.githubusercontent.com/u/6733935?v=3&s=200)
+
+[deluge](http://deluge-torrent.org/) Deluge is a lightweight, Free Software, cross-platform BitTorrent client.
+
+* Full Encryption
+* WebUI
+* Plugin System
+* Much more...
+
+## Usage
+
+```
+docker create \
+  --name deluge \
+  --net=host \
+  -e PUID=<UID> -e PGID=<GID> \
+  -v </path/to/your/torrents>:/torrents \
+  -v </path/to/deluge/config>:/config \
+  -v /etc/localtime:/etc/localtime:ro \
+  linuxserver/deluge
+```
+
+**Parameters**
+
+* `--net=host` - Shares host networking with container, **required**.
+* `-v /config` - deluge configs
+* `-v /torrents` - torrent download directory
+* `-e PGID` for for GroupID - see below for explanation
+* `-e PUID` for for UserID - see below for explanation
+
+It is based on phusion-baseimage with ssh removed, for shell access whilst the container is running do `docker exec -it deluge /bin/bash`.
+
+### User / Group Identifiers
+
+**TL;DR** - The `PGID` and `PUID` values set the user / group you'd like your container to 'run as' to the host OS. This can be a user you've created or even root (not recommended).
+
+Part of what makes our containers work so well is by allowing you to specify your own `PUID` and `PGID`. This avoids nasty permissions errors with relation to data volumes (`-v` flags). When an application is installed on the host OS it is normally added to the common group called users, Docker apps due to the nature of the technology can't be added to this group. So we added this feature to let you easily choose when running your containers.
+
+## Setting up the application 
+
+The admin interface is available at http://<ip>:8112 with a default user/password of admin/deluge.
+To change the password (recommended) log in to the web interface and go to Preferences->Interface->Password.
+
+## Updates / Monitoring
+
+* Upgrade to the latest version of deluge simply `docker restart deluge`.
+* Monitor the logs of the container in realtime `docker logs -f deluge`.
+
+## Versions
+
++ **15.10.2015:** Initial Release. 
