@@ -54,4 +54,5 @@ To change the password (recommended) log in to the web interface and go to Prefe
 
 ## Versions
 
++ **09.11.2015:** Add unrar and unzip
 + **15.10.2015:** Initial Release. 
