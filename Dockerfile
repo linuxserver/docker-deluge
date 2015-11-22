@@ -1,5 +1,5 @@
 FROM linuxserver/baseimage
-MAINTAINER Gonzalo Peci <weedv2@outlook.com>
+MAINTAINER Gonzalo Peci <davyjones@linuxserver.io>
 
 #Add Deluge variable
 ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs"
