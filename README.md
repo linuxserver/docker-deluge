@@ -1,6 +1,6 @@
 ![https://linuxserver.io](http://www.linuxserver.io/wp-content/uploads/2015/06/linuxserver_medium.png)
 
-The [LinuxServer.io](https://www.linuxserver.io/) team brings you another quality container release featuring auto-update of dependencies on startup, easy user mapping and community support. Be sure to checkout our [forums](https://forum.linuxserver.io/index.php) or for real-time support our [IRC](https://www.linuxserver.io/index.php/irc/) on freenode at `#linuxserver.io`.
+The [LinuxServer.io](https://www.linuxserver.io/) team brings you another quality container release featuring easy user mapping and community support. Be sure to checkout our [forums](https://forum.linuxserver.io/index.php) or for real-time support our [IRC](https://www.linuxserver.io/index.php/irc/) on freenode at `#linuxserver.io`.
 
 # linuxserver/deluge
 
@@ -34,7 +34,7 @@ docker create \
 * `-e PGID` for for GroupID - see below for explanation
 * `-e PUID` for for UserID - see below for explanation
 
-It is based on phusion-baseimage with ssh removed, for shell access whilst the container is running do `docker exec -it deluge /bin/bash`.
+It is based on alpine linux with s6 overlay, for shell access whilst the container is running do `docker exec -it deluge /bin/bash`.
 
 ### User / Group Identifiers
 
@@ -47,12 +47,11 @@ Part of what makes our containers work so well is by allowing you to specify you
 The admin interface is available at http://<ip>:8112 with a default user/password of admin/deluge.
 To change the password (recommended) log in to the web interface and go to Preferences->Interface->Password.
 
-## Updates / Monitoring
+## Info
 
-* Upgrade to the latest version of deluge simply `docker restart deluge`.
 * Monitor the logs of the container in realtime `docker logs -f deluge`.
 
 ## Versions
-
-+ **09.11.2015:** Add unrar and unzip
-+ **15.10.2015:** Initial Release. 
++ **01.07.16:** Rebase to alpine for smaller image size.
++ **09.11.15:** Add unrar and unzip
++ **15.10.15:** Initial Release. 
