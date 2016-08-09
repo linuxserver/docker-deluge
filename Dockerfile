@@ -4,37 +4,16 @@ MAINTAINER Gonzalo Peci <davyjones@linuxserver.io>, sparklyballs
 # environment variables
 ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs"
 
-# install build dependencies
-RUN \
- apk add --no-cache --virtual=build-dependencies \
-	g++ \
-	gcc \
-	libffi-dev \
-	openssl-dev \
-	python-dev \
-	py-pip && \
-
-# install deluge
- apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/testing \
-	deluge && \
-
-# install pip packages
- pip install --no-cache-dir -U \
-	service_identity && \
-
-# uninstall build-dependencies
- apk del --purge \
-	build-dependencies && \
-
-# cleanup
- rm -rfv /var/cache/apk/* /root/.cache /tmp/*
-
-# install runtime dependencies
+# install packages
 RUN \
  apk add --no-cache \
 	p7zip \
 	unrar \
-	unzip
+	unzip && \
+
+ apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/testing \
+	deluge \
+	py-service_identity
 
 # add local files
 COPY root/ /
