@@ -32,6 +32,7 @@ RUN \
 # install runtime dependencies
 RUN \
  apk add --no-cache \
+	p7zip \
 	unrar \
 	unzip
 
