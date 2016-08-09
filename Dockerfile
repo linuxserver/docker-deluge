@@ -11,7 +11,8 @@ RUN \
 	unrar \
 	unzip && \
 
- apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/testing \
+ apk add --no-cache \
+	--repository http://nl.alpinelinux.org/alpine/edge/testing \
 	deluge \
 	py-service_identity
 
@@ -19,5 +20,5 @@ RUN \
 COPY root/ /
 
 # ports and volumes
-VOLUME /config /downloads
 EXPOSE 8112 58846 58946 58946/udp
+VOLUME /config /downloads
