@@ -10,35 +10,41 @@ ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs"
 # install runtime packages
 RUN \
  apk add --no-cache \
-	curl \
-	librsvg py-cffi \
 	p7zip \
-	py-chardet \
-	py-cryptography \
-	py-enum34 \
-	py-gtk \
-	py-mako \
-	py-openssl \
-	py-setuptools \
-	py-six \
-	py-twisted \
-	tar \
+	py-pip \
+	python \
 	unrar \
-	unzip \
-	xdg-utils && \
+	unzip && \
 
  apk add --no-cache \
 	--repository http://nl.alpinelinux.org/alpine/edge/testing \
-	libtorrent-rasterbar \
-	py-service_identity \
-	py-xdg
+	libtorrent-rasterbar
 
 # install build packages
 RUN \
  apk add --no-cache --virtual=build-dependencies \
+	curl \
+	g++ \
+	gcc \
 	intltool \
 	librsvg-dev \
-	py-gtk-dev && \
+	openssl-dev \
+	py-gtk-dev \
+	python-dev \
+	tar && \
+
+# install pip packages
+ pip install --no-cache-dir -U \
+	chardet \
+	enum \
+	mako \
+	pip \
+	pyOpenSSL \
+	pyxdg \
+	service_identity \
+	setuptools \
+	twisted \
+	zope.interface && \
 
 # fetch and unpack deluge source
  mkdir -p \
@@ -63,6 +69,7 @@ RUN \
  apk del --purge \
 	build-dependencies && \
  rm -rf \
+	/root/.cache \
 	/tmp/*
 
 # add local files
