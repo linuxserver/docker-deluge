@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+umask 0002
+
+exec \
+	s6-setuidgid abc /usr/bin/deluge-web \
+	-c /config --loglevel=info
