@@ -10,11 +10,13 @@ ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs"
 # install runtime packages
 RUN \
  apk add --no-cache \
+	librsvg \
 	p7zip \
 	py-pip \
 	python \
 	unrar \
-	unzip && \
+	unzip \
+	xdg-utils && \
 
  apk add --no-cache \
 	--repository http://nl.alpinelinux.org/alpine/edge/testing \
@@ -35,7 +37,9 @@ RUN \
 
 # install pip packages
  pip install --no-cache-dir -U \
+	cffi \
 	chardet \
+	cryptography \
 	enum \
 	mako \
 	pip \
@@ -43,6 +47,7 @@ RUN \
 	pyxdg \
 	service_identity \
 	setuptools \
+	six \
 	twisted \
 	zope.interface && \
 
