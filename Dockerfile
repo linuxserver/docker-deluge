@@ -1,22 +1,24 @@
-FROM linuxserver/baseimage
-MAINTAINER Gonzalo Peci <davyjones@linuxserver.io>
+FROM lsiobase/alpine
+MAINTAINER Gonzalo Peci <davyjones@linuxserver.io>, sparklyballs
 
-#Add Deluge variable
+# environment variables
 ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs"
 
-ENV APTLIST="deluged deluge-web deluge-console unrar unzip"
+# install packages
+RUN \
+ apk add --no-cache \
+	p7zip \
+	unrar \
+	unzip && \
 
-# Install Deluge
-RUN add-apt-repository ppa:deluge-team/ppa > /dev/null && \
-    apt-get update -q && \
-    apt-get install $APTLIST -qy && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+ apk add --no-cache \
+	--repository http://nl.alpinelinux.org/alpine/edge/testing \
+	deluge \
+	py-service_identity
 
-#Adding Custom files
-ADD services/ /etc/service/
-RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh
+# add local files
+COPY root/ /
 
-#Ports and Volumes
-VOLUME /config /downloads
+# ports and volumes
 EXPOSE 8112 58846 58946 58946/udp
+VOLUME /config /downloads
