@@ -61,6 +61,6 @@ To change the password (recommended) log in to the web interface and go to Prefe
 * Monitor the logs of the container in realtime `docker logs -f deluge`.
 
 ## Versions
-+ **09.08.16:** Rebase to alpine linux.
++ **15.08.16:** Rebase to alpine linux.
 + **09.11.15:** Add unrar and unzip
 + **15.10.15:** Initial Release. 
