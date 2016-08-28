@@ -6,8 +6,10 @@ The [LinuxServer.io](https://linuxserver.io) team brings you another container r
 * [Podcast](https://www.linuxserver.io/index.php/category/podcast/) covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # linuxserver/deluge
-
-![](https://avatars2.githubusercontent.com/u/6733935?v=3&s=200)
+[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/deluge.svg)][hub]
+[![Docker Stars](https://img.shields.io/docker/stars/linuxserver/deluge.svg)][hub]
+[![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-deluge)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-deluge/)
+[hub]: https://hub.docker.com/r/linuxserver/deluge/
 
 [deluge](http://deluge-torrent.org/) Deluge is a lightweight, Free Software, cross-platform BitTorrent client.
 
@@ -15,6 +17,9 @@ The [LinuxServer.io](https://linuxserver.io) team brings you another container r
 * WebUI
 * Plugin System
 * Much more...
+
+[![deluge(https://avatars2.githubusercontent.com/u/6733935?v=3&s=200)][delugeurl]
+[delugeurl]: http://deluge-torrent.org/
 
 ## Usage
 
@@ -61,6 +66,8 @@ To change the password (recommended) log in to the web interface and go to Prefe
 * Monitor the logs of the container in realtime `docker logs -f deluge`.
 
 ## Versions
+
++ **28.08.16:** Add badges to README.
 + **15.08.16:** Rebase to alpine linux.
 + **09.11.15:** Add unrar and unzip
 + **15.10.15:** Initial Release. 
