@@ -18,7 +18,7 @@ The [LinuxServer.io](https://linuxserver.io) team brings you another container r
 * Plugin System
 * Much more...
 
-[![deluge(https://avatars2.githubusercontent.com/u/6733935?v=3&s=200)][delugeurl]
+[![deluge(https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/deluge-banner.png)][delugeurl]
 [delugeurl]: http://deluge-torrent.org/
 
 ## Usage
