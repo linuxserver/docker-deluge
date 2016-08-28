@@ -13,7 +13,10 @@ RUN \
 
  apk add --no-cache \
 	--repository http://nl.alpinelinux.org/alpine/edge/testing \
-	deluge \
+	deluge && \
+
+ apk add --no-cache \
+	--repository http://nl.alpinelinux.org/alpine/edge/community \
 	py-service_identity
 
 # add local files
