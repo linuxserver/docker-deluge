@@ -67,6 +67,7 @@ To change the password (recommended) log in to the web interface and go to Prefe
 
 ## Versions
 
++ **30.08.16:** Use pip packages for some critical dependencies.
 + **28.08.16:** Add badges to README.
 + **15.08.16:** Rebase to alpine linux.
 + **09.11.15:** Add unrar and unzip
