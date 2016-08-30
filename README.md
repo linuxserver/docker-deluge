@@ -60,6 +60,7 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 
 The admin interface is available at http://<ip>:8112 with a default user/password of admin/deluge.
 To change the password (recommended) log in to the web interface and go to Preferences->Interface->Password.
+Change the downloads location in the webui in Preferences->Downloads and use /downloads for completed downloads.
 
 ## Info
 
