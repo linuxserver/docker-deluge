@@ -59,7 +59,10 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 ## Setting up the application 
 
 The admin interface is available at http://<ip>:8112 with a default user/password of admin/deluge.
+
 To change the password (recommended) log in to the web interface and go to Preferences->Interface->Password.
+
+Change the downloads location in the webui in Preferences->Downloads and use /downloads for completed downloads.
 
 ## Info
 
@@ -67,6 +70,7 @@ To change the password (recommended) log in to the web interface and go to Prefe
 
 ## Versions
 
++ **30.08.16:** Use pip packages for some critical dependencies.
 + **28.08.16:** Add badges to README.
 + **15.08.16:** Rebase to alpine linux.
 + **09.11.15:** Add unrar and unzip
