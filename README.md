@@ -73,6 +73,8 @@ Change the downloads location in the webui in Preferences->Downloads and use /do
 
 ## Versions
 
++ **30.09.16:** Switch to libressl as openssl deprecated from alpine linux and deluge dependency
+no longer installs.
 + **30.09.16:** Fix umask.
 + **09.09.16:** Add layer badges to README.
 + **30.08.16:** Use pip packages for some critical dependencies.
