@@ -4,6 +4,11 @@ MAINTAINER Gonzalo Peci <davyjones@linuxserver.io>, sparklyballs
 # environment variables
 ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs"
 
+# set version label
+ARG BUILD_DATE
+ARG VERSION
+LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+
 # install runtime packages
 RUN \
  apk add --no-cache \
