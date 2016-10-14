@@ -11,7 +11,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # linuxserver/deluge
-[![](https://images.microbadger.com/badges/image/linuxserver/deluge.svg)](http://microbadger.com/images/linuxserver/deluge "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/deluge.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/deluge.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-deluge)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-deluge/)
+[![](https://images.microbadger.com/badges/version/linuxserver/deluge.svg)](https://microbadger.com/images/linuxserver/deluge "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/deluge.svg)](http://microbadger.com/images/linuxserver/deluge "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/deluge.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/deluge.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-deluge)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-deluge/)
 [hub]: https://hub.docker.com/r/linuxserver/deluge/
 
 [deluge](http://deluge-torrent.org/) Deluge is a lightweight, Free Software, cross-platform BitTorrent client.
@@ -71,8 +71,18 @@ Change the downloads location in the webui in Preferences->Downloads and use /do
 
 * Monitor the logs of the container in realtime `docker logs -f deluge`.
 
+* container version number 
+
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' deluge`
+
+* image version number
+
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/deluge`
+
 ## Versions
 
++ **13.10.16:** Switch to libressl as openssl deprecated from alpine linux and deluge dependency
+no longer installs.
 + **30.09.16:** Fix umask.
 + **09.09.16:** Add layer badges to README.
 + **30.08.16:** Use pip packages for some critical dependencies.
