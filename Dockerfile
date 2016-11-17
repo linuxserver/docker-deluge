@@ -12,6 +12,7 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 # install runtime packages
 RUN \
  apk add --no-cache \
+	ca-certificates \
 	libressl2.4-libssl \
 	p7zip \
 	unrar \
@@ -19,6 +20,9 @@ RUN \
  apk add --no-cache \
 	--repository http://nl.alpinelinux.org/alpine/edge/testing \
 	deluge && \
+
+# update certificates
+ update-ca-certificates && \
 
 # install build packages
  apk add --no-cache --virtual=build-dependencies \
