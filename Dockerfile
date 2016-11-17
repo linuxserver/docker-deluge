@@ -1,4 +1,4 @@
-FROM lsiobase/alpine
+FROM lsiobase/alpine:edge
 MAINTAINER Gonzalo Peci <davyjones@linuxserver.io>, sparklyballs
 
 # environment variables
@@ -12,30 +12,31 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 # install runtime packages
 RUN \
  apk add --no-cache \
+	ca-certificates \
+	libressl2.4-libssl \
 	p7zip \
-	python \
 	unrar \
 	unzip && \
  apk add --no-cache \
-	--repository http://nl.alpinelinux.org/alpine/edge/main \
-	libressl2.4-libssl && \
- apk add --no-cache \
 	--repository http://nl.alpinelinux.org/alpine/edge/testing \
 	deluge && \
+
+# update certificates
+ update-ca-certificates && \
 
 # install build packages
  apk add --no-cache --virtual=build-dependencies \
 	g++ \
 	gcc \
 	libffi-dev \
-	py-pip \
-	python-dev && \
-
- apk add --no-cache --virtual=build-dependencies2 \
-	--repository http://nl.alpinelinux.org/alpine/edge/main \
-	libressl-dev && \
+	libressl-dev \
+	py2-pip \
+	python2-dev && \
 
 # install pip packages
+ pip install --no-cache-dir -U \
+	incremental \
+	pip && \
  pip install --no-cache-dir -U \
 	crypto \
 	mako \
@@ -48,8 +49,7 @@ RUN \
 
 # cleanup
  apk del --purge \
-	build-dependencies \
-	build-dependencies2 && \
+	build-dependencies && \
  rm -rf \
 	/root/.cache
 
