@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:edge
+FROM lsiobase/alpine:3.5
 MAINTAINER Gonzalo Peci <davyjones@linuxserver.io>, sparklyballs
 
 # environment variables
@@ -20,9 +20,6 @@ RUN \
  apk add --no-cache \
 	--repository http://nl.alpinelinux.org/alpine/edge/testing \
 	deluge && \
-
-# update certificates
- update-ca-certificates && \
 
 # install build packages
  apk add --no-cache --virtual=build-dependencies \

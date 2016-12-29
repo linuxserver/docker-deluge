@@ -87,6 +87,7 @@ Change the downloads location in the webui in Preferences->Downloads and use /do
 
 ## Versions
 
++ **28.12.16:** Rebase to alpine 3.5 baseimage.
 + **17.11.16:** Rebase to edge baseimage.
 + **13.10.16:** Switch to libressl as openssl deprecated from alpine linux and deluge dependency
 no longer installs.
