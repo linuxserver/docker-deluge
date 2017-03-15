@@ -2,6 +2,8 @@
 [forumurl]: https://forum.linuxserver.io
 [ircurl]: https://www.linuxserver.io/irc/
 [podcasturl]: https://www.linuxserver.io/podcast/
+[appurl]: http://deluge-torrent.org/
+[hub]: https://hub.docker.com/r/linuxserver/deluge/
 
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
 
@@ -12,7 +14,6 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 
 # linuxserver/deluge
 [![](https://images.microbadger.com/badges/version/linuxserver/deluge.svg)](https://microbadger.com/images/linuxserver/deluge "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/deluge.svg)](http://microbadger.com/images/linuxserver/deluge "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/deluge.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/deluge.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-deluge)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-deluge/)
-[hub]: https://hub.docker.com/r/linuxserver/deluge/
 
 [deluge](http://deluge-torrent.org/) Deluge is a lightweight, Free Software, cross-platform BitTorrent client.
 
@@ -21,8 +22,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * Plugin System
 * Much more...
 
-[![deluge](https://avatars2.githubusercontent.com/u/6733935?v=3&s=200)][delugeurl]
-[delugeurl]: http://deluge-torrent.org/
+[![deluge](https://avatars2.githubusercontent.com/u/6733935?v=3&s=200)][appurl]
 
 ## Usage
 
