@@ -89,6 +89,7 @@ Change the downloads location in the webui in Preferences->Downloads and use /do
 
 ## Versions
 
++ **26.05.17:** Rebase to alpine 3.6.
 + **29.04.17:** Add variable for user defined umask.
 + **28.04.17:** update to libressl2.5-libssl.
 + **28.12.16:** Rebase to alpine 3.5 baseimage.
