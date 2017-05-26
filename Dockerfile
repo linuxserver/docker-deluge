@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.5
+FROM lsiobase/alpine:3.6
 MAINTAINER Gonzalo Peci <davyjones@linuxserver.io>, sparklyballs
 
 # environment variables
@@ -9,28 +9,26 @@ ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
-# install runtime packages
-RUN \
- apk add --no-cache \
-	ca-certificates \
-	p7zip \
-	unrar \
-	unzip && \
- apk add --no-cache \
-	--repository http://nl.alpinelinux.org/alpine/edge/main \
-	libressl2.5-libssl && \
-  apk add --no-cache \
-	--repository http://nl.alpinelinux.org/alpine/edge/testing \
-	deluge && \
-
 # install build packages
+RUN \
  apk add --no-cache --virtual=build-dependencies \
 	g++ \
 	gcc \
 	libffi-dev \
-	libressl-dev \
+	openssl-dev \
 	py2-pip \
 	python2-dev && \
+
+# install runtime packages
+ apk add --no-cache \
+	ca-certificates \
+	openssl \
+	p7zip \
+	unrar \
+	unzip && \
+ apk add --no-cache \
+	--repository http://nl.alpinelinux.org/alpine/edge/testing \
+	deluge && \
 
 # install pip packages
  pip install --no-cache-dir -U \
