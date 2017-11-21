@@ -89,6 +89,7 @@ Change the downloads location in the webui in Preferences->Downloads and use /do
 
 ## Versions
 
++ **20.11.17:** Change libressl2.6-libssl repo.
 + **01.07.17:** Add curl package.
 + **26.05.17:** Rebase to alpine 3.6.
 + **29.04.17:** Add variable for user defined umask.
