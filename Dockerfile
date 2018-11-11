@@ -15,7 +15,9 @@ RUN \
  apt-get install -y \
 	deluged \
 	deluge-web \
-	unrar && \
+	p7zip \
+	unrar \
+	unzip && \
  echo "**** cleanup ****" && \
  apt-get clean && \
  rm -rf \
