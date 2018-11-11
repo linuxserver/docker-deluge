@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:edge
+FROM lsiobase/ubuntu:bionic
 
 # set version label
 ARG BUILD_DATE
@@ -10,44 +10,18 @@ LABEL maintainer="sparklyballs"
 ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs"
 
 RUN \
-  echo "**** install build packages ****" && \
- apk add --no-cache --virtual=build-dependencies \
-	g++ \
-	gcc \
-	libffi-dev \
-	openssl-dev \
-	py2-pip \
-	python2-dev && \
- echo "**** install runtime packages ****" && \
- apk add --no-cache \
-	ca-certificates \
-	curl \
-	libressl2.7-libssl \
-	openssl \
-	p7zip \
-	unrar \
-	unzip && \
- apk add --no-cache \
-	--repository http://nl.alpinelinux.org/alpine/edge/testing \
-	deluge && \
- echo "**** install pip packages ****" && \
- pip install --no-cache-dir -U \
-	incremental \
-	pip && \
- pip install --no-cache-dir -U \
-	crypto \
-	mako \
-	markupsafe \
-	pyopenssl \
-	service_identity \
-	six \
-	twisted \
-	zope.interface && \
+ echo "**** install build packages ****" && \
+ apt-get update && \
+ apt-get install -y \
+	deluged \
+	deluge-web \
+	unrar &&
  echo "**** cleanup ****" && \
- apk del --purge \
-	build-dependencies && \
+ apt-get clean && \
  rm -rf \
-	/root/.cache
+	/tmp/* \
+	/var/lib/apt/lists/* \
+	/var/tmp/*
 
 # add local files
 COPY root/ /
