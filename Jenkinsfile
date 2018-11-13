@@ -11,6 +11,7 @@ pipeline {
     BUILD_VERSION_ARG = 'DELUGE_VERSION'
     LS_USER = 'linuxserver'
     LS_REPO = 'docker-deluge'
+    CONTAINER_NAME = 'deluge'
     DOCKERHUB_IMAGE = 'linuxserver/deluge'
     DEV_DOCKERHUB_IMAGE = 'lsiodev/deluge'
     PR_DOCKERHUB_IMAGE = 'lspipepr/deluge'
@@ -311,7 +312,7 @@ pipeline {
                   paste -d " " packages versions > /tmp/package_versions.txt'
               elif [ "${DIST_IMAGE}" == "ubuntu" ]; then
                 docker run --rm -v ${TEMPDIR}:/tmp ${LOCAL_CONTAINER} sh -c '\
-                  apt -qq list --installed | awk "{print \$1,\$2}" > /tmp/package_versions.txt'
+                  apt -qq list --installed > /tmp/package_versions.txt'
               fi
               if [ "$(md5sum ${TEMPDIR}/package_versions.txt | cut -c1-8 )" != "${PACKAGE_TAG}" ]; then
                 git clone https://github.com/${LS_USER}/${LS_REPO}.git ${TEMPDIR}/${LS_REPO}
