@@ -1,0 +1,67 @@
+---
+
+# project information
+project_name: deluge
+project_url: "http://deluge-torrent.org/"
+project_logo: "https://avatars2.githubusercontent.com/u/6733935?v=3&s=200"
+project_blurb: |
+  [{{ project_name|capitalize }}]({{ project_url }}) is a lightweight, Free Software, cross-platform BitTorrent client.
+
+  * Full Encryption
+  * WebUI
+  * Plugin System
+  * Much more...
+project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+
+# supported architectures
+available_architectures:
+  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
+  - { arch: "{{ arch_armhf }}", tag: "arm32v6-latest"}
+
+# container parameters
+param_container_name: "{{ project_name }}"
+param_usage_include_vols: true
+param_volumes:
+  - { vol_path: "/config", vol_host_path: "</path/to/deluge/config>", desc: "deluge configs" }
+  - { vol_path: "/downloads", vol_host_path: "</path/to/your/downloads>", desc: "torrent download directory" }
+param_usage_include_ports: false
+param_usage_include_net: true
+param_net: "host"
+param_net_desc: "Shares host networking with container, **required**."
+param_usage_include_env: true
+param_env_vars:
+  - { env_var: "UMASK_SET", env_value: "<022>", desc: "for umask setting of deluge, *optional* , default if left unset is 022."}
+  - { env_var: "TZ", env_value: "<timezone>", desc: "Specify a timezone to use EG Europe/London"}
+
+# application setup block
+app_setup_block_enabled: true
+app_setup_block: |
+  The admin interface is available at http://<ip>:8112 with a default user/password of admin/deluge.
+
+  To change the password (recommended) log in to the web interface and go to Preferences->Interface->Password.
+
+  Change the downloads location in the webui in Preferences->Downloads and use /downloads for completed downloads.
+
+# changelog
+changelogs:
+  - { date: "11.11.18:", desc: "Rebase to Ubuntu Bionic, add pipeline multiarch logic." }
+  - { date: "09.04.18:", desc: "update to libressl2.7-libssl." }
+  - { date: "29.03.18:", desc: "Rebase to alpine edge." }
+  - { date: "07.12.17:", desc: "Rebase to alpine 3.7." }
+  - { date: "20.11.17:", desc: "Change libressl2.6-libssl repo." }
+  - { date: "01.07.17:", desc: "Add curl package." }
+  - { date: "26.05.17:", desc: "Rebase to alpine 3.6." }
+  - { date: "29.04.17:", desc: "Add variable for user defined umask." }
+  - { date: "28.04.17:", desc: "update to libressl2.5-libssl." }
+  - { date: "28.12.16:", desc: "Rebase to alpine 3.5 baseimage." }
+  - { date: "17.11.16:", desc: "Rebase to edge baseimage." }
+  - { date: "13.10.16:", desc: "Switch to libressl as openssl deprecated from alpine linux and deluge dependency
+no longer installs" }
+  - { date: "30.09.16:", desc: "Fix umask." }
+  - { date: "09.09.16:", desc: "Add layer badges to README." }
+  - { date: "30.08.16:", desc: "Use pip packages for some critical dependencies." }
+  - { date: "28.08.16:", desc: "Add badges to README." }
+  - { date: "15.08.16:", desc: "Rebase to alpine linux." }
+  - { date: "09.11.15:", desc: "Add unrar and unzip" }
+  - { date: "15.10.15:", desc: "Initial Release." }
