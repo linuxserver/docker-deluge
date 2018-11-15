@@ -45,6 +45,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "15.11.18:", desc: "Add deluge-console." }
   - { date: "11.11.18:", desc: "Rebase to Ubuntu Bionic, add pipeline multiarch logic." }
   - { date: "09.04.18:", desc: "update to libressl2.7-libssl." }
   - { date: "29.03.18:", desc: "Rebase to alpine edge." }

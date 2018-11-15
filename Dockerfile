@@ -16,6 +16,7 @@ RUN \
  apt-get update && \
  apt-get install -y \
 	deluged \
+	deluge-console \
 	deluge-web \
 	p7zip \
 	unrar \
