@@ -143,6 +143,7 @@ Change the downloads location in the webui in Preferences->Downloads and use /do
 
 ## Versions
 
+* **15.11.18:** - Add deluge-console.
 * **11.11.18:** - Rebase to Ubuntu Bionic, add pipeline multiarch logic.
 * **09.04.18:** - update to libressl2.7-libssl.
 * **29.03.18:** - Rebase to alpine edge.
