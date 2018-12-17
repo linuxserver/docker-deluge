@@ -6,8 +6,10 @@ pipeline {
   parameters {
      string(defaultValue: 'false', description: 'package check run', name: 'PACKAGE_CHECK')
   }
-  // Configuraiton for the variables used for this specific repo
+  // Configuration for the variables used for this specific repo
   environment {
+    BUILDS_DISCORD=credentials('build_webhook_url')
+    GITHUB_TOKEN=credentials('498b4638-2d02-4ce5-832d-8a57d01d97ab')
     BUILD_VERSION_ARG = 'DELUGE_VERSION'
     LS_USER = 'linuxserver'
     LS_REPO = 'docker-deluge'
@@ -15,8 +17,6 @@ pipeline {
     DOCKERHUB_IMAGE = 'linuxserver/deluge'
     DEV_DOCKERHUB_IMAGE = 'lsiodev/deluge'
     PR_DOCKERHUB_IMAGE = 'lspipepr/deluge'
-    BUILDS_DISCORD = credentials('build_webhook_url')
-    GITHUB_TOKEN = credentials('498b4638-2d02-4ce5-832d-8a57d01d97ab')
     DIST_IMAGE = 'ubuntu'
     MULTIARCH='true'
     CI='true'
@@ -160,8 +160,8 @@ pipeline {
         }
       }
     }
-    // Use helper container to render a readme from the template if needed
-    stage('Update-README') {
+    // Use helper containers to render templated files
+    stage('Update-Templates') {
       when {
         branch "master"
         environment name: 'CHANGE_ID', value: ''
@@ -171,34 +171,40 @@ pipeline {
       }
       steps {
         sh '''#! /bin/bash
+              set -e
               TEMPDIR=$(mktemp -d)
+              docker pull linuxserver/jenkins-builder:latest
+              docker run --rm -e CONTAINER_NAME=${CONTAINER_NAME} -e GITHUB_BRANCH=master -v ${TEMPDIR}:/ansible/jenkins linuxserver/jenkins-builder:latest 
               docker pull linuxserver/doc-builder:latest
-              docker run --rm -e CONTAINER_NAME=${CONTAINER_NAME} -v ${TEMPDIR}:/ansible/readme linuxserver/doc-builder:latest
-              if [ "$(md5sum ${TEMPDIR}/${CONTAINER_NAME}/README.md | awk '{ print $1 }')" != "$(md5sum README.md | awk '{ print $1 }')" ]; then
-                git clone https://github.com/${LS_USER}/${LS_REPO}.git ${TEMPDIR}/${LS_REPO}
-                cp ${TEMPDIR}/${CONTAINER_NAME}/README.md ${TEMPDIR}/${LS_REPO}/
-                cd ${TEMPDIR}/${LS_REPO}/
-                git --git-dir ${TEMPDIR}/${LS_REPO}/.git add README.md
-                git --git-dir ${TEMPDIR}/${LS_REPO}/.git commit -m 'Bot Updating README from template'
-                git --git-dir ${TEMPDIR}/${LS_REPO}/.git push https://LinuxServer-CI:${GITHUB_TOKEN}@github.com/${LS_USER}/${LS_REPO}.git --all
+              docker run --rm -e CONTAINER_NAME=${CONTAINER_NAME} -e GITHUB_BRANCH=master -v ${TEMPDIR}:/ansible/readme linuxserver/doc-builder:latest
+              if [ "$(md5sum ${TEMPDIR}/${LS_REPO}/Jenkinsfile | awk '{ print $1 }')" != "$(md5sum Jenkinsfile | awk '{ print $1 }')" ] || [ "$(md5sum ${TEMPDIR}/${CONTAINER_NAME}/README.md | awk '{ print $1 }')" != "$(md5sum README.md | awk '{ print $1 }')" ]; then
+                mkdir -p ${TEMPDIR}/repo
+                git clone https://github.com/${LS_USER}/${LS_REPO}.git ${TEMPDIR}/repo/${LS_REPO}
+                git --git-dir ${TEMPDIR}/repo/${LS_REPO}/.git checkout -f master
+                cp ${TEMPDIR}/${CONTAINER_NAME}/README.md ${TEMPDIR}/repo/${LS_REPO}/
+                cp ${TEMPDIR}/docker-${CONTAINER_NAME}/Jenkinsfile ${TEMPDIR}/repo/${LS_REPO}/
+                cd ${TEMPDIR}/repo/${LS_REPO}/
+                git --git-dir ${TEMPDIR}/repo/${LS_REPO}/.git add Jenkinsfile README.md
+                git --git-dir ${TEMPDIR}/repo/${LS_REPO}/.git commit -m 'Bot Updating Templated Files'
+                git --git-dir ${TEMPDIR}/repo/${LS_REPO}/.git push https://LinuxServer-CI:${GITHUB_TOKEN}@github.com/${LS_USER}/${LS_REPO}.git --all
                 echo "true" > /tmp/${COMMIT_SHA}-${BUILD_NUMBER}
               else
                 echo "false" > /tmp/${COMMIT_SHA}-${BUILD_NUMBER}
               fi
               rm -Rf ${TEMPDIR}'''
         script{
-          env.README_UPDATED = sh(
+          env.FILES_UPDATED = sh(
             script: '''cat /tmp/${COMMIT_SHA}-${BUILD_NUMBER}''',
             returnStdout: true).trim()
         }
       }
     }
-    // Exit the build if the Readme was just updated
-    stage('README-exit') {
+    // Exit the build if the Templated files were just updated
+    stage('Template-exit') {
       when {
         branch "master"
         environment name: 'CHANGE_ID', value: ''
-        environment name: 'README_UPDATED', value: 'true'
+        environment name: 'FILES_UPDATED', value: 'true'
         expression {
           env.CONTAINER_NAME != null
         }
@@ -299,6 +305,7 @@ pipeline {
       }
       steps {
         sh '''#! /bin/bash
+              set -e
               TEMPDIR=$(mktemp -d)
               if [ "${MULTIARCH}" == "true" ]; then
                 LOCAL_CONTAINER=${IMAGE}:amd64-${META_TAG}
@@ -306,16 +313,17 @@ pipeline {
                 LOCAL_CONTAINER=${IMAGE}:${META_TAG}
               fi
               if [ "${DIST_IMAGE}" == "alpine" ]; then
-                docker run --rm -v ${TEMPDIR}:/tmp ${LOCAL_CONTAINER} sh -c '\
+                docker run --rm --entrypoint '/bin/sh' -v ${TEMPDIR}:/tmp ${LOCAL_CONTAINER} -c '\
                   apk info > packages && \
                   apk info -v > versions && \
                   paste -d " " packages versions > /tmp/package_versions.txt'
               elif [ "${DIST_IMAGE}" == "ubuntu" ]; then
-                docker run --rm -v ${TEMPDIR}:/tmp ${LOCAL_CONTAINER} sh -c '\
-                  apt -qq list --installed > /tmp/package_versions.txt'
+                docker run --rm --entrypoint '/bin/sh' -v ${TEMPDIR}:/tmp ${LOCAL_CONTAINER} -c '\
+                  apt -qq list --installed | awk "{print \$1,\$2}" > /tmp/package_versions.txt'
               fi
               if [ "$(md5sum ${TEMPDIR}/package_versions.txt | cut -c1-8 )" != "${PACKAGE_TAG}" ]; then
                 git clone https://github.com/${LS_USER}/${LS_REPO}.git ${TEMPDIR}/${LS_REPO}
+                git --git-dir ${TEMPDIR}/${LS_REPO}/.git checkout -f master
                 cp ${TEMPDIR}/package_versions.txt ${TEMPDIR}/${LS_REPO}/
                 cd ${TEMPDIR}/${LS_REPO}/
                 git --git-dir ${TEMPDIR}/${LS_REPO}/.git add package_versions.txt
@@ -379,6 +387,7 @@ pipeline {
           string(credentialsId: 'spaces-secret', variable: 'DO_SECRET')
         ]) {
           sh '''#! /bin/bash
+                set -e
                 docker pull lsiodev/ci:latest
                 if [ "${MULTIARCH}" == "true" ]; then
                   docker pull lsiodev/buildcache:arm32v6-${COMMIT_SHA}-${BUILD_NUMBER}
@@ -486,7 +495,7 @@ pipeline {
         }
       }
     }
-    // If this is a public release tag it in the LS Github and push a changelog from external repo and our internal one
+    // If this is a public release tag it in the LS Github
     stage('Github-Tag-Push-Release') {
       when {
         branch "master"

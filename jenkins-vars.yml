@@ -1,0 +1,26 @@
+---
+
+# jenkins variables
+project_name: docker-deluge
+external_type: os
+release_type: stable
+release_tag: latest
+ls_branch: master
+repo_vars:
+  - BUILD_VERSION_ARG = 'DELUGE_VERSION'
+  - LS_USER = 'linuxserver'
+  - LS_REPO = 'docker-deluge'
+  - CONTAINER_NAME = 'deluge'
+  - DOCKERHUB_IMAGE = 'linuxserver/deluge'
+  - DEV_DOCKERHUB_IMAGE = 'lsiodev/deluge'
+  - PR_DOCKERHUB_IMAGE = 'lspipepr/deluge'
+  - DIST_IMAGE = 'ubuntu'
+  - MULTIARCH='true'
+  - CI='true'
+  - CI_WEB='true'
+  - CI_PORT='8112'
+  - CI_SSL='false'
+  - CI_DELAY='120'
+  - CI_DOCKERENV='TZ=US/Pacific'
+  - CI_AUTH='user:password'
+  - CI_WEBPATH=''
