@@ -83,10 +83,10 @@ libncursesw5/now 6.1-1ubuntu1.18.04
 libnettle6/now 3.4-1
 libnghttp2-14/now 1.30.0-1ubuntu1
 libp11-kit0/now 0.23.9-2
-libpam-modules/now 1.1.8-3.6ubuntu2
-libpam-modules-bin/now 1.1.8-3.6ubuntu2
-libpam-runtime/now 1.1.8-3.6ubuntu2
-libpam0g/now 1.1.8-3.6ubuntu2
+libpam-modules/now 1.1.8-3.6ubuntu2.18.04.1
+libpam-modules-bin/now 1.1.8-3.6ubuntu2.18.04.1
+libpam-runtime/now 1.1.8-3.6ubuntu2.18.04.1
+libpam0g/now 1.1.8-3.6ubuntu2.18.04.1
 libpcre3/now 2:8.39-9
 libprocps6/now 2:3.3.12-3ubuntu1.1
 libpsl5/now 0.19.1-5build1
