@@ -18,7 +18,7 @@ RUN \
 	deluged \
 	deluge-console \
 	deluge-web \
-	p7zip \
+	p7zip-full \
 	unrar \
 	unzip \
 	libssl1.0.0 \
