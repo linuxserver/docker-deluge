@@ -165,7 +165,7 @@ Below are the instructions for updating containers:
   ```
   docker run --rm \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  containrrr/watchtower
+  containrrr/watchtower \
   --run-once deluge
   ```
 * You can also remove the old dangling images: `docker image prune`
@@ -191,6 +191,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **02.05.19:** - Install full version of 7zip.
 * **23.03.19:** - Switching to new Base images, shift to arm32v7 tag.
 * **15.11.18:** - Add deluge-console.
 * **11.11.18:** - Rebase to Ubuntu Bionic, add pipeline multiarch logic.
