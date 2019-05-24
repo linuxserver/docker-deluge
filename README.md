@@ -63,6 +63,8 @@ docker create \
   -e TZ=<timezone> \
   -v </path/to/deluge/config>:/config \
   -v </path/to/your/downloads>:/downloads \
+  -v </path/to/your/torrents>:/torrents \
+  -v </path/to/your/completed-files>:/completed
   --restart unless-stopped \
   linuxserver/deluge
 ```
@@ -88,6 +90,8 @@ services:
     volumes:
       - </path/to/deluge/config>:/config
       - </path/to/your/downloads>:/downloads
+      - </path/to/your/torrents>:/torrents
+      - </path/to/your/completed-files>:/completed
     restart: unless-stopped
 ```
 
@@ -104,6 +108,8 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e TZ=<timezone>` | Specify a timezone to use EG Europe/London |
 | `-v /config` | deluge configs |
 | `-v /downloads` | torrent download directory |
+| `-v /torrents` | watch folder for torrents |
+| `-v /completed` | completed files |
 
 ## User / Group Identifiers
 
