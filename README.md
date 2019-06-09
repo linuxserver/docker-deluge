@@ -191,6 +191,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **09.06.19:** - Update to 2.x using deluge ppa.
 * **02.05.19:** - Install full version of 7zip.
 * **23.03.19:** - Switching to new Base images, shift to arm32v7 tag.
 * **15.11.18:** - Add deluge-console.
