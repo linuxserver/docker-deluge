@@ -6,4 +6,4 @@ umask "$UMASK_SET"
 
 exec \
 	s6-setuidgid abc /usr/bin/deluge-web \
-	-d -c /config --loglevel=info
+	-d -c /config --loglevel=warning
