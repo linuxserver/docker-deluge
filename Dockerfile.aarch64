@@ -8,10 +8,20 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="sparklyballs, aptalca"
 
 # environment variables
+ARG DEBIAN_FRONTEND="noninteractive"
 ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs"
 
 # install software
 RUN \
+ echo "**** add repositories ****" && \
+ apt-get update && \
+ apt-get install -y \
+	gnupg && \
+ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C5E6A5ED249AD24C && \
+ echo "deb http://ppa.launchpad.net/deluge-team/stable/ubuntu bionic main" >> \
+	/etc/apt/sources.list.d/deluge.list && \
+ echo "deb-src http://ppa.launchpad.net/deluge-team/stable/ubuntu bionic main" >> \
+	/etc/apt/sources.list.d/deluge.list && \
  echo "**** install packages ****" && \
  apt-get update && \
  apt-get install -y \
@@ -20,36 +30,8 @@ RUN \
 	deluge-web \
 	p7zip-full \
 	unrar \
-	unzip \
-	libssl1.0.0 \
-	openssl && \
- echo "**** install build deps ****" && \
- apt-get install -y \
-	libssl-dev \
-	python-dev \
-	build-essential \
-	libffi-dev \
-	python-pip && \
- echo "**** install pip packages ****" && \
- pip install --no-cache-dir -U \
-	incremental \
-	crypto \
-	mako \
-	markupsafe \
-	pyopenssl \
-	service_identity \
-	six \
-	twisted \
-	zope.interface && \
+	unzip && \
  echo "**** cleanup ****" && \
- apt-get purge -y \
-	libssl-dev \
-	python-dev \
-	build-essential \
-	libffi-dev \
-	python-pip && \
- apt-get --purge autoremove -y && \
- apt-get clean && \
  rm -rf \
 	/tmp/* \
 	/var/lib/apt/lists/* \

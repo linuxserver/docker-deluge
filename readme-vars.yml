@@ -45,6 +45,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "09.06.19:", desc: "Update to 2.x using deluge ppa." }
   - { date: "02.05.19:", desc: "Install full version of 7zip." }
   - { date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag." }
   - { date: "15.11.18:", desc: "Add deluge-console." }
