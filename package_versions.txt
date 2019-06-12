@@ -13,10 +13,10 @@ dash0.5.8-2.10
 dbus1.12.2-1ubuntu1.1
 debconf1.5.66ubuntu1
 debianutils4.8.4
-deluge-common2.0.3-1~201906082034~ubuntu18.04.1
-deluge-console2.0.3-1~201906082034~ubuntu18.04.1
-deluged2.0.3-1~201906082034~ubuntu18.04.1
-deluge-web2.0.3-1~201906082034~ubuntu18.04.1
+deluge-common2.0.3-2~201906121747~ubuntu18.04.1
+deluge-console2.0.3-2~201906121747~ubuntu18.04.1
+deluged2.0.3-2~201906121747~ubuntu18.04.1
+deluge-web2.0.3-2~201906121747~ubuntu18.04.1
 diffutils1:3.6-1
 dirmngr2.2.4-1ubuntu1.2
 dpkg1.19.0.5ubuntu2.1
