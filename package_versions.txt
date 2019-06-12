@@ -1,6 +1,6 @@
 adduser3.116ubuntu1
-apt1.6.10
-apt-utils1.6.10
+apt1.6.11
+apt-utils1.6.11
 base-files10.1ubuntu2.4
 base-passwd3.5.44
 bash4.4.18-2ubuntu1.1
@@ -10,13 +10,13 @@ ca-certificates20180409
 coreutils8.28-1ubuntu1
 curl7.58.0-2ubuntu3.7
 dash0.5.8-2.10
-dbus1.12.2-1ubuntu1
+dbus1.12.2-1ubuntu1.1
 debconf1.5.66ubuntu1
 debianutils4.8.4
-deluge-common2.0.2-0~201906082034~ubuntu18.04.1
-deluge-console2.0.2-0~201906082034~ubuntu18.04.1
-deluged2.0.2-0~201906082034~ubuntu18.04.1
-deluge-web2.0.2-0~201906082034~ubuntu18.04.1
+deluge-common2.0.3-1~201906082034~ubuntu18.04.1
+deluge-console2.0.3-1~201906082034~ubuntu18.04.1
+deluged2.0.3-1~201906082034~ubuntu18.04.1
+deluge-web2.0.3-1~201906082034~ubuntu18.04.1
 diffutils1:3.6-1
 dirmngr2.2.4-1ubuntu1.2
 dpkg1.19.0.5ubuntu2.1
@@ -44,8 +44,8 @@ init-system-helpers1.51
 krb5-locales1.16-2ubuntu0.1
 libacl12.2.52-3build1
 libapparmor12.12-4ubuntu5.1
-libapt-inst2.01.6.10
-libapt-pkg5.01.6.10
+libapt-inst2.01.6.11
+libapt-pkg5.01.6.11
 libasn1-8-heimdal7.5.0+dfsg-1
 libassuan02.5.1-2
 libattr11:2.4.47-2build1
@@ -61,7 +61,7 @@ libc-bin2.27-3ubuntu1
 libcom-err21.44.1-1ubuntu1.1
 libcurl47.58.0-2ubuntu3.7
 libdb5.35.3.28-13.1ubuntu1.1
-libdbus-1-31.12.2-1ubuntu1
+libdbus-1-31.12.2-1ubuntu1.1
 libdebconfclient00.213ubuntu1
 libexpat12.2.5-3
 libext2fs21.44.1-1ubuntu1.1
@@ -160,7 +160,7 @@ mount2.31.1-0.4ubuntu3.3
 multiarch-support2.27-3ubuntu1
 ncurses-base6.1-1ubuntu1.18.04
 ncurses-bin6.1-1ubuntu1.18.04
-openssl1.1.0g-2ubuntu4.3
+openssl1.1.1-1ubuntu2.1~18.04.1
 p7zip16.02+dfsg-6
 p7zip-full16.02+dfsg-6
 passwd1:4.5-1ubuntu2
