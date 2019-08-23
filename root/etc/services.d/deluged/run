@@ -1,9 +1,10 @@
 #!/usr/bin/with-contenv bash
 
+DELUGE_LOGLEVEL=${DELUGE_LOGLEVEL:-info}
 UMASK_SET=${UMASK_SET:-022}
 
 umask "$UMASK_SET"
 
 exec \
 	s6-setuidgid abc /usr/bin/deluged -c /config \
-	-d --loglevel=info -l /config/deluged.log
+	-d --loglevel=${DELUGE_LOGLEVEL} -l /config/deluged.log

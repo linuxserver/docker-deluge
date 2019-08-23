@@ -60,6 +60,7 @@ docker create \
   -e PUID=1000 \
   -e PGID=1000 \
   -e UMASK_SET=<022> \
+  -e DELUGE_LOGLEVEL=info \
   -e TZ=<timezone> \
   -v </path/to/deluge/config>:/config \
   -v </path/to/your/downloads>:/downloads \
@@ -84,6 +85,7 @@ services:
       - PUID=1000
       - PGID=1000
       - UMASK_SET=<022>
+      - DELUGE_LOGLEVEL=info
       - TZ=<timezone>
     volumes:
       - </path/to/deluge/config>:/config
@@ -101,6 +103,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e UMASK_SET=<022>` | for umask setting of deluge, *optional* , default if left unset is 022. |
+| `-e DELUGE_LOGLEVEL=info` | set the loglevel output when running Deluge, default is info for deluged and warning for delgued-web |
 | `-e TZ=<timezone>` | Specify a timezone to use EG Europe/London |
 | `-v /config` | deluge configs |
 | `-v /downloads` | torrent download directory |

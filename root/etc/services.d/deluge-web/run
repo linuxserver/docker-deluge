@@ -1,9 +1,10 @@
 #!/usr/bin/with-contenv bash
 
+DELUGE_LOGLEVEL=${DELUGE_LOGLEVEL:-warning}
 UMASK_SET=${UMASK_SET:-022}
 
 umask "$UMASK_SET"
 
 exec \
 	s6-setuidgid abc /usr/bin/deluge-web \
-	-d -c /config --loglevel=warning
+	-d -c /config --loglevel=${DELUGE_LOGLEVEL}
