@@ -31,8 +31,12 @@ param_net: "host"
 param_net_desc: "Shares host networking with container, **required**."
 param_usage_include_env: true
 param_env_vars:
-  - { env_var: "UMASK_SET", env_value: "<022>", desc: "for umask setting of deluge, *optional* , default if left unset is 022."}
   - { env_var: "TZ", env_value: "<timezone>", desc: "Specify a timezone to use EG Europe/London"}
+# optional env variables
+opt_param_usage_include_env: true
+opt_param_env_vars:
+  - { env_var: "UMASK_SET", env_value: "022", desc: "for umask setting of deluge, default if left unset is 022"}
+  - { env_var: "DELUGE_LOGLEVEL", env_value: "error", desc: "set the loglevel output when running Deluge, default is info for deluged and warning for delgued-web"}
 
 # application setup block
 app_setup_block_enabled: true
@@ -45,6 +49,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "24.08.19:", desc: "Add ability to set LogLevel for Deluge." }
   - { date: "09.06.19:", desc: "Update to 2.x using deluge ppa." }
   - { date: "02.05.19:", desc: "Install full version of 7zip." }
   - { date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag." }
