@@ -19,7 +19,7 @@ deluged2.0.3-2~201906121747~ubuntu18.04.1
 deluge-web2.0.3-2~201906121747~ubuntu18.04.1
 diffutils1:3.6-1
 dirmngr2.2.4-1ubuntu1.2
-dpkg1.19.0.5ubuntu2.1
+dpkg1.19.0.5ubuntu2.2
 e2fsprogs1.44.1-1ubuntu1.1
 fdisk2.31.1-0.4ubuntu3.3
 file1:5.32-2ubuntu0.2
@@ -96,8 +96,8 @@ libkrb5-31.16-2ubuntu0.1
 libkrb5support01.16-2ubuntu0.1
 libksba81.3.5-2
 liblcms2-22.9-1ubuntu0.1
-libldap-2.4-22.4.45+dfsg-1ubuntu1.3
-libldap-common2.4.45+dfsg-1ubuntu1.3
+libldap-2.4-22.4.45+dfsg-1ubuntu1.4
+libldap-common2.4.45+dfsg-1ubuntu1.4
 liblz4-10.0~r131-2ubuntu3
 liblzma55.2.2-1.3
 libmagic11:5.32-2ubuntu0.2
@@ -116,7 +116,7 @@ libpam-modules-bin1.1.8-3.6ubuntu2.18.04.1
 libpam-runtime1.1.8-3.6ubuntu2.18.04.1
 libpcre32:8.39-9
 libpng16-161.6.34-1ubuntu0.18.04.2
-libprocps62:3.3.12-3ubuntu1.1
+libprocps62:3.3.12-3ubuntu1.2
 libpsl50.19.1-5build1
 libpython3.6-minimal3.6.8-1~18.04.1
 libpython3.6-stdlib3.6.8-1~18.04.1
@@ -150,7 +150,7 @@ libwebpdemux20.6.1-2
 libwebpmux30.6.1-2
 libwind0-heimdal7.5.0+dfsg-1
 libxml22.9.4+dfsg1-6.1ubuntu1.2
-libzstd11.3.3+dfsg-2ubuntu1
+libzstd11.3.3+dfsg-2ubuntu1.1
 locales2.27-3ubuntu1
 login1:4.5-1ubuntu2
 lsb-base9.20170808ubuntu1
@@ -166,7 +166,7 @@ p7zip-full16.02+dfsg-6
 passwd1:4.5-1ubuntu2
 perl-base5.26.1-6ubuntu0.3
 pinentry-curses1.1.0-1
-procps2:3.3.12-3ubuntu1.1
+procps2:3.3.12-3ubuntu1.2
 publicsuffix20180223.1310-1
 python33.6.7-1~18.04
 python3.63.6.8-1~18.04.1
