@@ -29,7 +29,9 @@ RUN \
 	deluge-web \
 	p7zip-full \
 	unrar \
-	unzip && \
+	unzip \
+        python3-requests \ 
+        python3-future && \
  echo "**** cleanup ****" && \
  rm -rf \
 	/tmp/* \
