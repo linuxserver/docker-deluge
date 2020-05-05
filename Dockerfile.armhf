@@ -30,8 +30,8 @@ RUN \
 	p7zip-full \
 	unrar \
 	unzip \
-        python3-requests \
-        python3-future && \
+	python3-requests \
+	python3-future && \
  echo "**** cleanup ****" && \
  rm -rf \
 	/tmp/* \
