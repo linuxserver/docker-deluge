@@ -23,15 +23,15 @@ available_architectures:
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "</path/to/deluge/config>", desc: "deluge configs" }
-  - { vol_path: "/downloads", vol_host_path: "</path/to/your/downloads>", desc: "torrent download directory" }
+  - { vol_path: "/config", vol_host_path: "/path/to/deluge/config", desc: "deluge configs" }
+  - { vol_path: "/downloads", vol_host_path: "/path/to/your/downloads", desc: "torrent download directory" }
 param_usage_include_ports: false
 param_usage_include_net: true
 param_net: "host"
 param_net_desc: "Shares host networking with container, **required**."
 param_usage_include_env: true
 param_env_vars:
-  - { env_var: "TZ", env_value: "<timezone>", desc: "Specify a timezone to use EG Europe/London"}
+  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use"}
 # optional env variables
 opt_param_usage_include_env: true
 opt_param_env_vars:
@@ -41,7 +41,7 @@ opt_param_env_vars:
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
-  The admin interface is available at http://<ip>:8112 with a default user/password of admin/deluge.
+  The admin interface is available at `http://SERVER-IP:8112` with a default user/password of admin/deluge.
 
   To change the password (recommended) log in to the web interface and go to Preferences->Interface->Password.
 
@@ -49,6 +49,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "09.05.19:", desc: "Add python3 requests and future modules." }
   - { date: "24.08.19:", desc: "Add ability to set LogLevel for Deluge." }
   - { date: "09.06.19:", desc: "Update to 2.x using deluge ppa." }
   - { date: "02.05.19:", desc: "Install full version of 7zip." }
@@ -65,8 +66,7 @@ changelogs:
   - { date: "28.04.17:", desc: "update to libressl2.5-libssl." }
   - { date: "28.12.16:", desc: "Rebase to alpine 3.5 baseimage." }
   - { date: "17.11.16:", desc: "Rebase to edge baseimage." }
-  - { date: "13.10.16:", desc: "Switch to libressl as openssl deprecated from alpine linux and deluge dependency
-no longer installs" }
+  - { date: "13.10.16:", desc: "Switch to libressl as openssl deprecated from alpine linux and deluge dependency no longer installs" }
   - { date: "30.09.16:", desc: "Fix umask." }
   - { date: "09.09.16:", desc: "Add layer badges to README." }
   - { date: "30.08.16:", desc: "Use pip packages for some critical dependencies." }
