@@ -73,11 +73,11 @@ docker create \
   --net=host \
   -e PUID=1000 \
   -e PGID=1000 \
-  -e TZ=<timezone> \
+  -e TZ=Europe/London \
   -e UMASK_SET=022 `#optional` \
   -e DELUGE_LOGLEVEL=error `#optional` \
-  -v </path/to/deluge/config>:/config \
-  -v </path/to/your/downloads>:/downloads \
+  -v /path/to/deluge/config:/config \
+  -v /path/to/your/downloads:/downloads \
   --restart unless-stopped \
   linuxserver/deluge
 ```
@@ -98,12 +98,12 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=<timezone>
+      - TZ=Europe/London
       - UMASK_SET=022 #optional
       - DELUGE_LOGLEVEL=error #optional
     volumes:
-      - </path/to/deluge/config>:/config
-      - </path/to/your/downloads>:/downloads
+      - /path/to/deluge/config:/config
+      - /path/to/your/downloads:/downloads
     restart: unless-stopped
 ```
 
@@ -116,7 +116,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `--net=host` | Shares host networking with container, **required**. |
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
-| `-e TZ=<timezone>` | Specify a timezone to use EG Europe/London |
+| `-e TZ=Europe/London` | Specify a timezone to use |
 | `-e UMASK_SET=022` | for umask setting of deluge, default if left unset is 022 |
 | `-e DELUGE_LOGLEVEL=error` | set the loglevel output when running Deluge, default is info for deluged and warning for delgued-web |
 | `-v /config` | deluge configs |
@@ -151,7 +151,7 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 &nbsp;
 ## Application Setup
 
-The admin interface is available at http://<ip>:8112 with a default user/password of admin/deluge.
+The admin interface is available at `http://SERVER-IP:8112` with a default user/password of admin/deluge.
 
 To change the password (recommended) log in to the web interface and go to Preferences->Interface->Password.
 
@@ -228,6 +228,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **09.05.19:** - Add python3 requests and future modules.
 * **24.08.19:** - Add ability to set LogLevel for Deluge.
 * **09.06.19:** - Update to 2.x using deluge ppa.
 * **02.05.19:** - Install full version of 7zip.
