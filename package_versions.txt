@@ -208,7 +208,7 @@ python3-setproctitle1.1.10-1build2
 python3-six1.11.0-2
 python3-twisted17.9.0-2ubuntu0.1
 python3-twisted-bin17.9.0-2ubuntu0.1
-python3-urllib31.22-1ubuntu0.18.04.1
+python3-urllib31.22-1ubuntu0.18.04.2
 python3-xdg0.25-4ubuntu1
 python3-zope.interface4.3.2-1build2
 readline-common7.0-3
