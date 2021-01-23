@@ -83,7 +83,6 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - UMASK_SET=022 #optional
       - DELUGE_LOGLEVEL=error #optional
     volumes:
       - /path/to/deluge/config:/config
@@ -100,7 +99,6 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
-  -e UMASK_SET=022 `#optional` \
   -e DELUGE_LOGLEVEL=error `#optional` \
   -v /path/to/deluge/config:/config \
   -v /path/to/your/downloads:/downloads \
@@ -119,7 +117,6 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use |
-| `-e UMASK_SET=022` | for umask setting of deluge, default if left unset is 022 |
 | `-e DELUGE_LOGLEVEL=error` | set the loglevel output when running Deluge, default is info for deluged and warning for delgued-web |
 | `-v /config` | deluge configs |
 | `-v /downloads` | torrent download directory |
@@ -236,6 +233,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **23.01.21:** - Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information.
 * **09.05.19:** - Add python3 requests and future modules.
 * **24.08.19:** - Add ability to set LogLevel for Deluge.
 * **09.06.19:** - Update to 2.x using deluge ppa.

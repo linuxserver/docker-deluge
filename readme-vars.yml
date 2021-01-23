@@ -35,7 +35,6 @@ param_env_vars:
 # optional env variables
 opt_param_usage_include_env: true
 opt_param_env_vars:
-  - { env_var: "UMASK_SET", env_value: "022", desc: "for umask setting of deluge, default if left unset is 022"}
   - { env_var: "DELUGE_LOGLEVEL", env_value: "error", desc: "set the loglevel output when running Deluge, default is info for deluged and warning for delgued-web"}
 
 # application setup block
@@ -49,6 +48,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "23.01.21:", desc: "Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information." }
   - { date: "09.05.19:", desc: "Add python3 requests and future modules." }
   - { date: "24.08.19:", desc: "Add ability to set LogLevel for Deluge." }
   - { date: "09.06.19:", desc: "Update to 2.x using deluge ppa." }
