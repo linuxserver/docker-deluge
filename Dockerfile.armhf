@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-ubuntu:arm32v7-bionic
+FROM ghcr.io/linuxserver/baseimage-ubuntu:arm32v7-focal
 
 # set version label
 ARG BUILD_DATE
@@ -17,9 +17,9 @@ RUN \
  apt-get install -y \
 	gnupg && \
  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C5E6A5ED249AD24C && \
- echo "deb http://ppa.launchpad.net/deluge-team/stable/ubuntu bionic main" >> \
+ echo "deb http://ppa.launchpad.net/deluge-team/stable/ubuntu focal main" >> \
 	/etc/apt/sources.list.d/deluge.list && \
- echo "deb-src http://ppa.launchpad.net/deluge-team/stable/ubuntu bionic main" >> \
+ echo "deb-src http://ppa.launchpad.net/deluge-team/stable/ubuntu focal main" >> \
 	/etc/apt/sources.list.d/deluge.list && \
  echo "**** install packages ****" && \
  apt-get update && \
