@@ -72,8 +72,8 @@ libgcc11:8.4.0-1ubuntu1~18.04
 libgcrypt201.8.1-4ubuntu1.2
 libgeoip11.6.12-1
 libgirepository-1.0-11.56.1-1
-libglib2.0-02.56.4-0ubuntu0.18.04.7
-libglib2.0-data2.56.4-0ubuntu0.18.04.7
+libglib2.0-02.56.4-0ubuntu0.18.04.8
+libglib2.0-data2.56.4-0ubuntu0.18.04.8
 libgmp102:6.1.2+dfsg-2
 libgnutls303.5.18-1ubuntu1.4
 libgpg-error01.27-6
@@ -196,7 +196,7 @@ python3-minimal3.6.7-1~18.04
 python3-olefile0.45.1-1
 python3-openssl17.5.0-1ubuntu1
 python3-pam0.4.2-13.2ubuntu4
-python3-pil5.1.0-1ubuntu0.4
+python3-pil5.1.0-1ubuntu0.5
 python3-pkg-resources39.0.1-2
 python3-pyasn10.4.2-3
 python3-pyasn1-modules0.2.1-0.2
