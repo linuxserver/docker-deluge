@@ -196,7 +196,7 @@ python3-minimal3.6.7-1~18.04
 python3-olefile0.45.1-1
 python3-openssl17.5.0-1ubuntu1
 python3-pam0.4.2-13.2ubuntu4
-python3-pil5.1.0-1ubuntu0.5
+python3-pil5.1.0-1ubuntu0.6
 python3-pkg-resources39.0.1-2
 python3-pyasn10.4.2-3
 python3-pyasn1-modules0.2.1-0.2
