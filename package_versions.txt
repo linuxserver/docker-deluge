@@ -145,9 +145,9 @@ libtorrent-rasterbar91.1.5-1build1
 libudev1237-3ubuntu10.47
 libunistring20.9.9-0ubuntu2
 libuuid12.31.1-0.4ubuntu3.7
-libwebp60.6.1-2
-libwebpdemux20.6.1-2
-libwebpmux30.6.1-2
+libwebp60.6.1-2ubuntu0.18.04.1
+libwebpdemux20.6.1-2ubuntu0.18.04.1
+libwebpmux30.6.1-2ubuntu0.18.04.1
 libwind0-heimdal7.5.0+dfsg-1
 libxml22.9.4+dfsg1-6.1ubuntu1.3
 libzstd11.3.3+dfsg-2ubuntu1.2
