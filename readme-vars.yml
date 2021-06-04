@@ -48,6 +48,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "25.02.21:", desc: "Update base image to Ubuntu Focal." }
   - { date: "23.01.21:", desc: "Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information." }
   - { date: "09.05.19:", desc: "Add python3 requests and future modules." }
   - { date: "24.08.19:", desc: "Add ability to set LogLevel for Deluge." }
