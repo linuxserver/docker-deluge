@@ -70,6 +70,8 @@ To change the password (recommended) log in to the web interface and go to Prefe
 
 Change the downloads location in the webui in Preferences->Downloads and use /downloads for completed downloads.
 
+Change the inbound port to 6881 (or whichever port you've mapped for the container) under Preferences->Network, otherwise random ports will be used.
+
 ## Usage
 
 Here are some example snippets to help you get started creating a container.
@@ -85,7 +87,6 @@ services:
   deluge:
     image: ghcr.io/linuxserver/deluge
     container_name: deluge
-    network_mode: host
     environment:
       - PUID=1000
       - PGID=1000
@@ -94,6 +95,10 @@ services:
     volumes:
       - /path/to/deluge/config:/config
       - /path/to/your/downloads:/downloads
+    ports:
+      - 8112:8112
+      - 6881:6881
+      - 6881/udp:6881/udp
     restart: unless-stopped
 ```
 
@@ -102,11 +107,13 @@ services:
 ```bash
 docker run -d \
   --name=deluge \
-  --net=host \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
   -e DELUGE_LOGLEVEL=error `#optional` \
+  -p 8112:8112 \
+  -p 6881:6881 \
+  -p 6881/udp:6881/udp \
   -v /path/to/deluge/config:/config \
   -v /path/to/your/downloads:/downloads \
   --restart unless-stopped \
@@ -119,7 +126,9 @@ Container images are configured using parameters passed at runtime (such as thos
 
 | Parameter | Function |
 | :----: | --- |
-| `--net=host` | Shares host networking with container, **required**. |
+| `-p 8112` | Port for webui |
+| `-p 6881` | Inbound torrent traffic (See App Setup) |
+| `-p 6881/udp` | Inbound torrent traffic (See App Setup) |
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use |
@@ -236,6 +245,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **07.06.21:** - Remove host networking from readme examples
 * **23.01.21:** - Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information.
 * **09.05.19:** - Add python3 requests and future modules.
 * **24.08.19:** - Add ability to set LogLevel for Deluge.
