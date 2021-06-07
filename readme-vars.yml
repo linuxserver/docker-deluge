@@ -25,10 +25,11 @@ param_usage_include_vols: true
 param_volumes:
   - { vol_path: "/config", vol_host_path: "/path/to/deluge/config", desc: "deluge configs" }
   - { vol_path: "/downloads", vol_host_path: "/path/to/your/downloads", desc: "torrent download directory" }
-param_usage_include_ports: false
-param_usage_include_net: true
-param_net: "host"
-param_net_desc: "Shares host networking with container, **required**."
+param_usage_include_ports: true
+param_ports:
+  - { external_port: "8112", internal_port: "8112", port_desc: "Port for webui" }
+  - { external_port: "6881", internal_port: "6881", port_desc: "Inbound torrent traffic (See App Setup)" }
+  - { external_port: "6881/udp", internal_port: "6881/udp", port_desc: "Inbound torrent traffic (See App Setup)" }
 param_usage_include_env: true
 param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use"}
@@ -45,9 +46,12 @@ app_setup_block: |
   To change the password (recommended) log in to the web interface and go to Preferences->Interface->Password.
 
   Change the downloads location in the webui in Preferences->Downloads and use /downloads for completed downloads.
+  
+  Change the inbound port to 6881 (or whichever port you've mapped for the container) under Preferences->Network, otherwise random ports will be used.
 
 # changelog
 changelogs:
+  - { date: "07.06.21:", desc: "Remove host networking from readme examples" }
   - { date: "23.01.21:", desc: "Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information." }
   - { date: "09.05.19:", desc: "Add python3 requests and future modules." }
   - { date: "24.08.19:", desc: "Add ability to set LogLevel for Deluge." }
