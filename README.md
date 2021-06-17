@@ -98,7 +98,7 @@ services:
     ports:
       - 8112:8112
       - 6881:6881
-      - 6881/udp:6881/udp
+      - 6881:6881/udp
     restart: unless-stopped
 ```
 
@@ -113,7 +113,7 @@ docker run -d \
   -e DELUGE_LOGLEVEL=error `#optional` \
   -p 8112:8112 \
   -p 6881:6881 \
-  -p 6881/udp:6881/udp \
+  -p 6881:6881/udp \
   -v /path/to/deluge/config:/config \
   -v /path/to/your/downloads:/downloads \
   --restart unless-stopped \
