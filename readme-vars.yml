@@ -29,7 +29,7 @@ param_usage_include_ports: true
 param_ports:
   - { external_port: "8112", internal_port: "8112", port_desc: "Port for webui" }
   - { external_port: "6881", internal_port: "6881", port_desc: "Inbound torrent traffic (See App Setup)" }
-  - { external_port: "6881/udp", internal_port: "6881/udp", port_desc: "Inbound torrent traffic (See App Setup)" }
+  - { external_port: "6881", internal_port: "6881/udp", port_desc: "Inbound torrent traffic (See App Setup)" }
 param_usage_include_env: true
 param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use"}
