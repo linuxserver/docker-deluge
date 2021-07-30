@@ -1,11 +1,16 @@
 #!/usr/bin/with-contenv bash
 
 DELUGE_LOGLEVEL=${DELUGE_LOGLEVEL:-info}
+DELUGE_REAL_LOGFILE=""
 
 if [ -n "${UMASK_SET}" ] && [ -z "${UMASK}" ]; then
   echo -e "You are using a legacy method of defining umask\nplease update your environment variable from UMASK_SET to UMASK\nto keep the functionality after July 2021"
   umask ${UMASK_SET}
 fi
+
+if [ -n "${DELUGED_LOGFILE}" ]; then
+    DELUGE_REAL_LOGFILE="-l ${DELUGED_LOGFILE}"
+fi
 exec \
 	s6-setuidgid abc /usr/bin/deluged -c /config \
-	-d --loglevel=${DELUGE_LOGLEVEL} -l /config/deluged.log
+	-d --loglevel=${DELUGE_LOGLEVEL} ${DELUGE_REAL_LOGFILE}

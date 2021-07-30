@@ -89,6 +89,7 @@ services:
       - PGID=1000
       - TZ=Europe/London
       - DELUGE_LOGLEVEL=error #optional
+      - DELUGED_LOGFILE=/config/deluged.log #optional
     volumes:
       - /path/to/deluge/config:/config
       - /path/to/your/downloads:/downloads
@@ -108,6 +109,7 @@ docker run -d \
   -e PGID=1000 \
   -e TZ=Europe/London \
   -e DELUGE_LOGLEVEL=error `#optional` \
+  -e DELUGED_LOGFILE=/config/deluged.log `#optional` \
   -p 8112:8112 \
   -p 6881:6881 \
   -p 6881:6881/udp \
@@ -130,6 +132,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use |
 | `-e DELUGE_LOGLEVEL=error` | set the loglevel output when running Deluge, default is info for deluged and warning for delgued-web |
+| `-e DELUGED_LOGFILE=/config/deluged.log` | set the file to use for logs when running deluged, default is logging to stdout |
 | `-v /config` | deluge configs |
 | `-v /downloads` | torrent download directory |
 
@@ -242,6 +245,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **07.30.21:** - Add logfile environment variable
 * **07.06.21:** - Remove host networking from readme examples
 * **23.01.21:** - Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information.
 * **09.05.19:** - Add python3 requests and future modules.
