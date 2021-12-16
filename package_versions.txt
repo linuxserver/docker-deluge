@@ -118,8 +118,8 @@ libpcre32:8.39-9
 libpng16-161.6.34-1ubuntu0.18.04.2
 libprocps62:3.3.12-3ubuntu1.2
 libpsl50.19.1-5build1
-libpython3.6-minimal3.6.9-1~18.04ubuntu1.4
-libpython3.6-stdlib3.6.9-1~18.04ubuntu1.4
+libpython3.6-minimal3.6.9-1~18.04ubuntu1.6
+libpython3.6-stdlib3.6.9-1~18.04ubuntu1.6
 libpython3-stdlib3.6.7-1~18.04
 libreadline77.0-3
 libroken18-heimdal7.5.0+dfsg-1
@@ -169,8 +169,8 @@ pinentry-curses1.1.0-1
 procps2:3.3.12-3ubuntu1.2
 publicsuffix20180223.1310-1
 python33.6.7-1~18.04
-python3.63.6.9-1~18.04ubuntu1.4
-python3.6-minimal3.6.9-1~18.04ubuntu1.4
+python3.63.6.9-1~18.04ubuntu1.6
+python3.6-minimal3.6.9-1~18.04ubuntu1.6
 python3-asn1crypto0.24.0-1
 python3-attr17.4.0-2
 python3-automat0.6.0-1
