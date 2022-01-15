@@ -51,6 +51,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "15.01.22:", desc: "Rebase to Focal." }  
   - { date: "07.06.21:", desc: "Remove host networking from readme examples" }
   - { date: "23.01.21:", desc: "Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information." }
   - { date: "09.05.19:", desc: "Add python3 requests and future modules." }
