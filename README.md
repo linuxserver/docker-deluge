@@ -244,6 +244,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **15.01.22:** - Rebase to Focal.
 * **07.06.21:** - Remove host networking from readme examples
 * **23.01.21:** - Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information.
 * **09.05.19:** - Add python3 requests and future modules.
