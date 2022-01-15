@@ -3,5 +3,5 @@
 DELUGE_LOGLEVEL=${DELUGE_LOGLEVEL:-info}
 
 exec \
-	s6-setuidgid abc /usr/bin/deluged -c /config \
-	-d --loglevel="${DELUGE_LOGLEVEL}" -l /config/deluged.log
+    s6-setuidgid abc /usr/bin/deluged -c /config \
+    -d --loglevel="${DELUGE_LOGLEVEL}" -l /config/deluged.log

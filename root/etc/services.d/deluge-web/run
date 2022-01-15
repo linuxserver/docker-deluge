@@ -4,5 +4,5 @@ DELUGE_LOGLEVEL=${DELUGE_LOGLEVEL:-warning}
 
 
 exec \
-	s6-setuidgid abc /usr/bin/deluge-web \
-	-d -c /config --loglevel="${DELUGE_LOGLEVEL}"
+    s6-setuidgid abc /usr/bin/deluge-web \
+    -d -c /config --loglevel="${DELUGE_LOGLEVEL}"
