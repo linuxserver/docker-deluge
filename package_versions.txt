@@ -12,10 +12,10 @@ curl7.68.0-1ubuntu2.7
 dash0.5.10.2-6
 debconf1.5.73
 debianutils4.9.1
-deluge-common2.0.5-0~202112151848~ubuntu20.04.1
-deluge-console2.0.5-0~202112151848~ubuntu20.04.1
-deluged2.0.5-0~202112151848~ubuntu20.04.1
-deluge-web2.0.5-0~202112151848~ubuntu20.04.1
+deluge-common2.0.5-0~202202181752~ubuntu20.04.1
+deluge-console2.0.5-0~202202181752~ubuntu20.04.1
+deluged2.0.5-0~202202181752~ubuntu20.04.1
+deluge-web2.0.5-0~202202181752~ubuntu20.04.1
 diffutils1:3.7-3
 dirmngr2.2.19-3ubuntu2.1
 dpkg1.19.7ubuntu3
