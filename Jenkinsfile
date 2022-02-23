@@ -26,7 +26,7 @@ pipeline {
     PR_DOCKERHUB_IMAGE = 'lspipepr/deluge'
     DIST_IMAGE = 'alpine'
     DIST_TAG = '3.15'
-    DIST_REPO = 'http://nl.alpinelinux.org/alpine/3.15/community/'
+    DIST_REPO = 'http://nl.alpinelinux.org/alpine/v3.15/community/'
     DIST_REPO_PACKAGES = 'deluge'
     MULTIARCH='true'
     CI='true'
