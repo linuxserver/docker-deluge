@@ -10,3 +10,9 @@ if [[ -d /downloads ]]; then
         chown -R abc:abc /downloads
     fi
 fi
+
+# create torrents directory if it does not exist
+if [[ ! -d /config/torrents ]]; then
+  mkdir -p /config/torrents
+  chown abc:abc /config/torrents
+fi
