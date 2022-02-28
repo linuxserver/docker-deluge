@@ -69,8 +69,6 @@ The admin interface is available at `http://SERVER-IP:8112` with a default user/
 
 To change the password (recommended) log in to the web interface and go to Preferences->Interface->Password.
 
-Change the downloads location in the webui in Preferences->Downloads and use /downloads for completed downloads.
-
 Change the inbound port to 6881 (or whichever port you've mapped for the container) under Preferences->Network, otherwise random ports will be used.
 
 ## Usage
@@ -244,6 +242,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **22.02.22:** - Rebase to Alpine, config on first startup, add GeoIP.
 * **15.01.22:** - Rebase to Focal.
 * **07.06.21:** - Remove host networking from readme examples
 * **23.01.21:** - Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information.

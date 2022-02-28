@@ -45,12 +45,11 @@ app_setup_block: |
 
   To change the password (recommended) log in to the web interface and go to Preferences->Interface->Password.
 
-  Change the downloads location in the webui in Preferences->Downloads and use /downloads for completed downloads.
-  
   Change the inbound port to 6881 (or whichever port you've mapped for the container) under Preferences->Network, otherwise random ports will be used.
 
 # changelog
 changelogs:
+  - { date: "22.02.22:", desc: "Rebase to Alpine, config on first startup, add GeoIP." }
   - { date: "15.01.22:", desc: "Rebase to Focal." }  
   - { date: "07.06.21:", desc: "Remove host networking from readme examples" }
   - { date: "23.01.21:", desc: "Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information." }

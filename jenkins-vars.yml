@@ -2,8 +2,7 @@
 
 # jenkins variables
 project_name: docker-deluge
-external_type: na
-custom_version_command: "curl -sX GET http://ppa.launchpad.net/deluge-team/stable/ubuntu/dists/focal/main/binary-amd64/Packages.gz | gunzip -c |grep -A 7 -m 1 '^Package: deluged$' | awk -F ': ' '/Version/{print $2;exit}'"
+external_type: alpine_repo
 release_type: stable
 release_tag: latest
 ls_branch: master
@@ -15,7 +14,10 @@ repo_vars:
   - DOCKERHUB_IMAGE = 'linuxserver/deluge'
   - DEV_DOCKERHUB_IMAGE = 'lsiodev/deluge'
   - PR_DOCKERHUB_IMAGE = 'lspipepr/deluge'
-  - DIST_IMAGE = 'ubuntu'
+  - DIST_IMAGE = 'alpine'
+  - DIST_TAG = 'edge'
+  - DIST_REPO = 'http://nl.alpinelinux.org/alpine/edge/community/'
+  - DIST_REPO_PACKAGES = 'deluge'
   - MULTIARCH='true'
   - CI='true'
   - CI_WEB='true'
