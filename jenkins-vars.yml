@@ -16,7 +16,7 @@ repo_vars:
   - PR_DOCKERHUB_IMAGE = 'lspipepr/deluge'
   - DIST_IMAGE = 'alpine'
   - DIST_TAG = '3.16'
-  - DIST_REPO = 'http://nl.alpinelinux.org/alpine/3.16/community/'
+  - DIST_REPO = 'http://nl.alpinelinux.org/alpine/v3.16/community/'
   - DIST_REPO_PACKAGES = 'deluge'
   - MULTIARCH='true'
   - CI='true'
