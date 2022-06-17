@@ -49,6 +49,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "16.06.22:", desc: "Rebase to Alpine 3.16 from edge." }
   - { date: "22.02.22:", desc: "Rebase to Alpine, config on first startup, add GeoIP." }
   - { date: "15.01.22:", desc: "Rebase to Focal." }  
   - { date: "07.06.21:", desc: "Remove host networking from readme examples" }

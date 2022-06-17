@@ -242,6 +242,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **16.06.22:** - Rebase to Alpine 3.16 from edge.
 * **22.02.22:** - Rebase to Alpine, config on first startup, add GeoIP.
 * **15.01.22:** - Rebase to Focal.
 * **07.06.21:** - Remove host networking from readme examples
