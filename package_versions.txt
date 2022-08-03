@@ -9,7 +9,7 @@ avahi-libs-0.8-r6
 bash-5.1.16-r2
 boost1.78-python3-1.78.0-r1
 brotli-libs-1.0.9-r6
-busybox-1.35.0-r16
+busybox-1.35.0-r17
 ca-certificates-20220614-r0
 ca-certificates-bundle-20220614-r0
 cairo-1.17.4-r2
@@ -145,7 +145,7 @@ shadow-4.10-r3
 shared-mime-info-2.2-r0
 skalibs-2.11.2.0-r0
 sqlite-libs-3.38.5-r0
-ssl_client-1.35.0-r16
+ssl_client-1.35.0-r17
 tiff-4.3.0-r1
 tzdata-2022a-r0
 unzip-6.0-r9
