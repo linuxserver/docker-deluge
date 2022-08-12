@@ -1,6 +1,6 @@
 FROM ghcr.io/linuxserver/baseimage-alpine:3.16
 
-ARG UNRAR_VERSION=6.1.4
+ARG UNRAR_VERSION=6.1.7
 # set version label
 ARG BUILD_DATE
 ARG VERSION
