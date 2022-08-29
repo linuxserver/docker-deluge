@@ -2,7 +2,6 @@
 
 DELUGE_LOGLEVEL=${DELUGE_LOGLEVEL:-warning}
 
-
-exec \
+s6-notifyoncheck -d -c "nc -z 127.0.0.1 8112" \
     s6-setuidgid abc /usr/bin/deluge-web \
     -d -c /config --loglevel="${DELUGE_LOGLEVEL}"
