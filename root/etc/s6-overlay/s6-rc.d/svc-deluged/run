@@ -11,6 +11,6 @@ _term() {
 
 DELUGE_LOGLEVEL=${DELUGE_LOGLEVEL:-info}
 
-s6-notifyoncheck -d -n 48 -w 5000 -c "nc -z 127.0.0.1 58846" \
+s6-notifyoncheck -d -n 0 -c "nc -z 127.0.0.1 58846" \
     s6-setuidgid abc /usr/bin/deluged -c /config \
     -d --loglevel="${DELUGE_LOGLEVEL}"
