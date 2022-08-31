@@ -1,9 +1,0 @@
-#!/usr/bin/with-contenv bash
-
-# Set defaults on first run
-if [ ! -f '/config/core.conf' ]; then
-  sleep 5
-  deluge-console --quiet --config=/config config --set download_location /downloads
-  deluge-console --quiet --config=/config config --set move_completed_path /downloads
-  exec deluge-console --quiet --config=/config config --set torrentfiles_location /config/torrents
-fi

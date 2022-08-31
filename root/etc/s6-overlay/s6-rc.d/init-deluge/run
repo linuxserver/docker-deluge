@@ -1,5 +1,9 @@
 #!/usr/bin/with-contenv bash
 
+if [[ ! -f /config/core.conf ]]; then
+    cp /defaults/core.conf /config/core.conf
+fi
+
 # permissions
 chown -R abc:abc \
     /config
