@@ -5,12 +5,12 @@ _term() {
   echo "Tell Deluged to shut down."
   pid=$(pidof deluged)
   deluge-console --config=/config halt
-  # terminate when the transmission-daemon process dies
+  # terminate when the deluged process dies
   tail --pid=${pid} -f /dev/null
 }
 
 DELUGE_LOGLEVEL=${DELUGE_LOGLEVEL:-info}
 
-exec \
+s6-notifyoncheck -d -n 60 -w 5000 -c "nc -z 127.0.0.1 58846" \
     s6-setuidgid abc /usr/bin/deluged -c /config \
     -d --loglevel="${DELUGE_LOGLEVEL}"
