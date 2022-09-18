@@ -11,6 +11,10 @@ _term() {
 
 DELUGE_LOGLEVEL=${DELUGE_LOGLEVEL:-info}
 
-s6-notifyoncheck -d -n 60 -w 5000 -c "nc -z 127.0.0.1 58846" \
+if [[ -f /config/core.conf ]]; then
+    DELUGED_PORT=$(grep '"daemon_port"' /config/core.conf | tr -cd "[:digit:]")
+fi
+
+s6-notifyoncheck -d -n 60 -w 5000 -c "nc -z 127.0.0.1 ${DELUGED_PORT:-58846}" \
     s6-setuidgid abc /usr/bin/deluged -c /config \
     -d --loglevel="${DELUGE_LOGLEVEL}"
