@@ -136,7 +136,7 @@ py3-tomli-2.0.1-r1
 py3-twisted-22.4.0-r0
 py3-typing-extensions-4.3.0-r0
 py3-wheel-0.37.1-r1
-py3-xdg-0.27-r2
+py3-xdg-0.28-r0
 py3-zope-interface-5.4.0-r1
 python3-3.10.7-r0
 readline-8.1.2-r0
