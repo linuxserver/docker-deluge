@@ -55,7 +55,7 @@ RUN \
   echo "**** grab GeoIP database ****" && \
   curl -o \
     /usr/share/GeoIP/GeoIP.dat -L \
-    "https://ipfs.infura.io/ipfs/QmWTWcPRRbADZcLcJeANZmcJZNrcpmuQgKYBi6hGdddtC6" && \
+    "https://infura-ipfs.io/ipfs/QmWTWcPRRbADZcLcJeANZmcJZNrcpmuQgKYBi6hGdddtC6" && \
   echo "**** cleanup ****" && \
   apk del --purge \
     build-dependencies && \
