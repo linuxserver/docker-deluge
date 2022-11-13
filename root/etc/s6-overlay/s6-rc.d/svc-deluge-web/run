@@ -7,6 +7,6 @@ if [[ -f /config/web.conf ]]; then
 fi
 
 exec \
-    s6-notifyoncheck -d -n 300 -w 1000 -c "nc -z 127.0.0.1 ${DELUGE_WEB_PORT:-8112}" \
+    s6-notifyoncheck -d -n 300 -w 1000 -c "nc -z localhost ${DELUGE_WEB_PORT:-8112}" \
         s6-setuidgid abc /usr/bin/deluge-web \
         -d -c /config --loglevel="${DELUGE_LOGLEVEL}"
