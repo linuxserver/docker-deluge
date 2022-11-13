@@ -1,14 +1,5 @@
 #!/usr/bin/with-contenv bash
 
-_term() {
-  echo "Caught SIGTERM signal!"
-  echo "Tell Deluged to shut down."
-  pid=$(pidof deluged)
-  deluge-console --config=/config halt
-  # terminate when the deluged process dies
-  tail --pid=${pid} -f /dev/null
-}
-
 DELUGE_LOGLEVEL=${DELUGE_LOGLEVEL:-info}
 
 if [[ -f /config/core.conf ]]; then

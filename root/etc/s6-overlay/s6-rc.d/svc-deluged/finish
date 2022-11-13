@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+
+echo "Caught SIGTERM signal!"
+echo "Tell Deluged to shut down."
+pid=$(pidof deluged)
+deluge-console --config=/config halt
+# terminate when the deluged process dies
+tail --pid=${pid} -f /dev/null
