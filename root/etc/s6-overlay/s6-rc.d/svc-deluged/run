@@ -1,14 +1,5 @@
 #!/usr/bin/with-contenv bash
 
-_term() {
-  echo "Caught SIGTERM signal!"
-  echo "Tell Deluged to shut down."
-  pid=$(pidof deluged)
-  deluge-console --config=/config halt
-  # terminate when the deluged process dies
-  tail --pid=${pid} -f /dev/null
-}
-
 DELUGE_LOGLEVEL=${DELUGE_LOGLEVEL:-info}
 
 if [[ -f /config/core.conf ]]; then
@@ -16,6 +7,6 @@ if [[ -f /config/core.conf ]]; then
 fi
 
 exec \
-    s6-notifyoncheck -d -n 300 -w 1000 -c "nc -z 127.0.0.1 ${DELUGED_PORT:-58846}" \
+    s6-notifyoncheck -d -n 300 -w 1000 -c "nc -z localhost ${DELUGED_PORT:-58846}" \
         s6-setuidgid abc /usr/bin/deluged -c /config \
         -d --loglevel="${DELUGE_LOGLEVEL}"

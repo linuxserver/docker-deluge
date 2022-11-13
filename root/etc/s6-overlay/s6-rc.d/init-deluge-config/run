@@ -5,18 +5,18 @@ if [[ ! -f /config/core.conf ]]; then
 fi
 
 # permissions
-chown -R abc:abc \
+lsiown -R abc:abc \
     /config
 
 # chown download directory if currently not set to abc
 if [[ -d /downloads ]]; then
     if [[ "$(stat -c '%U' /downloads)" != "abc" ]]; then
-        chown -R abc:abc /downloads
+        lsiown -R abc:abc /downloads
     fi
 fi
 
 # create torrents directory if it does not exist
 if [[ ! -d /config/torrents ]]; then
   mkdir -p /config/torrents
-  chown abc:abc /config/torrents
+  lsiown abc:abc /config/torrents
 fi

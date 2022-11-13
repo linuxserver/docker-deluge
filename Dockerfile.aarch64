@@ -22,7 +22,6 @@ RUN \
     python3-dev && \
   echo "**** install packages ****" && \
   apk add --no-cache \
-    curl \
     geoip \
     py3-pip \
     python3 \
