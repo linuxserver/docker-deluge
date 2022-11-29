@@ -20,8 +20,9 @@ RUN \
     gcc \
     python3-dev && \
   echo "**** install packages ****" && \
-  apk add --no-cache \
+  apk add --no-cache --upgrade --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     python3 \
+    py3-geoip \
     p7zip && \
   echo "**** install unrar from source ****" && \
   mkdir /tmp/unrar && \
@@ -48,6 +49,10 @@ RUN \
   pip3 install --no-cache-dir \
     future \
     requests && \
+  echo "**** grab GeoIP database ****" && \
+  curl -o \
+    /usr/share/GeoIP/GeoIP.dat -L --retry 10 --retry-max-time 60 --retry-all-errors \
+    "https://infura-ipfs.io/ipfs/QmWTWcPRRbADZcLcJeANZmcJZNrcpmuQgKYBi6hGdddtC6" && \
   echo "**** cleanup ****" && \
   apk del --purge \
     build-dependencies && \
