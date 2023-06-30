@@ -243,6 +243,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **30.06.23:** - Bump unrar to 6.2.8, deprecate armhf as per [https://www.linuxserver.io/armhf](https://www.linuxserver.io/armhf).
 * **29.11.22:** - Restore geoip using py3-geoip as an interim measure.
 * **24.11.22:** - Remove GeoIP packages as geoip will not build under Py 3.11 and Deluge still doesn't support geoip2.
 * **22.11.22:** - Update GeoIP URL for new IPFS domain.

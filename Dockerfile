@@ -1,6 +1,6 @@
 FROM ghcr.io/linuxserver/baseimage-alpine:edge
 
-ARG UNRAR_VERSION=6.1.7
+ARG UNRAR_VERSION=6.2.8
 # set version label
 ARG BUILD_DATE
 ARG VERSION
@@ -15,14 +15,13 @@ ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs"
 RUN \
   echo "**** install build packages ****" && \
   apk add --no-cache --upgrade --virtual=build-dependencies \
-    make \
-    g++ \
-    gcc \
-    python3-dev && \
+    build-base && \
   echo "**** install packages ****" && \
   apk add --no-cache --upgrade --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     python3 \
+    py3-future \
     py3-geoip \
+    py3-requests \
     p7zip && \
   echo "**** install unrar from source ****" && \
   mkdir /tmp/unrar && \
@@ -41,14 +40,6 @@ RUN \
   fi && \
   apk add -U --upgrade --no-cache \
     deluge==${DELUGE_VERSION} && \  
-  echo "**** install python packages ****" && \
-  python3 -m ensurepip && \
-  pip3 install -U --no-cache-dir \
-    pip \
-    wheel && \
-  pip3 install --no-cache-dir \
-    future \
-    requests && \
   echo "**** grab GeoIP database ****" && \
   curl -o \
     /usr/share/GeoIP/GeoIP.dat -L --retry 10 --retry-max-time 60 --retry-all-errors \
@@ -57,7 +48,7 @@ RUN \
   apk del --purge \
     build-dependencies && \
   rm -rf \
-    /root/.cache \
+    $HOME/.cache \
     /tmp/*
 
 # add local files

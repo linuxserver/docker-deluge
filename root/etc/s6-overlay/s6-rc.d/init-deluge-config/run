@@ -1,4 +1,5 @@
 #!/usr/bin/with-contenv bash
+# shellcheck shell=bash
 
 if [[ ! -f /config/core.conf ]]; then
     cp /defaults/core.conf /config/core.conf
@@ -17,6 +18,6 @@ fi
 
 # create torrents directory if it does not exist
 if [[ ! -d /config/torrents ]]; then
-  mkdir -p /config/torrents
-  lsiown abc:abc /config/torrents
+    mkdir -p /config/torrents
+    lsiown abc:abc /config/torrents
 fi
