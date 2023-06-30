@@ -49,6 +49,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "30.06.23:", desc: "Bump unrar to 6.2.8, deprecate armhf as per [https://www.linuxserver.io/armhf](https://www.linuxserver.io/armhf)." }
   - { date: "29.11.22:", desc: "Restore geoip using py3-geoip as an interim measure." }
   - { date: "24.11.22:", desc: "Remove GeoIP packages as geoip will not build under Py 3.11 and Deluge still doesn't support geoip2." }
   - { date: "22.11.22:", desc: "Update GeoIP URL for new IPFS domain." }

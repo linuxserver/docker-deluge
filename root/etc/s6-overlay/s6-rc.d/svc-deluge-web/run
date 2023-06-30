@@ -1,4 +1,5 @@
 #!/usr/bin/with-contenv bash
+# shellcheck shell=bash
 
 DELUGE_LOGLEVEL=${DELUGE_LOGLEVEL:-warning}
 

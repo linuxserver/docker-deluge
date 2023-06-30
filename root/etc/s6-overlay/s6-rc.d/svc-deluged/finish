@@ -1,4 +1,5 @@
 #!/usr/bin/with-contenv bash
+# shellcheck shell=bash
 
 echo "Caught SIGTERM signal!"
 echo "Tell Deluged to shut down."
