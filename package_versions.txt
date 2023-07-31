@@ -206,4 +206,4 @@ wheel                       0.41.0                 python
 xz-libs                     5.4.3-r1               apk     
 zlib                        1.2.13-r2              apk     
 zope.interface              6.0                    python  
-zstd-libs                   1.5.5-r6               apk     
+zstd-libs                   1.5.5-r7               apk     
