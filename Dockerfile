@@ -1,6 +1,6 @@
 FROM ghcr.io/linuxserver/baseimage-alpine:edge
 
-ARG UNRAR_VERSION=6.2.8
+ARG UNRAR_VERSION=6.2.10
 # set version label
 ARG BUILD_DATE
 ARG VERSION
