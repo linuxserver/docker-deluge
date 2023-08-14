@@ -59,7 +59,7 @@ libcurl                     8.2.1-r0               apk
 libexpat                    2.5.0-r2               apk     
 libffi                      3.4.4-r3               apk     
 libgcc                      13.1.1_git20230722-r1  apk     
-libidn2                     2.3.4-r2               apk     
+libidn2                     2.3.4-r3               apk     
 libimagequant               4.2.0-r2               apk     
 libintl                     0.22-r0                apk     
 libjpeg-turbo               3.0.0-r1               apk     
