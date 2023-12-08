@@ -46,7 +46,7 @@ hyperlink                   21.0.0                 python
 idna                        3.6                    python  
 incremental                 22.10.0                python  
 jq                          1.7-r2                 apk     
-lcms2                       2.15-r4                apk     
+lcms2                       2.16-r0                apk     
 libacl                      2.3.1-r4               apk     
 libattr                     2.5.1-r5               apk     
 libbsd                      0.11.7-r3              apk     
