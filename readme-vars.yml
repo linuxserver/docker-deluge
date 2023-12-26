@@ -51,6 +51,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "26.12.23:", desc: "Replace source for GeoIP database." }
   - { date: "07.12.23:", desc: "Add optional port 58846 to readme for thin client connectivity."}
   - { date: "07.10.23:", desc: "Install unrar from [linuxserver repo](https://github.com/linuxserver/docker-unrar)."}
   - { date: "10.08.23:", desc: "Bump unrar to 6.2.10."}
