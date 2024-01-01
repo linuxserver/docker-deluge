@@ -7,8 +7,8 @@ MarkupSafe                  2.1.3                  python
 Pillow                      10.1.0                 python  
 PyHamcrest                  2.0.4                  python  
 Twisted                     22.10.0                python  
-alpine-baselayout           3.5.0-r0               apk     
-alpine-baselayout-data      3.5.0-r0               apk     
+alpine-baselayout           3.5.2-r0               apk     
+alpine-baselayout-data      3.5.2-r0               apk     
 alpine-keys                 2.4-r1                 apk     
 apk-tools                   2.14.0-r5              apk     
 attrs                       23.1.0                 python  
@@ -34,7 +34,7 @@ curl                        8.5.0-r0               apk
 deluge                      2.1.1                  python  
 deluge                      2.1.1-r8               apk     
 deluge-pyc                  2.1.1-r8               apk     
-distro                      1.8.0                  python  
+distro                      1.9.0                  python  
 freetype                    2.13.2-r0              apk     
 future                      0.18.3                 python  
 gdbm                        1.23-r1                apk     
@@ -111,8 +111,8 @@ py3-cparser                 2.21-r4                apk
 py3-cparser-pyc             2.21-r4                apk     
 py3-cryptography            41.0.7-r0              apk     
 py3-cryptography-pyc        41.0.7-r0              apk     
-py3-distro                  1.8.0-r2               apk     
-py3-distro-pyc              1.8.0-r2               apk     
+py3-distro                  1.9.0-r0               apk     
+py3-distro-pyc              1.9.0-r0               apk     
 py3-future                  0.18.3-r4              apk     
 py3-future-pyc              0.18.3-r4              apk     
 py3-geoip                   1.3.2-r1               apk     
@@ -194,7 +194,7 @@ sqlite-libs                 3.44.2-r0              apk
 ssl_client                  1.36.1-r18             apk     
 tiff                        4.6.0-r0               apk     
 typing_extensions           4.9.0                  python  
-tzdata                      2023c-r1               apk     
+tzdata                      2023d-r0               apk     
 urllib3                     1.26.18                python  
 utmps-libs                  0.1.2.2-r0             apk     
 wheel                       0.42.0                 python  
