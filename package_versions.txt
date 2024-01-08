@@ -4,11 +4,10 @@ Automat                     22.10.0                python
 GeoIP                       1.3.2                  python  
 Mako                        1.3.0                  python  
 MarkupSafe                  2.1.3                  python  
-Pillow                      10.1.0                 python  
 PyHamcrest                  2.0.4                  python  
 Twisted                     22.10.0                python  
-alpine-baselayout           3.5.2-r0               apk     
-alpine-baselayout-data      3.5.2-r0               apk     
+alpine-baselayout           3.5.3-r0               apk     
+alpine-baselayout-data      3.5.3-r0               apk     
 alpine-keys                 2.4-r1                 apk     
 apk-tools                   2.14.0-r5              apk     
 attrs                       23.1.0                 python  
@@ -88,6 +87,7 @@ nghttp2-libs                1.58.0-r0              apk
 oniguruma                   6.9.9-r0               apk     
 openjpeg                    2.5.0-r3               apk     
 packaging                   23.2                   python  
+pillow                      10.2.0                 python  
 procps-ng                   4.0.4-r0               apk     
 py3-asn1                    0.5.1-r0               apk     
 py3-asn1-modules            0.3.0-r1               apk     
@@ -111,8 +111,8 @@ py3-cparser                 2.21-r4                apk
 py3-cparser-pyc             2.21-r4                apk     
 py3-cryptography            41.0.7-r0              apk     
 py3-cryptography-pyc        41.0.7-r0              apk     
-py3-distro                  1.9.0-r0               apk     
-py3-distro-pyc              1.9.0-r0               apk     
+py3-distro                  1.9.0-r1               apk     
+py3-distro-pyc              1.9.0-r1               apk     
 py3-future                  0.18.3-r4              apk     
 py3-future-pyc              0.18.3-r4              apk     
 py3-geoip                   1.3.2-r1               apk     
@@ -139,8 +139,8 @@ py3-packaging               23.2-r0                apk
 py3-packaging-pyc           23.2-r0                apk     
 py3-parsing                 3.1.1-r0               apk     
 py3-parsing-pyc             3.1.1-r0               apk     
-py3-pillow                  10.1.0-r1              apk     
-py3-pillow-pyc              10.1.0-r1              apk     
+py3-pillow                  10.2.0-r0              apk     
+py3-pillow-pyc              10.2.0-r0              apk     
 py3-pyhamcrest              2.0.4-r2               apk     
 py3-pyhamcrest-pyc          2.0.4-r2               apk     
 py3-pyserial                3.5-r6                 apk     
@@ -153,8 +153,8 @@ py3-service_identity        23.1.0-r0              apk
 py3-service_identity-pyc    23.1.0-r0              apk     
 py3-setproctitle            1.3.3-r0               apk     
 py3-setproctitle-pyc        1.3.3-r0               apk     
-py3-setuptools              68.2.2-r0              apk     
-py3-setuptools-pyc          68.2.2-r0              apk     
+py3-setuptools              69.0.3-r0              apk     
+py3-setuptools-pyc          69.0.3-r0              apk     
 py3-six                     1.16.0-r8              apk     
 py3-six-pyc                 1.16.0-r8              apk     
 py3-twisted                 22.10.0-r4             apk     
@@ -186,7 +186,7 @@ requests                    2.31.0                 python
 scanelf                     1.3.7-r2               apk     
 service-identity            23.1.0                 python  
 setproctitle                1.3.3                  python  
-setuptools                  68.2.2                 python  
+setuptools                  69.0.3                 python  
 shadow                      4.14.2-r0              apk     
 six                         1.16.0                 python  
 skalibs                     2.14.1.0-r0            apk     
