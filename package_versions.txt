@@ -172,8 +172,8 @@ py3-six                     1.16.0-r8              apk
 py3-six-pyc                 1.16.0-r8              apk           
 py3-twisted                 22.10.0-r4             apk           
 py3-twisted-pyc             22.10.0-r4             apk           
-py3-typing-extensions       4.9.0-r1               apk           
-py3-typing-extensions-pyc   4.9.0-r1               apk           
+py3-typing-extensions       4.10.0-r0              apk           
+py3-typing-extensions-pyc   4.10.0-r0              apk           
 py3-urllib3                 1.26.18-r0             apk           
 py3-urllib3-pyc             1.26.18-r0             apk           
 py3-wheel                   0.42.0-r0              apk           
@@ -211,7 +211,7 @@ sqlite-libs                 3.45.1-r0              apk
 ssl_client                  1.36.1-r19             apk           
 thread_local                1.1.7                  rust-crate    
 tiff                        4.6.0-r0               apk           
-typing_extensions           4.9.0                  python        
+typing_extensions           4.10.0                 python        
 tzdata                      2024a-r1               apk           
 urllib3                     1.26.18                python        
 utmps-libs                  0.1.2.2-r0             apk           
