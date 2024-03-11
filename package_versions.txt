@@ -16,8 +16,8 @@ bash                        5.2.26-r0              apk
 bitflags                    2.4.1                  rust-crate    
 boost1.82-python3           1.82.0-r4              apk           
 brotli-libs                 1.1.0-r1               apk           
-busybox                     1.36.1-r19             apk           
-busybox-binsh               1.36.1-r19             apk           
+busybox                     1.36.1-r20             apk           
+busybox-binsh               1.36.1-r20             apk           
 bytemuck                    1.14.0                 rust-crate    
 c-ares                      1.26.0-r0              apk           
 ca-certificates             20240226-r0            apk           
@@ -88,7 +88,7 @@ libwebpmux                  1.3.2-r0               apk
 libxau                      1.0.11-r3              apk           
 libxcb                      1.16-r0                apk           
 libxdmcp                    1.1.4-r3               apk           
-linux-pam                   1.5.3-r7               apk           
+linux-pam                   1.5.3-r8               apk           
 memoffset                   0.9.0                  rust-crate    
 mpdecimal                   4.0.0-r0               apk           
 musl                        1.2.5-r0               apk           
@@ -150,8 +150,8 @@ py3-openssl                 23.3.0-r0              apk
 py3-openssl-pyc             23.3.0-r0              apk           
 py3-packaging               23.2-r0                apk           
 py3-packaging-pyc           23.2-r0                apk           
-py3-parsing                 3.1.1-r0               apk           
-py3-parsing-pyc             3.1.1-r0               apk           
+py3-parsing                 3.1.2-r0               apk           
+py3-parsing-pyc             3.1.2-r0               apk           
 py3-pillow                  10.2.0-r1              apk           
 py3-pillow-pyc              10.2.0-r1              apk           
 py3-pyhamcrest              2.1.0-r0               apk           
@@ -187,7 +187,7 @@ pyasn1                      0.5.1                  python
 pyasn1-modules              0.3.0                  python        
 pyc                         3.11.8-r0              apk           
 pycparser                   2.21                   python        
-pyparsing                   3.1.1                  python        
+pyparsing                   3.1.2                  python        
 pyserial                    3.5                    python        
 python3                     3.11.8-r0              apk           
 python3-pyc                 3.11.8-r0              apk           
@@ -208,7 +208,7 @@ shadow                      4.14.4-r0              apk
 six                         1.16.0                 python        
 skalibs                     2.14.1.1-r0            apk           
 sqlite-libs                 3.45.1-r0              apk           
-ssl_client                  1.36.1-r19             apk           
+ssl_client                  1.36.1-r20             apk           
 thread_local                1.1.7                  rust-crate    
 tiff                        4.6.0-r0               apk           
 typing_extensions           4.10.0                 python        
@@ -216,7 +216,7 @@ tzdata                      2024a-r1               apk
 urllib3                     1.26.18                python        
 utmps-libs                  0.1.2.2-r0             apk           
 wheel                       0.42.0                 python        
-xz-libs                     5.4.6-r0               apk           
+xz-libs                     5.6.1-r1               apk           
 zlib                        1.3.1-r0               apk           
 zope.interface              6.0                    python        
 zstd-libs                   1.5.5-r8               apk           
