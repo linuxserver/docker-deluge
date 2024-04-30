@@ -38,8 +38,8 @@ crossbeam-utils             0.8.16                 rust-crate
 cryptography                42.0.5                 python        
 curl                        8.7.1-r0               apk           
 deluge                      2.1.1                  python        
-deluge                      2.1.1-r9               apk           
-deluge-pyc                  2.1.1-r9               apk           
+deluge                      2.1.1-r10              apk           
+deluge-pyc                  2.1.1-r10              apk           
 distro                      1.9.0                  python        
 either                      1.9.0                  rust-crate    
 findutils                   4.9.0-r5               apk           
