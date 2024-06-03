@@ -162,8 +162,8 @@ py3-pyserial                3.5-r7                 apk
 py3-pyserial-pyc            3.5-r7                 apk           
 py3-rencode                 1.0.6-r11              apk           
 py3-rencode-pyc             1.0.6-r11              apk           
-py3-requests                2.32.2-r0              apk           
-py3-requests-pyc            2.32.2-r0              apk           
+py3-requests                2.32.3-r0              apk           
+py3-requests-pyc            2.32.3-r0              apk           
 py3-service_identity        24.1.0-r1              apk           
 py3-service_identity-pyc    24.1.0-r1              apk           
 py3-setproctitle            1.3.3-r1               apk           
@@ -199,7 +199,7 @@ rayon                       1.8.0                  rust-crate
 rayon-core                  1.12.0                 rust-crate    
 readline                    8.2.10-r0              apk           
 rencode                     1.0.6                  python        
-requests                    2.32.2                 python        
+requests                    2.32.3                 python        
 rgb                         0.8.36                 rust-crate    
 scanelf                     1.3.7-r2               apk           
 scopeguard                  1.2.0                  rust-crate    
