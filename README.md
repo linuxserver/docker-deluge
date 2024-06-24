@@ -89,7 +89,7 @@ services:
       - DELUGE_LOGLEVEL=error #optional
     volumes:
       - /path/to/deluge/config:/config
-      - /path/to/your/downloads:/downloads
+      - /path/to/downloads:/downloads
     ports:
       - 8112:8112
       - 6881:6881
@@ -112,7 +112,7 @@ docker run -d \
   -p 6881:6881/udp \
   -p 58846:58846 `#optional` \
   -v /path/to/deluge/config:/config \
-  -v /path/to/your/downloads:/downloads \
+  -v /path/to/downloads:/downloads \
   --restart unless-stopped \
   lscr.io/linuxserver/deluge:latest
 ```

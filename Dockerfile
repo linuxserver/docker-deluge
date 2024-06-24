@@ -31,11 +31,12 @@ RUN \
     && awk '/^P:deluge$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://'); \
   fi && \
   apk add -U --upgrade --no-cache \
-    deluge==${DELUGE_VERSION} && \  
+    deluge==${DELUGE_VERSION} && \
   echo "**** grab GeoIP database ****" && \
   curl -L --retry 10 --retry-max-time 60 --retry-all-errors \
     "https://mailfud.org/geoip-legacy/GeoIP.dat.gz" \
     | gunzip > /usr/share/GeoIP/GeoIP.dat && \
+  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
   apk del --purge \
     build-dependencies && \
