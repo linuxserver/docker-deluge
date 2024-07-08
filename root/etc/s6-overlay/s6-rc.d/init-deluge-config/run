@@ -5,8 +5,11 @@ if [[ ! -f /config/core.conf ]]; then
     cp /defaults/core.conf /config/core.conf
 fi
 
+mkdir -p /run/deluged-temp
+
 # permissions
 lsiown -R abc:abc \
+    /run/deluged-temp \
     /config
 
 # chown download directory if currently not set to abc

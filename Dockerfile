@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/unrar:latest as unrar
+FROM ghcr.io/linuxserver/unrar:latest AS unrar
 
 FROM ghcr.io/linuxserver/baseimage-alpine:edge
 
@@ -12,7 +12,8 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="aptalca"
 
 # environment variables
-ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs"
+ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs" \
+  TMPDIR=/run/deluged-temp
 
 # install software
 RUN \
