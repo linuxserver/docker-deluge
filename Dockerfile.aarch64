@@ -13,7 +13,7 @@ LABEL maintainer="aptalca"
 
 # environment variables
 ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs" \
-  TMPDIR=/run/deluged
+  TMPDIR=/run/deluged-temp
 
 # install software
 RUN \
