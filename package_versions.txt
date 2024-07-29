@@ -2,12 +2,12 @@ NAME                        VERSION                TYPE
 7zip                        23.01-r0               apk           
 Automat                     22.10.0                python        
 GeoIP                       1.3.2                  python        
-Mako                        1.3.3                  python        
+Mako                        1.3.5                  python        
 MarkupSafe                  2.1.5                  python        
 PyHamcrest                  2.1.0                  python        
 Twisted                     22.10.0                python        
-alpine-baselayout           3.6.5-r0               apk           
-alpine-baselayout-data      3.6.5-r0               apk           
+alpine-baselayout           3.6.6-r0               apk           
+alpine-baselayout-data      3.6.6-r0               apk           
 alpine-keys                 2.4-r1                 apk           
 apk-tools                   2.14.4-r2              apk           
 arrayvec                    0.7.4                  rust-crate    
@@ -19,7 +19,7 @@ brotli-libs                 1.1.0-r2               apk
 busybox                     1.36.1-r31             apk           
 busybox-binsh               1.36.1-r31             apk           
 bytemuck                    1.14.0                 rust-crate    
-c-ares                      1.32.2-r0              apk           
+c-ares                      1.32.3-r0              apk           
 ca-certificates             20240705-r0            apk           
 ca-certificates-bundle      20240705-r0            apk           
 catatonit                   0.2.0-r0               apk           
@@ -36,8 +36,8 @@ coreutils-sha512sum         9.5-r1                 apk
 crossbeam-deque             0.8.3                  rust-crate    
 crossbeam-epoch             0.9.15                 rust-crate    
 crossbeam-utils             0.8.16                 rust-crate    
-cryptography                42.0.8                 python        
-curl                        8.8.0-r1               apk           
+cryptography                43.0.0                 python        
+curl                        8.9.0-r0               apk           
 deluge                      2.1.1                  python        
 deluge                      2.1.1-r10              apk           
 deluge-pyc                  2.1.1-r10              apk           
@@ -64,7 +64,7 @@ libbsd                      0.12.2-r0              apk
 libbz2                      1.0.8-r6               apk           
 libc                        0.2.149                rust-crate    
 libcrypto3                  3.3.1-r3               apk           
-libcurl                     8.8.0-r1               apk           
+libcurl                     8.9.0-r0               apk           
 libexpat                    2.6.2-r0               apk           
 libffi                      3.4.6-r0               apk           
 libgcc                      13.2.1_git20240309-r0  apk           
@@ -124,8 +124,8 @@ py3-constantly              23.10.4-r1             apk
 py3-constantly-pyc          23.10.4-r1             apk           
 py3-cparser                 2.22-r1                apk           
 py3-cparser-pyc             2.22-r1                apk           
-py3-cryptography            42.0.8-r0              apk           
-py3-cryptography-pyc        42.0.8-r0              apk           
+py3-cryptography            43.0.0-r0              apk           
+py3-cryptography-pyc        43.0.0-r0              apk           
 py3-distro                  1.9.0-r2               apk           
 py3-distro-pyc              1.9.0-r2               apk           
 py3-future                  1.0.0-r1               apk           
@@ -144,8 +144,8 @@ py3-idna-pyc                3.7-r0                 apk
 py3-incremental             22.10.0-r3             apk           
 py3-incremental-pyc         22.10.0-r3             apk           
 py3-libtorrent-rasterbar    2.0.10-r2              apk           
-py3-mako                    1.3.3-r0               apk           
-py3-mako-pyc                1.3.3-r0               apk           
+py3-mako                    1.3.5-r0               apk           
+py3-mako-pyc                1.3.5-r0               apk           
 py3-markupsafe              2.1.5-r1               apk           
 py3-markupsafe-pyc          2.1.5-r1               apk           
 py3-openssl                 24.1.0-r1              apk           
@@ -178,8 +178,8 @@ py3-typing-extensions       4.12.2-r0              apk
 py3-typing-extensions-pyc   4.12.2-r0              apk           
 py3-urllib3                 1.26.18-r1             apk           
 py3-urllib3-pyc             1.26.18-r1             apk           
-py3-wheel                   0.42.0-r1              apk           
-py3-wheel-pyc               0.42.0-r1              apk           
+py3-wheel                   0.43.0-r0              apk           
+py3-wheel-pyc               0.43.0-r0              apk           
 py3-xdg                     0.28-r3                apk           
 py3-xdg-pyc                 0.28-r3                apk           
 py3-zope-interface          6.0-r1                 apk           
@@ -217,7 +217,7 @@ typing_extensions           4.12.2                 python
 tzdata                      2024a-r1               apk           
 urllib3                     1.26.18                python        
 utmps-libs                  0.1.2.2-r1             apk           
-wheel                       0.42.0                 python        
+wheel                       0.43.0                 python        
 xz-libs                     5.6.2-r0               apk           
 zlib                        1.3.1-r1               apk           
 zope.interface              6.0                    python        
