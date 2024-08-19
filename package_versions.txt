@@ -2,7 +2,7 @@ NAME                        VERSION           TYPE
 7zip                        23.01-r0          apk           
 alpine-baselayout           3.6.6-r0          apk           
 alpine-baselayout-data      3.6.6-r0          apk           
-alpine-keys                 2.4-r1            apk           
+alpine-keys                 2.5-r0            apk           
 apk-tools                   2.14.4-r2         apk           
 arrayvec                    0.7.4             rust-crate    
 attrs                       23.2.0            python        
@@ -72,7 +72,7 @@ libmd                       1.1.0-r0          apk
 libncursesw                 6.5_p20240601-r0  apk           
 libpanelw                   6.5_p20240601-r0  apk           
 libpng                      1.6.43-r0         apk           
-libproc2                    4.0.4-r0          apk           
+libproc2                    4.0.4-r1          apk           
 libpsl                      0.21.5-r2         apk           
 libsharpyuv                 1.4.0-r0          apk           
 libssl3                     3.3.1-r3          apk           
@@ -101,7 +101,7 @@ oniguruma                   6.9.9-r0          apk
 openjpeg                    2.5.2-r0          apk           
 packaging                   24.1              python        
 pillow                      10.4.0            python        
-procps-ng                   4.0.4-r0          apk           
+procps-ng                   4.0.4-r1          apk           
 py3-asn1                    0.6.0-r1          apk           
 py3-asn1-modules            0.4.0-r0          apk           
 py3-asn1-modules-pyc        0.4.0-r0          apk           
@@ -184,15 +184,15 @@ py3-zope-interface          6.0-r1            apk
 py3-zope-interface-pyc      6.0-r1            apk           
 pyasn1                      0.6.0             python        
 pyasn1-modules              0.4.0             python        
-pyc                         3.12.4-r0         apk           
+pyc                         3.12.5-r0         apk           
 pycparser                   2.22              python        
 pyhamcrest                  2.1.0             python        
 pyopenssl                   24.1.0            python        
 pyparsing                   3.1.2             python        
 pyserial                    3.5               python        
-python3                     3.12.4-r0         apk           
-python3-pyc                 3.12.4-r0         apk           
-python3-pycache-pyc0        3.12.4-r0         apk           
+python3                     3.12.5-r0         apk           
+python3-pyc                 3.12.5-r0         apk           
+python3-pycache-pyc0        3.12.5-r0         apk           
 pyxdg                       0.28              python        
 rayon                       1.8.0             rust-crate    
 rayon-core                  1.12.0            rust-crate    
@@ -208,7 +208,7 @@ setuptools                  70.3.0            python
 shadow                      4.16.0-r0         apk           
 six                         1.16.0            python        
 skalibs                     2.14.2.0-r0       apk           
-sqlite-libs                 3.46.0-r0         apk           
+sqlite-libs                 3.46.1-r0         apk           
 ssl_client                  1.36.1-r31        apk           
 thread_local                1.1.7             rust-crate    
 tiff                        4.6.0t-r0         apk           
