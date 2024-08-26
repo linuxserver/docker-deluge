@@ -62,6 +62,15 @@ The architectures supported by this image are:
 | arm64 | ✅ | arm64v8-\<version tag\> |
 | armhf | ❌ | |
 
+## Version Tags
+
+This image provides various versions that are available via tags. Please read the descriptions carefully and exercise caution when using unstable or development tags.
+
+| Tag | Available | Description |
+| :----: | :----: |--- |
+| latest | ✅ | Stable Deluge releases |
+| libtorrentv1 | ✅ | Stable Deluge releases using libtorrentv1 |
+
 ## Application Setup
 
 The admin interface is available at `http://SERVER-IP:8112` with a default user/password of admin/deluge.
@@ -301,6 +310,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **26.08.24:** - Add libtorrentv1 tag.
 * **26.12.23:** - Replace source for GeoIP database.
 * **07.12.23:** - Add optional port 58846 to readme for thin client connectivity.
 * **07.10.23:** - Install unrar from [linuxserver repo](https://github.com/linuxserver/docker-unrar).
