@@ -18,6 +18,12 @@ available_architectures:
   - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
   - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 
+# development version
+development_versions: true
+development_versions_items:
+  - { tag: "latest", desc: "Stable Deluge releases" }
+  - { tag: "libtorrentv1", desc: "Stable Deluge releases using libtorrentv1" }
+
 # container parameters
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
@@ -50,6 +56,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "26.08.24:", desc: "Add libtorrentv1 tag." }
   - { date: "26.12.23:", desc: "Replace source for GeoIP database." }
   - { date: "07.12.23:", desc: "Add optional port 58846 to readme for thin client connectivity."}
   - { date: "07.10.23:", desc: "Install unrar from [linuxserver repo](https://github.com/linuxserver/docker-unrar)."}
