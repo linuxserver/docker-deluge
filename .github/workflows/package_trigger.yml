@@ -4,29 +4,29 @@ on:
   workflow_dispatch:
 
 jobs:
-  package-trigger-master:
+  package-trigger-libtorrentv1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.1.1
 
       - name: Package Trigger
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/libtorrentv1'
         run: |
           printf "# Package trigger for docker-deluge\n\n" >> $GITHUB_STEP_SUMMARY
-          if [ -n "${{ secrets.PAUSE_PACKAGE_TRIGGER_DELUGE_MASTER }}" ]; then
+          if [ -n "${{ secrets.PAUSE_PACKAGE_TRIGGER_DELUGE_LIBTORRENTV1 }}" ]; then
             echo "> [!WARNING]" >> $GITHUB_STEP_SUMMARY
-            echo "> Github secret \`PAUSE_PACKAGE_TRIGGER_DELUGE_MASTER\` is set; skipping trigger." >> $GITHUB_STEP_SUMMARY
+            echo "> Github secret \`PAUSE_PACKAGE_TRIGGER_DELUGE_LIBTORRENTV1\` is set; skipping trigger." >> $GITHUB_STEP_SUMMARY
             exit 0
           fi
-          if [ $(curl -s https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-deluge/job/master/lastBuild/api/json | jq -r '.building') == "true" ]; then
+          if [ $(curl -s https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-deluge/job/libtorrentv1/lastBuild/api/json | jq -r '.building') == "true" ]; then
             echo "> [!WARNING]" >> $GITHUB_STEP_SUMMARY
             echo "> There already seems to be an active build on Jenkins; skipping package trigger" >> $GITHUB_STEP_SUMMARY
             exit 0
           fi
           echo "> [!NOTE]" >> $GITHUB_STEP_SUMMARY
-          echo "> Package trigger running off of master branch. To disable, set a Github secret named \`PAUSE_PACKAGE_TRIGGER_DELUGE_MASTER\`" >> $GITHUB_STEP_SUMMARY
+          echo "> Package trigger running off of libtorrentv1 branch. To disable, set a Github secret named \`PAUSE_PACKAGE_TRIGGER_DELUGE_LIBTORRENTV1\`" >> $GITHUB_STEP_SUMMARY
           response=$(curl -iX POST \
-            https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-deluge/job/master/buildWithParameters?PACKAGE_CHECK=true \
+            https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-deluge/job/libtorrentv1/buildWithParameters?PACKAGE_CHECK=true \
             --user ${{ secrets.JENKINS_USER }}:${{ secrets.JENKINS_TOKEN }} | grep -i location | sed "s|^[L|l]ocation: \(.*\)|\1|")
           echo "Jenkins [job queue url](${response%$'\r'})" >> $GITHUB_STEP_SUMMARY
           echo "Sleeping 10 seconds until job starts" >> $GITHUB_STEP_SUMMARY

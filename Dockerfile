@@ -2,7 +2,9 @@
 
 FROM ghcr.io/linuxserver/unrar:latest AS unrar
 
-FROM ghcr.io/linuxserver/baseimage-alpine:edge
+FROM ghcr.io/by275/libtorrent:1-alpine3.20 AS libtorrent
+
+FROM ghcr.io/linuxserver/baseimage-alpine:3.20
 
 # set version label
 ARG BUILD_DATE
@@ -19,20 +21,25 @@ ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs" \
 RUN \
   echo "**** install build packages ****" && \
   apk add --no-cache --upgrade --virtual=build-dependencies \
-    build-base && \
+    build-base \
+    python3-dev && \
   echo "**** install packages ****" && \
-  apk add --no-cache --upgrade --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+  apk add --no-cache --upgrade \
+    boost1.84-python3 \
+    geoip \
     python3 \
-    py3-future \
-    py3-geoip \
-    py3-requests \
     p7zip && \
   if [ -z ${DELUGE_VERSION+x} ]; then \
-    DELUGE_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/edge/community/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
-    && awk '/^P:deluge$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://'); \
+    DELUGE_VERSION=$(curl -sL  https://pypi.python.org/pypi/deluge/json |jq -r '. | .info.version');\
   fi && \
-  apk add -U --upgrade --no-cache \
-    deluge==${DELUGE_VERSION} && \
+  python3 -m venv /lsiopy && \
+  pip install -U --no-cache-dir \
+    pip \
+    setuptools \
+    wheel && \
+  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.20/ \
+    deluge[all]==${DELUGE_VERSION} \
+    pygeoip && \
   echo "**** grab GeoIP database ****" && \
   curl -L --retry 10 --retry-max-time 60 --retry-all-errors \
     "https://mailfud.org/geoip-legacy/GeoIP.dat.gz" \
@@ -44,6 +51,10 @@ RUN \
   rm -rf \
     $HOME/.cache \
     /tmp/*
+
+  COPY --from=libtorrent /libtorrent-build/usr/lib/libtorrent-rasterbar.* /usr/lib/
+
+  COPY --from=libtorrent /libtorrent-build/usr/lib/python3.12 /lsiopy/lib/python3.12
 
 # add local files
 COPY root/ /

@@ -2,12 +2,13 @@
 
 # jenkins variables
 project_name: docker-deluge
-external_type: alpine_repo
-release_type: stable
-release_tag: latest
-ls_branch: master
+external_type: pip_version
+release_type: prerelease
+release_tag: libtorrentv1
+ls_branch: libtorrentv1
 repo_vars:
   - BUILD_VERSION_ARG = 'DELUGE_VERSION'
+  - EXT_PIP='deluge'
   - LS_USER = 'linuxserver'
   - LS_REPO = 'docker-deluge'
   - CONTAINER_NAME = 'deluge'
@@ -15,9 +16,6 @@ repo_vars:
   - DEV_DOCKERHUB_IMAGE = 'lsiodev/deluge'
   - PR_DOCKERHUB_IMAGE = 'lspipepr/deluge'
   - DIST_IMAGE = 'alpine'
-  - DIST_TAG = 'edge'
-  - DIST_REPO = 'http://dl-cdn.alpinelinux.org/alpine/edge/community/'
-  - DIST_REPO_PACKAGES = 'deluge'
   - MULTIARCH='true'
   - CI='true'
   - CI_WEB='true'
