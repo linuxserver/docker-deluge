@@ -27,7 +27,7 @@ coreutils-env           9.5-r1                 apk
 coreutils-fmt           9.5-r1                 apk                      
 coreutils-sha512sum     9.5-r1                 apk                      
 cryptography            43.0.0                 python                   
-curl                    8.9.0-r0               apk                      
+curl                    8.9.1-r1               apk                      
 deluge                  2.1.1                  python                   
 findutils               4.9.0-r5               apk                      
 gdbm                    1.23-r1                apk                      
@@ -48,7 +48,7 @@ libattr                 2.5.2-r0               apk
 libbsd                  0.12.2-r0              apk                      
 libbz2                  1.0.8-r6               apk                      
 libcrypto3              3.3.1-r3               apk                      
-libcurl                 8.9.0-r0               apk                      
+libcurl                 8.9.1-r1               apk                      
 libexpat                2.6.2-r0               apk                      
 libffi                  3.4.6-r0               apk                      
 libgcc                  13.2.1_git20240309-r0  apk                      
@@ -94,7 +94,7 @@ rencode                 1.0.6                  python
 scanelf                 1.3.7-r2               apk                      
 service-identity        24.1.0                 python                   
 setproctitle            1.3.3                  python                   
-setuptools              73.0.1                 python                   
+setuptools              74.0.0                 python                   
 shadow                  4.15.1-r0              apk                      
 skalibs                 2.14.1.1-r0            apk                      
 sqlite-libs             3.45.3-r1              apk                      
@@ -110,5 +110,5 @@ wheel                   0.44.0                 python
 xz-libs                 5.6.2-r0               apk                      
 zipp                    3.19.2                 python                   
 zlib                    1.3.1-r1               apk                      
-zope-interface          7.0.1                  python                   
+zope-interface          7.0.3                  python                   
 zstd-libs               1.5.6-r0               apk                      
