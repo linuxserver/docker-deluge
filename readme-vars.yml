@@ -56,6 +56,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "19.09.24:", desc: "Prevent race condition related delay during container stop." }
   - { date: "26.08.24:", desc: "Add libtorrentv1 tag." }
   - { date: "26.12.23:", desc: "Replace source for GeoIP database." }
   - { date: "07.12.23:", desc: "Add optional port 58846 to readme for thin client connectivity."}
