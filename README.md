@@ -310,6 +310,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **19.09.24:** - Prevent race condition related delay during container stop.
 * **26.08.24:** - Add libtorrentv1 tag.
 * **26.12.23:** - Replace source for GeoIP database.
 * **07.12.23:** - Add optional port 58846 to readme for thin client connectivity.
