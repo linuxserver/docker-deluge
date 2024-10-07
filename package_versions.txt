@@ -82,13 +82,13 @@ platformdirs            4.2.2                  python
 procps-ng               4.0.4-r0               apk                      
 pyasn1                  0.6.1                  python                   
 pyasn1-modules          0.4.1                  python                   
-pyc                     3.12.6-r0              apk                      
+pyc                     3.12.7-r0              apk                      
 pycparser               2.22                   python                   
 pygeoip                 0.3.2                  python                   
 pyopenssl               24.2.1                 python                   
-python3                 3.12.6-r0              apk                      
-python3-pyc             3.12.6-r0              apk                      
-python3-pycache-pyc0    3.12.6-r0              apk                      
+python3                 3.12.7-r0              apk                      
+python3-pyc             3.12.7-r0              apk                      
+python3-pycache-pyc0    3.12.7-r0              apk                      
 pyxdg                   0.28                   python                   
 readline                8.2.10-r0              apk                      
 rencode                 1.0.6                  python                   
