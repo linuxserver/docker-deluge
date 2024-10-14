@@ -88,7 +88,7 @@ libxcb                      1.16.1-r0         apk
 libxdmcp                    1.1.5-r1          apk           
 linux-pam                   1.6.1-r1          apk           
 mako                        1.3.5             python        
-markupsafe                  2.1.5             python        
+markupsafe                  3.0.1             python        
 memoffset                   0.9.0             rust-crate    
 mpdecimal                   4.0.0-r0          apk           
 musl                        1.2.5-r5          apk           
@@ -144,8 +144,8 @@ py3-incremental-pyc         22.10.0-r3        apk
 py3-libtorrent-rasterbar    2.0.10-r2         apk           
 py3-mako                    1.3.5-r1          apk           
 py3-mako-pyc                1.3.5-r1          apk           
-py3-markupsafe              2.1.5-r2          apk           
-py3-markupsafe-pyc          2.1.5-r2          apk           
+py3-markupsafe              3.0.1-r0          apk           
+py3-markupsafe-pyc          3.0.1-r0          apk           
 py3-openssl                 24.1.0-r1         apk           
 py3-openssl-pyc             24.1.0-r1         apk           
 py3-packaging               24.1-r0           apk           
