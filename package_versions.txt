@@ -69,8 +69,8 @@ libimagequant               4.2.2-r0          apk
 libintl                     0.22.5-r0         apk           
 libjpeg-turbo               3.0.4-r0          apk           
 libmd                       1.1.0-r0          apk           
-libncursesw                 6.5_p20241006-r0  apk           
-libpanelw                   6.5_p20241006-r0  apk           
+libncursesw                 6.5_p20241006-r2  apk           
+libpanelw                   6.5_p20241006-r2  apk           
 libpng                      1.6.44-r0         apk           
 libproc2                    4.0.4-r2          apk           
 libpsl                      0.21.5-r2         apk           
@@ -93,7 +93,7 @@ memoffset                   0.9.0             rust-crate
 mpdecimal                   4.0.0-r0          apk           
 musl                        1.2.5-r5          apk           
 musl-utils                  1.2.5-r3          apk           
-ncurses-terminfo-base       6.5_p20241006-r0  apk           
+ncurses-terminfo-base       6.5_p20241006-r2  apk           
 netcat-openbsd              1.226-r0          apk           
 nghttp2-libs                1.63.0-r0         apk           
 once_cell                   1.18.0            rust-crate    
@@ -102,10 +102,10 @@ openjpeg                    2.5.2-r0          apk
 packaging                   24.1              python        
 pillow                      11.0.0            python        
 procps-ng                   4.0.4-r2          apk           
-py3-asn1                    0.6.0-r1          apk           
+py3-asn1                    0.6.1-r0          apk           
 py3-asn1-modules            0.4.1-r0          apk           
 py3-asn1-modules-pyc        0.4.1-r0          apk           
-py3-asn1-pyc                0.6.0-r1          apk           
+py3-asn1-pyc                0.6.1-r0          apk           
 py3-attrs                   24.2.0-r0         apk           
 py3-attrs-pyc               24.2.0-r0         apk           
 py3-automat                 22.10.0-r3        apk           
@@ -182,7 +182,7 @@ py3-xdg                     0.28-r3           apk
 py3-xdg-pyc                 0.28-r3           apk           
 py3-zope-interface          6.0-r1            apk           
 py3-zope-interface-pyc      6.0-r1            apk           
-pyasn1                      0.6.0             python        
+pyasn1                      0.6.1             python        
 pyasn1-modules              0.4.1             python        
 pyc                         3.12.7-r1         apk           
 pycparser                   2.22              python        
