@@ -61,7 +61,7 @@ libbz2                      1.0.8-r6          apk
 libc                        0.2.149           rust-crate    
 libcrypto3                  3.3.2-r3          apk           
 libcurl                     8.9.1-r2          apk           
-libexpat                    2.6.3-r0          apk           
+libexpat                    2.6.4-r0          apk           
 libffi                      3.4.6-r0          apk           
 libgcc                      14.2.0-r4         apk           
 libidn2                     2.3.7-r0          apk           
@@ -99,7 +99,7 @@ nghttp2-libs                1.63.0-r0         apk
 once_cell                   1.18.0            rust-crate    
 oniguruma                   6.9.9-r0          apk           
 openjpeg                    2.5.2-r0          apk           
-packaging                   24.1              python        
+packaging                   24.2              python        
 pillow                      11.0.0            python        
 procps-ng                   4.0.4-r2          apk           
 py3-asn1                    0.6.1-r0          apk           
@@ -148,8 +148,8 @@ py3-markupsafe              3.0.2-r0          apk
 py3-markupsafe-pyc          3.0.2-r0          apk           
 py3-openssl                 24.1.0-r1         apk           
 py3-openssl-pyc             24.1.0-r1         apk           
-py3-packaging               24.1-r0           apk           
-py3-packaging-pyc           24.1-r0           apk           
+py3-packaging               24.2-r0           apk           
+py3-packaging-pyc           24.2-r0           apk           
 py3-parsing                 3.1.4-r0          apk           
 py3-parsing-pyc             3.1.4-r0          apk           
 py3-pillow                  11.0.0-r0         apk           
