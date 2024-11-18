@@ -36,7 +36,6 @@ hyperlink               21.0.0                 python
 idna                    3.10                   python                   
 ifaddr                  0.2.0                  python                   
 importlib-metadata      8.0.0                  python                   
-importlib-resources     6.4.0                  python                   
 incremental             24.7.2                 python                   
 inflect                 7.3.1                  python                   
 jaraco-collections      5.1.0                  python                   
@@ -56,8 +55,8 @@ libgcc                  13.2.1_git20240309-r0  apk
 libidn2                 2.3.7-r0               apk                      
 libintl                 0.22.5-r0              apk                      
 libmd                   1.1.0-r0               apk                      
-libncursesw             6.4_p20240420-r1       apk                      
-libpanelw               6.4_p20240420-r1       apk                      
+libncursesw             6.4_p20240420-r2       apk                      
+libpanelw               6.4_p20240420-r2       apk                      
 libproc2                4.0.4-r0               apk                      
 libpsl                  0.21.5-r1              apk                      
 libssl3                 3.3.2-r1               apk                      
@@ -71,11 +70,11 @@ mpdecimal               4.0.0-r0               apk
 musl                    1.2.5-r0               apk                      
 musl-utils              1.2.5-r0               apk                      
 my-test-package         1.0                    python                   
-ncurses-terminfo-base   6.4_p20240420-r1       apk                      
+ncurses-terminfo-base   6.4_p20240420-r2       apk                      
 netcat-openbsd          1.226-r0               apk                      
 nghttp2-libs            1.62.1-r0              apk                      
 oniguruma               6.9.9-r0               apk                      
-packaging               24.1                   python                   
+packaging               24.2                   python                   
 pillow                  11.0.0                 python                   
 pip                     24.3.1                 python                   
 platformdirs            4.2.2                  python                   
@@ -94,8 +93,8 @@ readline                8.2.10-r0              apk
 rencode                 1.0.6                  python                   
 scanelf                 1.3.7-r2               apk                      
 service-identity        24.2.0                 python                   
-setproctitle            1.3.3                  python                   
-setuptools              75.3.0                 python                   
+setproctitle            1.3.4                  python                   
+setuptools              75.5.0                 python                   
 shadow                  4.15.1-r0              apk                      
 skalibs                 2.14.1.1-r0            apk                      
 sqlite-libs             3.45.3-r1              apk                      
