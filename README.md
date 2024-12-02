@@ -79,7 +79,6 @@ To change the password (recommended) log in to the web interface and go to Prefe
 
 Change the inbound port to 6881 (or whichever port you've mapped for the container) under Preferences->Network, otherwise random ports will be used.
 
- 
 ## Read-Only Operation
 
 This image can be run with a read-only container filesystem. For details please [read the docs](https://docs.linuxserver.io/misc/read-only/).
@@ -87,6 +86,9 @@ This image can be run with a read-only container filesystem. For details please 
 ## Usage
 
 To help you get started creating a container from this image you can either use docker-compose or the docker cli.
+
+>[!NOTE]
+>Unless a parameter is flaged as 'optional', it is *mandatory* and a value must be provided.
 
 ### docker-compose (recommended, [click here for more info](https://docs.linuxserver.io/general/docker-compose))
 
@@ -137,9 +139,9 @@ Containers are configured using parameters passed at runtime (such as those abov
 
 | Parameter | Function |
 | :----: | --- |
-| `-p 8112` | Port for webui |
-| `-p 6881` | Inbound torrent traffic (See App Setup) |
-| `-p 6881/udp` | Inbound torrent traffic (See App Setup) |
+| `-p 8112:8112` | Port for webui |
+| `-p 6881:6881` | Inbound torrent traffic (See App Setup) |
+| `-p 6881:6881/udp` | Inbound torrent traffic (See App Setup) |
 | `-p 58846` | Default deluged port for thin client connectivity |
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
