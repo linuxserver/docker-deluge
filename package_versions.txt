@@ -32,7 +32,7 @@ coreutils-sha512sum         9.5-r1            apk
 crossbeam-deque             0.8.3             rust-crate    
 crossbeam-epoch             0.9.15            rust-crate    
 crossbeam-utils             0.8.16            rust-crate    
-cryptography                43.0.3            python        
+cryptography                44.0.0            python        
 curl                        8.11.0-r2         apk           
 deluge                      2.1.1             python        
 deluge                      2.1.1-r10         apk           
@@ -122,8 +122,8 @@ py3-constantly              23.10.4-r1        apk
 py3-constantly-pyc          23.10.4-r1        apk           
 py3-cparser                 2.22-r1           apk           
 py3-cparser-pyc             2.22-r1           apk           
-py3-cryptography            43.0.3-r0         apk           
-py3-cryptography-pyc        43.0.3-r0         apk           
+py3-cryptography            44.0.0-r0         apk           
+py3-cryptography-pyc        44.0.0-r0         apk           
 py3-distro                  1.9.0-r2          apk           
 py3-distro-pyc              1.9.0-r2          apk           
 py3-future                  1.0.0-r1          apk           
@@ -208,7 +208,7 @@ setuptools                  70.3.0            python
 shadow                      4.16.0-r1         apk           
 six                         1.16.0            python        
 skalibs-libs                2.14.3.0-r0       apk           
-sqlite-libs                 3.47.0-r0         apk           
+sqlite-libs                 3.47.1-r0         apk           
 ssl_client                  1.37.0-r7         apk           
 thread_local                1.1.7             rust-crate    
 tiff                        4.7.0-r0          apk           
