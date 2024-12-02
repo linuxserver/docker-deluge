@@ -12,39 +12,34 @@ project_blurb: |
   * Plugin System
   * Much more...
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
-
 # supported architectures
 available_architectures:
-  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
-  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
-
+  - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - {arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 # development version
 development_versions: true
 development_versions_items:
-  - { tag: "latest", desc: "Stable Deluge releases" }
-  - { tag: "libtorrentv1", desc: "Stable Deluge releases using libtorrentv1" }
-
+  - {tag: "latest", desc: "Stable Deluge releases"}
+  - {tag: "libtorrentv1", desc: "Stable Deluge releases using libtorrentv1"}
 # container parameters
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "deluge configs" }
-  - { vol_path: "/downloads", vol_host_path: "/path/to/downloads", desc: "torrent download directory" }
+  - {vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "deluge configs"}
+  - {vol_path: "/downloads", vol_host_path: "/path/to/downloads", desc: "torrent download directory"}
 param_usage_include_ports: true
 param_ports:
-  - { external_port: "8112", internal_port: "8112", port_desc: "Port for webui" }
-  - { external_port: "6881", internal_port: "6881", port_desc: "Inbound torrent traffic (See App Setup)" }
-  - { external_port: "6881", internal_port: "6881/udp", port_desc: "Inbound torrent traffic (See App Setup)" }
+  - {external_port: "8112", internal_port: "8112", port_desc: "Port for webui"}
+  - {external_port: "6881", internal_port: "6881", port_desc: "Inbound torrent traffic (See App Setup)"}
+  - {external_port: "6881", internal_port: "6881/udp", port_desc: "Inbound torrent traffic (See App Setup)"}
 # optional env variables
 opt_param_usage_include_env: true
 opt_param_env_vars:
-  - { env_var: "DELUGE_LOGLEVEL", env_value: "error", desc: "set the loglevel output when running Deluge, default is info for deluged and warning for delgued-web"}
+  - {env_var: "DELUGE_LOGLEVEL", env_value: "error", desc: "set the loglevel output when running Deluge, default is info for deluged and warning for delgued-web"}
 opt_param_usage_include_ports: true
 opt_param_ports:
-  - { external_port: "58846", internal_port: "58846", port_desc: "Default deluged port for thin client connectivity"}
-
+  - {external_port: "58846", internal_port: "58846", port_desc: "Default deluged port for thin client connectivity"}
 readonly_supported: true
-
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -53,48 +48,89 @@ app_setup_block: |
   To change the password (recommended) log in to the web interface and go to Preferences->Interface->Password.
 
   Change the inbound port to 6881 (or whichever port you've mapped for the container) under Preferences->Network, otherwise random ports will be used.
-
+# init diagram
+init_diagram: |
+  "deluge:latest": {
+    docker-mods
+    base {
+      fix-attr +\nlegacy cont-init
+    }
+    docker-mods -> base
+    legacy-services
+    custom services
+    init-services -> legacy-services
+    init-services -> custom services
+    custom services -> legacy-services
+    legacy-services -> ci-service-check
+    init-migrations -> init-adduser
+    init-os-end -> init-config
+    init-config -> init-config-end
+    init-crontab-config -> init-config-end
+    init-deluge-config -> init-config-end
+    init-config -> init-crontab-config
+    init-mods-end -> init-custom-files
+    init-config -> init-deluge-config
+    base -> init-envfile
+    base -> init-migrations
+    init-config-end -> init-mods
+    init-mods-package-install -> init-mods-end
+    init-mods -> init-mods-package-install
+    init-adduser -> init-os-end
+    init-envfile -> init-os-end
+    init-custom-files -> init-services
+    init-services -> svc-cron
+    svc-cron -> legacy-services
+    init-services -> svc-deluge-web
+    svc-deluged -> svc-deluge-web
+    svc-deluge-web -> legacy-services
+    init-services -> svc-deluged
+    svc-deluged -> legacy-services
+  }
+  Base Images: {
+    "baseimage-alpine:edge"
+  }
+  "deluge:latest" <- Base Images
 # changelog
 changelogs:
-  - { date: "19.09.24:", desc: "Prevent race condition related delay during container stop." }
-  - { date: "26.08.24:", desc: "Add libtorrentv1 tag." }
-  - { date: "26.12.23:", desc: "Replace source for GeoIP database." }
-  - { date: "07.12.23:", desc: "Add optional port 58846 to readme for thin client connectivity."}
-  - { date: "07.10.23:", desc: "Install unrar from [linuxserver repo](https://github.com/linuxserver/docker-unrar)."}
-  - { date: "10.08.23:", desc: "Bump unrar to 6.2.10."}
-  - { date: "30.06.23:", desc: "Bump unrar to 6.2.8, deprecate armhf as per [https://www.linuxserver.io/armhf](https://www.linuxserver.io/armhf)." }
-  - { date: "29.11.22:", desc: "Restore geoip using py3-geoip as an interim measure." }
-  - { date: "24.11.22:", desc: "Remove GeoIP packages as geoip will not build under Py 3.11 and Deluge still doesn't support geoip2." }
-  - { date: "22.11.22:", desc: "Update GeoIP URL for new IPFS domain." }
-  - { date: "29.08.22:", desc: "Rebase to Alpine Edge again to follow latest releases." }
-  - { date: "12.08.22:", desc: "Bump unrar to 6.1.7." }
-  - { date: "16.06.22:", desc: "Rebase to Alpine 3.16 from edge." }
-  - { date: "22.02.22:", desc: "Rebase to Alpine, config on first startup, add GeoIP." }
-  - { date: "15.01.22:", desc: "Rebase to Focal." }
-  - { date: "07.06.21:", desc: "Remove host networking from readme examples" }
-  - { date: "23.01.21:", desc: "Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information." }
-  - { date: "09.05.19:", desc: "Add python3 requests and future modules." }
-  - { date: "24.08.19:", desc: "Add ability to set LogLevel for Deluge." }
-  - { date: "09.06.19:", desc: "Update to 2.x using deluge ppa." }
-  - { date: "02.05.19:", desc: "Install full version of 7zip." }
-  - { date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag." }
-  - { date: "15.11.18:", desc: "Add deluge-console." }
-  - { date: "11.11.18:", desc: "Rebase to Ubuntu Bionic, add pipeline multiarch logic." }
-  - { date: "09.04.18:", desc: "update to libressl2.7-libssl." }
-  - { date: "29.03.18:", desc: "Rebase to alpine edge." }
-  - { date: "07.12.17:", desc: "Rebase to alpine 3.7." }
-  - { date: "20.11.17:", desc: "Change libressl2.6-libssl repo." }
-  - { date: "01.07.17:", desc: "Add curl package." }
-  - { date: "26.05.17:", desc: "Rebase to alpine 3.6." }
-  - { date: "29.04.17:", desc: "Add variable for user defined umask." }
-  - { date: "28.04.17:", desc: "update to libressl2.5-libssl." }
-  - { date: "28.12.16:", desc: "Rebase to alpine 3.5 baseimage." }
-  - { date: "17.11.16:", desc: "Rebase to edge baseimage." }
-  - { date: "13.10.16:", desc: "Switch to libressl as openssl deprecated from alpine linux and deluge dependency no longer installs" }
-  - { date: "30.09.16:", desc: "Fix umask." }
-  - { date: "09.09.16:", desc: "Add layer badges to README." }
-  - { date: "30.08.16:", desc: "Use pip packages for some critical dependencies." }
-  - { date: "28.08.16:", desc: "Add badges to README." }
-  - { date: "15.08.16:", desc: "Rebase to alpine linux." }
-  - { date: "09.11.15:", desc: "Add unrar and unzip" }
-  - { date: "15.10.15:", desc: "Initial Release." }
+  - {date: "19.09.24:", desc: "Prevent race condition related delay during container stop."}
+  - {date: "26.08.24:", desc: "Add libtorrentv1 tag."}
+  - {date: "26.12.23:", desc: "Replace source for GeoIP database."}
+  - {date: "07.12.23:", desc: "Add optional port 58846 to readme for thin client connectivity."}
+  - {date: "07.10.23:", desc: "Install unrar from [linuxserver repo](https://github.com/linuxserver/docker-unrar)."}
+  - {date: "10.08.23:", desc: "Bump unrar to 6.2.10."}
+  - {date: "30.06.23:", desc: "Bump unrar to 6.2.8, deprecate armhf as per [https://www.linuxserver.io/armhf](https://www.linuxserver.io/armhf)."}
+  - {date: "29.11.22:", desc: "Restore geoip using py3-geoip as an interim measure."}
+  - {date: "24.11.22:", desc: "Remove GeoIP packages as geoip will not build under Py 3.11 and Deluge still doesn't support geoip2."}
+  - {date: "22.11.22:", desc: "Update GeoIP URL for new IPFS domain."}
+  - {date: "29.08.22:", desc: "Rebase to Alpine Edge again to follow latest releases."}
+  - {date: "12.08.22:", desc: "Bump unrar to 6.1.7."}
+  - {date: "16.06.22:", desc: "Rebase to Alpine 3.16 from edge."}
+  - {date: "22.02.22:", desc: "Rebase to Alpine, config on first startup, add GeoIP."}
+  - {date: "15.01.22:", desc: "Rebase to Focal."}
+  - {date: "07.06.21:", desc: "Remove host networking from readme examples"}
+  - {date: "23.01.21:", desc: "Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information."}
+  - {date: "09.05.19:", desc: "Add python3 requests and future modules."}
+  - {date: "24.08.19:", desc: "Add ability to set LogLevel for Deluge."}
+  - {date: "09.06.19:", desc: "Update to 2.x using deluge ppa."}
+  - {date: "02.05.19:", desc: "Install full version of 7zip."}
+  - {date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag."}
+  - {date: "15.11.18:", desc: "Add deluge-console."}
+  - {date: "11.11.18:", desc: "Rebase to Ubuntu Bionic, add pipeline multiarch logic."}
+  - {date: "09.04.18:", desc: "update to libressl2.7-libssl."}
+  - {date: "29.03.18:", desc: "Rebase to alpine edge."}
+  - {date: "07.12.17:", desc: "Rebase to alpine 3.7."}
+  - {date: "20.11.17:", desc: "Change libressl2.6-libssl repo."}
+  - {date: "01.07.17:", desc: "Add curl package."}
+  - {date: "26.05.17:", desc: "Rebase to alpine 3.6."}
+  - {date: "29.04.17:", desc: "Add variable for user defined umask."}
+  - {date: "28.04.17:", desc: "update to libressl2.5-libssl."}
+  - {date: "28.12.16:", desc: "Rebase to alpine 3.5 baseimage."}
+  - {date: "17.11.16:", desc: "Rebase to edge baseimage."}
+  - {date: "13.10.16:", desc: "Switch to libressl as openssl deprecated from alpine linux and deluge dependency no longer installs"}
+  - {date: "30.09.16:", desc: "Fix umask."}
+  - {date: "09.09.16:", desc: "Add layer badges to README."}
+  - {date: "30.08.16:", desc: "Use pip packages for some critical dependencies."}
+  - {date: "28.08.16:", desc: "Add badges to README."}
+  - {date: "15.08.16:", desc: "Rebase to alpine linux."}
+  - {date: "09.11.15:", desc: "Add unrar and unzip"}
+  - {date: "15.10.15:", desc: "Initial Release."}
