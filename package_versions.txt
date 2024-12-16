@@ -6,7 +6,7 @@ alpine-baselayout-data  3.6.5-r0               apk
 alpine-keys             2.4-r1                 apk                      
 alpine-release          3.20.3-r0              apk                      
 apk-tools               2.14.4-r1              apk                      
-attrs                   24.2.0                 python                   
+attrs                   24.3.0                 python                   
 autocommand             2.2.2                  python                   
 automat                 24.8.1                 python                   
 backports-tarfile       1.2.0                  python                   
@@ -27,7 +27,7 @@ coreutils-env           9.5-r1                 apk
 coreutils-fmt           9.5-r1                 apk                      
 coreutils-sha512sum     9.5-r1                 apk                      
 cryptography            44.0.0                 python                   
-curl                    8.11.0-r2              apk                      
+curl                    8.11.1-r0              apk                      
 deluge                  2.1.1                  python                   
 findutils               4.9.0-r5               apk                      
 gdbm                    1.23-r1                apk                      
@@ -48,7 +48,7 @@ libattr                 2.5.2-r0               apk
 libbsd                  0.12.2-r0              apk                      
 libbz2                  1.0.8-r6               apk                      
 libcrypto3              3.3.2-r1               apk                      
-libcurl                 8.11.0-r2              apk                      
+libcurl                 8.11.1-r0              apk                      
 libexpat                2.6.4-r0               apk                      
 libffi                  3.4.6-r0               apk                      
 libgcc                  13.2.1_git20240309-r0  apk                      
