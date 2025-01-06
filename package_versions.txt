@@ -1,8 +1,8 @@
 NAME                        VERSION           TYPE         
 7zip                        24.09-r0          apk           
 acl-libs                    2.3.2-r1          apk           
-alpine-baselayout           3.6.8-r0          apk           
-alpine-baselayout-data      3.6.8-r0          apk           
+alpine-baselayout           3.6.8-r1          apk           
+alpine-baselayout-data      3.6.8-r1          apk           
 alpine-keys                 2.5-r0            apk           
 apk-tools                   2.14.7-r0         apk           
 arrayvec                    0.7.4             rust-crate    
@@ -16,8 +16,8 @@ busybox                     1.37.0-r10        apk
 busybox-binsh               1.37.0-r10        apk           
 bytemuck                    1.14.0            rust-crate    
 c-ares                      1.34.4-r0         apk           
-ca-certificates             20241010-r0       apk           
-ca-certificates-bundle      20241010-r0       apk           
+ca-certificates             20241121-r0       apk           
+ca-certificates-bundle      20241121-r0       apk           
 catatonit                   0.2.0-r0          apk           
 certifi                     2024.12.14        python        
 cffi                        1.17.1            python        
@@ -63,11 +63,11 @@ libcrypto3                  3.3.2-r4          apk
 libcurl                     8.11.1-r0         apk           
 libexpat                    2.6.4-r0          apk           
 libffi                      3.4.6-r0          apk           
-libgcc                      14.2.0-r4         apk           
+libgcc                      14.2.0-r5         apk           
 libidn2                     2.3.7-r0          apk           
 libimagequant               4.2.2-r0          apk           
 libintl                     0.22.5-r0         apk           
-libjpeg-turbo               3.0.4-r0          apk           
+libjpeg-turbo               3.1.0-r0          apk           
 libmd                       1.1.0-r0          apk           
 libncursesw                 6.5_p20241006-r3  apk           
 libpanelw                   6.5_p20241006-r3  apk           
@@ -76,10 +76,10 @@ libproc2                    4.0.4-r2          apk
 libpsl                      0.21.5-r3         apk           
 libsharpyuv                 1.5.0-r0          apk           
 libssl3                     3.3.2-r4          apk           
-libstdc++                   14.2.0-r4         apk           
+libstdc++                   14.2.0-r5         apk           
 libtorrent                  2.0.10            python        
 libtorrent-rasterbar        2.0.10-r3         apk           
-libunistring                1.2-r0            apk           
+libunistring                1.3-r0            apk           
 libwebp                     1.5.0-r0          apk           
 libwebpdemux                1.5.0-r0          apk           
 libwebpmux                  1.5.0-r0          apk           
@@ -91,7 +91,7 @@ mako                        1.3.8             python
 markupsafe                  3.0.2             python        
 memoffset                   0.9.0             rust-crate    
 mpdecimal                   4.0.0-r0          apk           
-musl                        1.2.5-r8          apk           
+musl                        1.2.5-r9          apk           
 musl-utils                  1.2.5-r8          apk           
 ncurses-terminfo-base       6.5_p20241006-r3  apk           
 netcat-openbsd              1.226.1.1-r0      apk           
@@ -100,7 +100,7 @@ once_cell                   1.18.0            rust-crate
 oniguruma                   6.9.9-r0          apk           
 openjpeg                    2.5.3-r0          apk           
 packaging                   24.2              python        
-pillow                      11.0.0            python        
+pillow                      11.1.0            python        
 procps-ng                   4.0.4-r2          apk           
 py3-asn1                    0.6.1-r0          apk           
 py3-asn1-modules            0.4.1-r0          apk           
@@ -152,8 +152,8 @@ py3-packaging               24.2-r0           apk
 py3-packaging-pyc           24.2-r0           apk           
 py3-parsing                 3.2.0-r0          apk           
 py3-parsing-pyc             3.2.0-r0          apk           
-py3-pillow                  11.0.0-r0         apk           
-py3-pillow-pyc              11.0.0-r0         apk           
+py3-pillow                  11.1.0-r0         apk           
+py3-pillow-pyc              11.1.0-r0         apk           
 py3-pyhamcrest              2.1.0-r1          apk           
 py3-pyhamcrest-pyc          2.1.0-r1          apk           
 py3-pyserial                3.5-r7            apk           
