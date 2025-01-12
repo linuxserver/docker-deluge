@@ -2,9 +2,9 @@
 
 FROM ghcr.io/linuxserver/unrar:latest AS unrar
 
-FROM ghcr.io/by275/libtorrent:1-alpine3.20 AS libtorrent
+FROM ghcr.io/by275/libtorrent:1-alpine3.21 AS libtorrent
 
-FROM ghcr.io/linuxserver/baseimage-alpine:3.20
+FROM ghcr.io/linuxserver/baseimage-alpine:3.21
 
 # set version label
 ARG BUILD_DATE
@@ -37,7 +37,7 @@ RUN \
     pip \
     setuptools \
     wheel && \
-  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.20/ \
+  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.21/ \
     deluge[all]==${DELUGE_VERSION} \
     pygeoip && \
   echo "**** grab GeoIP database ****" && \

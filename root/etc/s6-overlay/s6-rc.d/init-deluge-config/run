@@ -7,20 +7,21 @@ fi
 
 mkdir -p /run/deluged-temp
 
-# permissions
-lsiown -R abc:abc \
-    /run/deluged-temp \
-    /config
-
-# chown download directory if currently not set to abc
-if [[ -d /downloads ]]; then
-    if [[ "$(stat -c '%U' /downloads)" != "abc" ]]; then
-        lsiown -R abc:abc /downloads
-    fi
-fi
-
 # create torrents directory if it does not exist
 if [[ ! -d /config/torrents ]]; then
     mkdir -p /config/torrents
-    lsiown abc:abc /config/torrents
+fi
+
+if [[ -z ${LSIO_NON_ROOT_USER} ]]; then
+    # permissions
+    lsiown -R abc:abc \
+        /run/deluged-temp \
+        /config
+
+    # chown download directory if currently not set to abc
+    if [[ -d /downloads ]]; then
+        if [[ "$(stat -c '%U' /downloads)" != "abc" ]]; then
+            lsiown -R abc:abc /downloads
+        fi
+    fi
 fi
