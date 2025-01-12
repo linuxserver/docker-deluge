@@ -21,18 +21,17 @@ RUN \
   apk add --no-cache --upgrade --virtual=build-dependencies \
     build-base && \
   echo "**** install packages ****" && \
+  if [ -z ${DELUGE_VERSION+x} ]; then \
+    DELUGE_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/edge/community/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
+    && awk '/^P:deluge$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://'); \
+  fi && \
   apk add --no-cache --upgrade --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+    deluge==${DELUGE_VERSION} \
     python3 \
     py3-future \
     py3-geoip \
     py3-requests \
     p7zip && \
-  if [ -z ${DELUGE_VERSION+x} ]; then \
-    DELUGE_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/edge/community/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
-    && awk '/^P:deluge$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://'); \
-  fi && \
-  apk add -U --upgrade --no-cache \
-    deluge==${DELUGE_VERSION} && \
   echo "**** grab GeoIP database ****" && \
   curl -L --retry 10 --retry-max-time 60 --retry-all-errors \
     "https://mailfud.org/geoip-legacy/GeoIP.dat.gz" \
