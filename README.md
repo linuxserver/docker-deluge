@@ -46,7 +46,7 @@ Find us at:
 * Plugin System
 * Much more...
 
-[![deluge](https://avatars2.githubusercontent.com/u/6733935?v=3&s=200)](http://deluge-torrent.org/)
+[![deluge](https://raw.githubusercontent.com/linuxserver/docker-templates/blob/master/linuxserver.io/img/deluge-logo.png)](http://deluge-torrent.org/)
 
 ## Supported Architectures
 
@@ -82,6 +82,10 @@ Change the inbound port to 6881 (or whichever port you've mapped for the contain
 ## Read-Only Operation
 
 This image can be run with a read-only container filesystem. For details please [read the docs](https://docs.linuxserver.io/misc/read-only/).
+
+## Non-Root Operation
+
+This image can be run with a non-root user. For details please [read the docs](https://docs.linuxserver.io/misc/non-root/).
 
 ## Usage
 
@@ -150,6 +154,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-v /config` | deluge configs |
 | `-v /downloads` | torrent download directory |
 | `--read-only=true` | Run container with a read-only filesystem. Please [read the docs](https://docs.linuxserver.io/misc/read-only/). |
+| `--user=1000:1000` | Run container with a non-root user. Please [read the docs](https://docs.linuxserver.io/misc/non-root/). |
 
 ## Environment variables from files (Docker secrets)
 
@@ -313,6 +318,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **12.01.25:** - Rebase libtorrentv1 branch to Alpine 3.21.
 * **19.09.24:** - Prevent race condition related delay during container stop.
 * **26.08.24:** - Add libtorrentv1 tag.
 * **26.12.23:** - Replace source for GeoIP database.
