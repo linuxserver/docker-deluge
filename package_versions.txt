@@ -7,7 +7,7 @@ alpine-baselayout-data  3.6.8-r1          apk
 alpine-keys             2.5-r0            apk                      
 alpine-release          3.21.2-r0         apk                      
 apk-tools               2.14.6-r2         apk                      
-attrs                   24.3.0            python                   
+attrs                   25.1.0            python                   
 autocommand             2.2.2             python                   
 automat                 24.8.1            python                   
 backports-tarfile       1.2.0             python                   
@@ -76,7 +76,7 @@ nghttp2-libs            1.64.0-r0         apk
 oniguruma               6.9.9-r0          apk                      
 packaging               24.2              python                   
 pillow                  11.1.0            python                   
-pip                     24.3.1            python                   
+pip                     25.0              python                   
 platformdirs            4.2.2             python                   
 procps-ng               4.0.4-r2          apk                      
 pyasn1                  0.6.1             python                   
