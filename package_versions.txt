@@ -46,7 +46,7 @@ gdbm                        1.24-r0           apk
 geoip                       1.3.2             python        
 geoip                       1.6.12-r6         apk           
 h2                          4.1.0             python        
-hpack                       4.0.0             python        
+hpack                       4.1.0             python        
 hyperframe                  6.1.0             python        
 hyperlink                   21.0.0            python        
 idna                        3.10              python        
@@ -59,7 +59,7 @@ libattr                     2.5.2-r2          apk
 libbsd                      0.12.2-r0         apk           
 libbz2                      1.0.8-r6          apk           
 libc                        0.2.149           rust-crate    
-libcrypto3                  3.3.2-r6          apk           
+libcrypto3                  3.3.3-r0          apk           
 libcurl                     8.12.0-r0         apk           
 libexpat                    2.6.4-r0          apk           
 libffi                      3.4.6-r0          apk           
@@ -75,7 +75,7 @@ libpng                      1.6.45-r0         apk
 libproc2                    4.0.4-r2          apk           
 libpsl                      0.21.5-r3         apk           
 libsharpyuv                 1.5.0-r0          apk           
-libssl3                     3.3.2-r6          apk           
+libssl3                     3.3.3-r0          apk           
 libstdc++                   14.2.0-r5         apk           
 libtorrent                  2.0.10            python        
 libtorrent-rasterbar        2.0.10-r3         apk           
@@ -87,7 +87,7 @@ libxau                      1.0.12-r0         apk
 libxcb                      1.17.0-r0         apk           
 libxdmcp                    1.1.5-r1          apk           
 linux-pam                   1.7.0-r1          apk           
-mako                        1.3.8             python        
+mako                        1.3.9             python        
 markupsafe                  3.0.2             python        
 memoffset                   0.9.0             rust-crate    
 mpdecimal                   4.0.0-r0          apk           
@@ -131,8 +131,8 @@ py3-future-pyc              1.0.0-r1          apk
 py3-geoip                   1.3.2-r4          apk           
 py3-h2                      4.1.0-r3          apk           
 py3-h2-pyc                  4.1.0-r3          apk           
-py3-hpack                   4.0.0-r9          apk           
-py3-hpack-pyc               4.0.0-r9          apk           
+py3-hpack                   4.1.0-r0          apk           
+py3-hpack-pyc               4.1.0-r0          apk           
 py3-hyperframe              6.1.0-r0          apk           
 py3-hyperframe-pyc          6.1.0-r0          apk           
 py3-hyperlink               21.0.0-r5         apk           
@@ -142,8 +142,8 @@ py3-idna-pyc                3.10-r0           apk
 py3-incremental             22.10.0-r3        apk           
 py3-incremental-pyc         22.10.0-r3        apk           
 py3-libtorrent-rasterbar    2.0.10-r3         apk           
-py3-mako                    1.3.8-r0          apk           
-py3-mako-pyc                1.3.8-r0          apk           
+py3-mako                    1.3.9-r0          apk           
+py3-mako-pyc                1.3.9-r0          apk           
 py3-markupsafe              3.0.2-r0          apk           
 py3-markupsafe-pyc          3.0.2-r0          apk           
 py3-openssl                 24.3.0-r0         apk           
