@@ -3,7 +3,7 @@
 # project information
 project_name: deluge
 project_url: "http://deluge-torrent.org/"
-project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/refs/heads/master/linuxserver.io/img/deluge-logo.png"
+project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/deluge-logo.png"
 project_blurb: |
   [{{ project_name|capitalize }}]({{ project_url }}) is a lightweight, Free Software, cross-platform BitTorrent client.
 
