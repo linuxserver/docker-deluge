@@ -7,7 +7,7 @@ alpine-baselayout-data  3.6.8-r1          apk
 alpine-keys             2.5-r0            apk                      
 alpine-release          3.21.3-r0         apk                      
 apk-tools               2.14.6-r3         apk                      
-attrs                   25.1.0            python                   
+attrs                   25.3.0            python                   
 autocommand             2.2.2             python                   
 automat                 24.8.1            python                   
 backports-tarfile       1.2.0             python                   
@@ -49,7 +49,7 @@ libbsd                  0.12.2-r0         apk
 libbz2                  1.0.8-r6          apk                      
 libcrypto3              3.3.3-r0          apk                      
 libcurl                 8.12.1-r0         apk                      
-libexpat                2.6.4-r0          apk                      
+libexpat                2.7.0-r0          apk                      
 libffi                  3.4.7-r0          apk                      
 libgcc                  14.2.0-r4         apk                      
 libidn2                 2.3.7-r0          apk                      
