@@ -28,7 +28,7 @@ coreutils-fmt           9.5-r2            apk
 coreutils-sha512sum     9.5-r2            apk                     
 cryptography            44.0.2            python                  
 curl                    8.12.1-r1         apk                     
-deluge                  2.1.1             python                  
+deluge                  2.2.0             python                  
 findutils               4.10.0-r0         apk                     
 gdbm                    1.24-r0           apk                     
 geoip                   1.6.12-r5         apk                     
