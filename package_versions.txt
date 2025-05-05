@@ -25,7 +25,7 @@ certifi                     2024.12.14        python
 cffi                        1.17.1            python        
 cfg-if                      1.0.0             rust-crate    
 chardet                     5.2.0             python        
-charset-normalizer          3.4.1             python        
+charset-normalizer          3.4.2             python        
 constantly                  23.10.4           python        
 coreutils                   9.7-r1            apk           
 coreutils-env               9.7-r1            apk           
@@ -105,7 +105,7 @@ musl                        1.2.5-r10         apk
 musl-utils                  1.2.5-r10         apk           
 my-test-package             1.0               python        
 ncurses-terminfo-base       6.5_p20250412-r0  apk           
-netcat-openbsd              1.228.1-r0        apk           
+netcat-openbsd              1.229.1-r0        apk           
 nghttp2-libs                1.65.0-r0         apk           
 once_cell                   1.18.0            rust-crate    
 oniguruma                   6.9.10-r0         apk           
@@ -129,8 +129,8 @@ py3-cffi                    1.17.1-r1         apk
 py3-cffi-pyc                1.17.1-r1         apk           
 py3-chardet                 5.2.0-r1          apk           
 py3-chardet-pyc             5.2.0-r1          apk           
-py3-charset-normalizer      3.4.1-r0          apk           
-py3-charset-normalizer-pyc  3.4.1-r0          apk           
+py3-charset-normalizer      3.4.2-r0          apk           
+py3-charset-normalizer-pyc  3.4.2-r0          apk           
 py3-constantly              23.10.4-r1        apk           
 py3-constantly-pyc          23.10.4-r1        apk           
 py3-cparser                 2.22-r1           apk           
@@ -163,8 +163,8 @@ py3-openssl                 25.0.0-r0         apk
 py3-openssl-pyc             25.0.0-r0         apk           
 py3-packaging               25.0-r0           apk           
 py3-packaging-pyc           25.0-r0           apk           
-py3-parsing                 3.2.0-r0          apk           
-py3-parsing-pyc             3.2.0-r0          apk           
+py3-parsing                 3.2.3-r0          apk           
+py3-parsing-pyc             3.2.3-r0          apk           
 py3-pillow                  11.2.1-r0         apk           
 py3-pillow-pyc              11.2.1-r0         apk           
 py3-pyhamcrest              2.1.0-r1          apk           
@@ -179,8 +179,8 @@ py3-service_identity        24.2.0-r0         apk
 py3-service_identity-pyc    24.2.0-r0         apk           
 py3-setproctitle            1.3.5-r0          apk           
 py3-setproctitle-pyc        1.3.5-r0          apk           
-py3-setuptools              77.0.3-r0         apk           
-py3-setuptools-pyc          77.0.3-r0         apk           
+py3-setuptools              80.3.1-r0         apk           
+py3-setuptools-pyc          80.3.1-r0         apk           
 py3-six                     1.17.0-r0         apk           
 py3-six-pyc                 1.17.0-r0         apk           
 py3-twisted                 24.11.0-r0        apk           
@@ -189,8 +189,8 @@ py3-typing-extensions       4.13.2-r0         apk
 py3-typing-extensions-pyc   4.13.2-r0         apk           
 py3-urllib3                 1.26.20-r0        apk           
 py3-urllib3-pyc             1.26.20-r0        apk           
-py3-wheel                   0.43.0-r0         apk           
-py3-wheel-pyc               0.43.0-r0         apk           
+py3-wheel                   0.46.1-r0         apk           
+py3-wheel-pyc               0.46.1-r0         apk           
 py3-xdg                     0.28-r5           apk           
 py3-xdg-pyc                 0.28-r5           apk           
 py3-zope-interface          7.2-r0            apk           
@@ -201,7 +201,7 @@ pyc                         3.12.10-r0        apk
 pycparser                   2.22              python        
 pyhamcrest                  2.1.0             python        
 pyopenssl                   25.0.0            python        
-pyparsing                   3.2.0             python        
+pyparsing                   3.2.3             python        
 pyserial                    3.5               python        
 python3                     3.12.10-r0        apk           
 python3-pyc                 3.12.10-r0        apk           
@@ -217,7 +217,7 @@ scanelf                     1.3.8-r1          apk
 scopeguard                  1.2.0             rust-crate    
 service-identity            24.2.0            python        
 setproctitle                1.3.5             python        
-setuptools                  77.0.3            python        
+setuptools                  80.3.1            python        
 shadow                      4.17.3-r0         apk           
 six                         1.17.0            python        
 skalibs-libs                2.14.3.0-r0       apk           
@@ -233,8 +233,8 @@ typing-extensions           4.13.2            python
 tzdata                      2025b-r0          apk           
 urllib3                     1.26.20           python        
 utmps-libs                  0.1.2.3-r2        apk           
-wheel                       0.43.0            python        
 wheel                       0.45.1            python        
+wheel                       0.46.1            python        
 xz-libs                     5.8.1-r0          apk           
 zipp                        3.19.2            python        
 zlib                        1.3.1-r2          apk           
