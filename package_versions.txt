@@ -98,11 +98,11 @@ python3-pyc             3.12.10-r1        apk
 python3-pycache-pyc0    3.12.10-r1        apk                      
 pyxdg                   0.28              python                   
 readline                8.2.13-r0         apk                      
-rencode                 1.0.6             python                   
+rencode                 1.0.8             python                   
 scanelf                 1.3.8-r1          apk                      
 service-identity        24.2.0            python                   
 setproctitle            1.3.6             python                   
-setuptools              80.8.0            python                   
+setuptools              80.9.0            python                   
 shadow                  4.16.0-r1         apk                      
 skalibs-libs            2.14.3.0-r0       apk                      
 sqlite-libs             3.48.0-r2         apk                      
@@ -111,7 +111,7 @@ tomli                   2.0.1             python
 twisted                 24.11.0           python                   
 typeguard               4.3.0             python                   
 typing-extensions       4.12.2            python                   
-typing-extensions       4.13.2            python                   
+typing-extensions       4.14.0            python                   
 tzdata                  2025b-r0          apk                      
 utmps-libs              0.1.2.3-r2        apk                      
 wheel                   0.45.1            python  (+1 duplicate)   
