@@ -72,7 +72,7 @@ libcrypto3                  3.5.0-r0          apk
 libcurl                     8.14.1-r1         apk           
 libexpat                    2.7.1-r0          apk           
 libffi                      3.5.1-r0          apk           
-libgcc                      14.3.0-r4         apk           
+libgcc                      14.3.0-r5         apk           
 libidn2                     2.3.7-r0          apk           
 libimagequant               4.2.2-r0          apk           
 libintl                     0.24.1-r0         apk           
@@ -85,7 +85,7 @@ libproc2                    4.0.4-r3          apk
 libpsl                      0.21.5-r3         apk           
 libsharpyuv                 1.5.0-r0          apk           
 libssl3                     3.5.0-r0          apk           
-libstdc++                   14.3.0-r4         apk           
+libstdc++                   14.3.0-r5         apk           
 libtorrent                  2.0.11            python        
 libtorrent-rasterbar        2.0.11-r0         apk           
 libunistring                1.3-r0            apk           
@@ -101,12 +101,12 @@ markupsafe                  3.0.2             python
 memoffset                   0.9.0             rust-crate    
 more-itertools              10.3.0            python        
 mpdecimal                   4.0.1-r0          apk           
-musl                        1.2.5-r12         apk           
+musl                        1.2.5-r13         apk           
 musl-utils                  1.2.5-r12         apk           
 my-test-package             1.0               python        
 ncurses-terminfo-base       6.5_p20250614-r0  apk           
 netcat-openbsd              1.229.1-r0        apk           
-nghttp2-libs                1.65.0-r0         apk           
+nghttp2-libs                1.66.0-r0         apk           
 once_cell                   1.18.0            rust-crate    
 oniguruma                   6.9.10-r0         apk           
 openjpeg                    2.5.3-r0          apk           
@@ -185,8 +185,8 @@ py3-six                     1.17.0-r0         apk
 py3-six-pyc                 1.17.0-r0         apk           
 py3-twisted                 24.11.0-r0        apk           
 py3-twisted-pyc             24.11.0-r0        apk           
-py3-typing-extensions       4.13.2-r0         apk           
-py3-typing-extensions-pyc   4.13.2-r0         apk           
+py3-typing-extensions       4.14.0-r0         apk           
+py3-typing-extensions-pyc   4.14.0-r0         apk           
 py3-urllib3                 1.26.20-r0        apk           
 py3-urllib3-pyc             1.26.20-r0        apk           
 py3-wheel                   0.46.1-r0         apk           
@@ -218,10 +218,10 @@ scopeguard                  1.2.0             rust-crate
 service-identity            24.2.0            python        
 setproctitle                1.3.5             python        
 setuptools                  80.9.0            python        
-shadow                      4.17.3-r0         apk           
+shadow                      4.18.0-r0         apk           
 six                         1.17.0            python        
 skalibs-libs                2.14.4.0-r0       apk           
-sqlite-libs                 3.50.1-r0         apk           
+sqlite-libs                 3.50.2-r0         apk           
 ssl_client                  1.37.0-r18        apk           
 thread_local                1.1.7             rust-crate    
 tiff                        4.7.0-r0          apk           
@@ -229,7 +229,7 @@ tomli                       2.0.1             python
 twisted                     24.11.0           python        
 typeguard                   4.3.0             python        
 typing-extensions           4.12.2            python        
-typing-extensions           4.13.2            python        
+typing-extensions           4.14.0            python        
 tzdata                      2025b-r0          apk           
 urllib3                     1.26.20           python        
 utmps-libs                  0.1.3.1-r0        apk           
