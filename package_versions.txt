@@ -14,8 +14,8 @@ bash                        5.3.3-r0                  apk
 bitflags                    2.4.1                     rust-crate    
 boost1.84-python3           1.84.0-r3                 apk           
 brotli-libs                 1.1.0-r2                  apk           
-busybox                     1.37.0-r21                apk           
-busybox-binsh               1.37.0-r21                apk           
+busybox                     1.37.0-r22                apk           
+busybox-binsh               1.37.0-r22                apk           
 bytemuck                    1.14.0                    rust-crate    
 c-ares                      1.34.5-r0                 apk           
 ca-certificates             20250619-r0               apk           
@@ -25,7 +25,7 @@ certifi                     2025.8.3                  python
 cffi                        1.17.1                    python        
 cfg-if                      1.0.0                     rust-crate    
 chardet                     5.2.0                     python        
-charset-normalizer          3.4.2                     python        
+charset-normalizer          3.4.3                     python        
 constantly                  23.10.4                   python        
 coreutils                   9.7-r1                    apk           
 coreutils-env               9.7-r1                    apk           
@@ -35,7 +35,7 @@ crossbeam-deque             0.8.3                     rust-crate
 crossbeam-epoch             0.9.15                    rust-crate    
 crossbeam-utils             0.8.16                    rust-crate    
 cryptography                44.0.3                    python        
-curl                        8.15.0-r0                 apk           
+curl                        8.15.0-r1                 apk           
 deluge                      2.2.0                     python        
 deluge                      2.2.0-r1                  apk           
 deluge-pyc                  2.2.0-r1                  apk           
@@ -69,7 +69,7 @@ libbsd                      0.12.2-r0                 apk
 libbz2                      1.0.8-r6                  apk           
 libc                        0.2.149                   rust-crate    
 libcrypto3                  3.5.2-r0                  apk           
-libcurl                     8.15.0-r0                 apk           
+libcurl                     8.15.0-r1                 apk           
 libexpat                    2.7.1-r0                  apk           
 libffi                      3.5.2-r0                  apk           
 libgcc                      15.2.0-r0                 apk           
@@ -101,7 +101,7 @@ markupsafe                  3.0.2                     python
 memoffset                   0.9.0                     rust-crate    
 more-itertools              10.3.0                    python        
 mpdecimal                   4.0.1-r0                  apk           
-musl                        1.2.5-r17                 apk           
+musl                        1.2.5-r18                 apk           
 musl-utils                  1.2.5-r17                 apk           
 my-test-package             1.0                       python        
 ncurses-terminfo-base       6.5_p20250705-r0          apk           
@@ -129,8 +129,8 @@ py3-cffi                    1.17.1-r1                 apk
 py3-cffi-pyc                1.17.1-r1                 apk           
 py3-chardet                 5.2.0-r1                  apk           
 py3-chardet-pyc             5.2.0-r1                  apk           
-py3-charset-normalizer      3.4.2-r0                  apk           
-py3-charset-normalizer-pyc  3.4.2-r0                  apk           
+py3-charset-normalizer      3.4.3-r0                  apk           
+py3-charset-normalizer-pyc  3.4.3-r0                  apk           
 py3-constantly              23.10.4-r1                apk           
 py3-constantly-pyc          23.10.4-r1                apk           
 py3-cparser                 2.22-r1                   apk           
@@ -222,7 +222,7 @@ shadow                      4.18.0-r0                 apk
 six                         1.17.0                    python        
 skalibs-libs                2.14.4.0-r0               apk           
 sqlite-libs                 3.50.4-r0                 apk           
-ssl_client                  1.37.0-r21                apk           
+ssl_client                  1.37.0-r22                apk           
 thread_local                1.1.7                     rust-crate    
 tiff                        4.7.0-r2                  apk           
 tomli                       2.0.1                     python        
