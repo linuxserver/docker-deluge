@@ -10,7 +10,7 @@ attrs                       25.3.0                    python
 autocommand                 2.2.2                     python        
 automat                     24.8.1                    python        
 backports-tarfile           1.2.0                     python        
-bash                        5.3.3-r0                  apk           
+bash                        5.3.3-r1                  apk           
 bitflags                    2.4.1                     rust-crate    
 boost1.84-python3           1.84.0-r3                 apk           
 brotli-libs                 1.1.0-r2                  apk           
@@ -101,8 +101,8 @@ markupsafe                  3.0.2                     python
 memoffset                   0.9.0                     rust-crate    
 more-itertools              10.3.0                    python        
 mpdecimal                   4.0.1-r0                  apk           
-musl                        1.2.5-r18                 apk           
-musl-utils                  1.2.5-r17                 apk           
+musl                        1.2.5-r19                 apk           
+musl-utils                  1.2.5-r19                 apk           
 my-test-package             1.0                       python        
 ncurses-terminfo-base       6.5_p20250705-r0          apk           
 netcat-openbsd              1.229.1-r0                apk           
@@ -221,7 +221,7 @@ setuptools                  80.9.0                    python
 shadow                      4.18.0-r0                 apk           
 six                         1.17.0                    python        
 skalibs-libs                2.14.4.0-r0               apk           
-sqlite-libs                 3.50.4-r0                 apk           
+sqlite-libs                 3.50.4-r1                 apk           
 ssl_client                  1.37.0-r22                apk           
 thread_local                1.1.7                     rust-crate    
 tiff                        4.7.0-r2                  apk           
