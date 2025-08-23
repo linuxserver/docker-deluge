@@ -315,6 +315,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **23.08.25:** - Update GeoIP provider, add weekly cronjob to update.
 * **12.01.25:** - Rebase libtorrentv1 branch to Alpine 3.21.
 * **19.09.24:** - Prevent race condition related delay during container stop.
 * **26.08.24:** - Add libtorrentv1 tag.

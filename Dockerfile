@@ -34,7 +34,7 @@ RUN \
     p7zip && \
   echo "**** grab GeoIP database ****" && \
   curl -L --retry 10 --retry-max-time 60 --retry-all-errors \
-    "https://mailfud.org/geoip-legacy/GeoIP.dat.gz" \
+    "https://geo.el0.org/GeoIP.dat.gz" \
     | gunzip > /usr/share/GeoIP/GeoIP.dat && \
   printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
