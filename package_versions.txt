@@ -173,8 +173,8 @@ py3-pyserial                3.5-r7                    apk
 py3-pyserial-pyc            3.5-r7                    apk           
 py3-rencode                 1.0.6-r11                 apk           
 py3-rencode-pyc             1.0.6-r11                 apk           
-py3-requests                2.32.4-r0                 apk           
-py3-requests-pyc            2.32.4-r0                 apk           
+py3-requests                2.32.5-r0                 apk           
+py3-requests-pyc            2.32.5-r0                 apk           
 py3-service_identity        24.2.0-r0                 apk           
 py3-service_identity-pyc    24.2.0-r0                 apk           
 py3-setproctitle            1.3.5-r0                  apk           
@@ -185,8 +185,8 @@ py3-six                     1.17.0-r0                 apk
 py3-six-pyc                 1.17.0-r0                 apk           
 py3-twisted                 24.11.0-r0                apk           
 py3-twisted-pyc             24.11.0-r0                apk           
-py3-typing-extensions       4.14.1-r0                 apk           
-py3-typing-extensions-pyc   4.14.1-r0                 apk           
+py3-typing-extensions       4.15.0-r0                 apk           
+py3-typing-extensions-pyc   4.15.0-r0                 apk           
 py3-urllib3                 1.26.20-r0                apk           
 py3-urllib3-pyc             1.26.20-r0                apk           
 py3-wheel                   0.46.1-r0                 apk           
@@ -211,7 +211,7 @@ rayon                       1.8.0                     rust-crate
 rayon-core                  1.12.0                    rust-crate    
 readline                    8.3.1-r0                  apk           
 rencode                     1.0.6                     python        
-requests                    2.32.4                    python        
+requests                    2.32.5                    python        
 rgb                         0.8.36                    rust-crate    
 scanelf                     1.3.8-r2                  apk           
 scopeguard                  1.2.0                     rust-crate    
@@ -229,7 +229,7 @@ tomli                       2.0.1                     python
 twisted                     24.11.0                   python        
 typeguard                   4.3.0                     python        
 typing-extensions           4.12.2                    python        
-typing-extensions           4.14.1                    python        
+typing-extensions           4.15.0                    python        
 tzdata                      2025b-r0                  apk           
 urllib3                     1.26.20                   python        
 utmps-libs                  0.1.3.1-r0                apk           
