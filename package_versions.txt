@@ -35,7 +35,7 @@ crossbeam-deque             0.8.3                     rust-crate
 crossbeam-epoch             0.9.15                    rust-crate    
 crossbeam-utils             0.8.16                    rust-crate    
 cryptography                44.0.3                    python        
-curl                        8.15.0-r1                 apk           
+curl                        8.16.0-r0                 apk           
 deluge                      2.2.0                     python        
 deluge                      2.2.0-r1                  apk           
 deluge-pyc                  2.2.0-r1                  apk           
@@ -61,7 +61,7 @@ jaraco-collections          5.1.0                     python
 jaraco-context              5.3.0                     python        
 jaraco-functools            4.0.1                     python        
 jaraco-text                 3.12.1                    python        
-jq                          1.8.0-r0                  apk           
+jq                          1.8.1-r0                  apk           
 lcms2                       2.16-r0                   apk           
 libapk                      3.0.0_rc5_git20250819-r0  apk           
 libattr                     2.5.2-r2                  apk           
@@ -69,7 +69,7 @@ libbsd                      0.12.2-r0                 apk
 libbz2                      1.0.8-r6                  apk           
 libc                        0.2.149                   rust-crate    
 libcrypto3                  3.5.2-r0                  apk           
-libcurl                     8.15.0-r1                 apk           
+libcurl                     8.16.0-r0                 apk           
 libexpat                    2.7.1-r0                  apk           
 libffi                      3.5.2-r0                  apk           
 libgcc                      15.2.0-r0                 apk           
@@ -107,6 +107,7 @@ my-test-package             1.0                       python
 ncurses-terminfo-base       6.5_p20250816-r0          apk           
 netcat-openbsd              1.229.1-r0                apk           
 nghttp2-libs                1.66.0-r0                 apk           
+nghttp3                     1.9.0-r0                  apk           
 once_cell                   1.18.0                    rust-crate    
 oniguruma                   6.9.10-r0                 apk           
 openjpeg                    2.5.3-r0                  apk           
