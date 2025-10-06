@@ -7,7 +7,7 @@ alpine-baselayout-data  3.6.8-r1          apk
 alpine-keys             2.5-r0            apk                      
 alpine-release          3.21.4-r0         apk                      
 apk-tools               2.14.6-r3         apk                      
-attrs                   25.3.0            python                   
+attrs                   25.4.0            python                   
 autocommand             2.2.2             python                   
 automat                 25.4.16           python                   
 backports-tarfile       1.2.0             python                   
@@ -17,8 +17,8 @@ brotli-libs             1.1.0-r2          apk
 busybox                 1.37.0-r13        apk                      
 busybox-binsh           1.37.0-r13        apk                      
 c-ares                  1.34.5-r0         apk                      
-ca-certificates         20250619-r0       apk                      
-ca-certificates-bundle  20250619-r0       apk                      
+ca-certificates         20250911-r0       apk                      
+ca-certificates-bundle  20250911-r0       apk                      
 catatonit               0.2.0-r0          apk                      
 cffi                    2.0.0             python                   
 chardet                 5.2.0             python                   
@@ -31,8 +31,8 @@ coreutils               9.5-r2            apk
 coreutils-env           9.5-r2            apk                      
 coreutils-fmt           9.5-r2            apk                      
 coreutils-sha512sum     9.5-r2            apk                      
-cryptography            46.0.1            python                   
-curl                    8.12.1-r1         apk                      
+cryptography            46.0.2            python                   
+curl                    8.14.1-r2         apk                      
 deluge                  2.2.0             python                   
 findutils               4.10.0-r0         apk                      
 gdbm                    1.24-r0           apk                      
@@ -55,8 +55,8 @@ jq                      1.7.1-r0          apk
 libattr                 2.5.2-r2          apk                      
 libbsd                  0.12.2-r0         apk                      
 libbz2                  1.0.8-r6          apk                      
-libcrypto3              3.3.4-r0          apk                      
-libcurl                 8.12.1-r1         apk                      
+libcrypto3              3.3.5-r0          apk                      
+libcurl                 8.14.1-r2         apk                      
 libexpat                2.7.3-r0          apk                      
 libffi                  3.4.7-r0          apk                      
 libgcc                  14.2.0-r4         apk                      
@@ -67,7 +67,7 @@ libncursesw             6.5_p20241006-r3  apk
 libpanelw               6.5_p20241006-r3  apk                      
 libproc2                4.0.4-r2          apk                      
 libpsl                  0.21.5-r3         apk                      
-libssl3                 3.3.4-r0          apk                      
+libssl3                 3.3.5-r0          apk                      
 libstdc++               14.2.0-r4         apk                      
 libunistring            1.2-r0            apk                      
 linux-pam               1.6.1-r1          apk                      
