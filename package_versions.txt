@@ -5,7 +5,7 @@ acl-libs                2.3.2-r1          apk
 alpine-baselayout       3.6.8-r1          apk                      
 alpine-baselayout-data  3.6.8-r1          apk                      
 alpine-keys             2.5-r0            apk                      
-alpine-release          3.21.4-r0         apk                      
+alpine-release          3.21.5-r0         apk                      
 apk-tools               2.14.6-r3         apk                      
 attrs                   25.4.0            python                   
 autocommand             2.2.2             python                   
@@ -42,7 +42,7 @@ gui-32                  UNKNOWN           binary
 gui-64                  UNKNOWN           binary                   
 gui-arm64               UNKNOWN           binary                   
 hyperlink               21.0.0            python                   
-idna                    3.10              python                   
+idna                    3.11              python                   
 ifaddr                  0.2.0             python                   
 importlib-metadata      8.0.0             python                   
 incremental             24.7.2            python                   
@@ -89,13 +89,13 @@ platformdirs            4.2.2             python
 procps-ng               4.0.4-r2          apk                      
 pyasn1                  0.6.1             python                   
 pyasn1-modules          0.4.2             python                   
-pyc                     3.12.11-r0        apk                      
+pyc                     3.12.12-r0        apk                      
 pycparser               2.23              python                   
 pygeoip                 0.3.2             python                   
 pyopenssl               25.3.0            python                   
-python3                 3.12.11-r0        apk                      
-python3-pyc             3.12.11-r0        apk                      
-python3-pycache-pyc0    3.12.11-r0        apk                      
+python3                 3.12.12-r0        apk                      
+python3-pyc             3.12.12-r0        apk                      
+python3-pycache-pyc0    3.12.12-r0        apk                      
 pyxdg                   0.28              python                   
 readline                8.2.13-r0         apk                      
 rencode                 1.0.8             python                   
