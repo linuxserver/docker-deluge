@@ -118,5 +118,5 @@ wheel                   0.45.1            python  (+1 duplicate)
 xz-libs                 5.6.3-r1          apk                      
 zipp                    3.19.2            python                   
 zlib                    1.3.1-r2          apk                      
-zope-interface          8.0.1             python                   
+zope-interface          8.1               python                   
 zstd-libs               1.5.6-r2          apk                      
