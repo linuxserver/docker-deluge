@@ -13,7 +13,7 @@ backports-tarfile           1.2.0             python
 bash                        5.3.3-r1          apk           
 bitflags                    2.4.1             rust-crate    
 boost1.84-python3           1.84.0-r3         apk           
-brotli-libs                 1.1.0-r2          apk           
+brotli-libs                 1.2.0-r0          apk           
 busybox                     1.37.0-r29        apk           
 busybox-binsh               1.37.0-r29        apk           
 bytemuck                    1.14.0            rust-crate    
@@ -80,7 +80,7 @@ libjpeg-turbo               3.1.2-r0          apk
 libmd                       1.1.0-r0          apk           
 libncursesw                 6.5_p20251123-r0  apk           
 libpanelw                   6.5_p20251123-r0  apk           
-libpng                      1.6.51-r1         apk           
+libpng                      1.6.53-r0         apk           
 libproc2                    4.0.5-r0          apk           
 libpsl                      0.21.5-r3         apk           
 libsharpyuv                 1.6.0-r0          apk           
