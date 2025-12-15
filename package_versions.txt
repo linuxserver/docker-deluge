@@ -16,7 +16,7 @@ boost1.84-python3       1.84.0-r2         apk
 brotli-libs             1.1.0-r2          apk                      
 busybox                 1.37.0-r14        apk                      
 busybox-binsh           1.37.0-r14        apk                      
-c-ares                  1.34.5-r0         apk                      
+c-ares                  1.34.6-r0         apk                      
 ca-certificates         20250911-r0       apk                      
 ca-certificates-bundle  20250911-r0       apk                      
 catatonit               0.2.0-r0          apk                      
@@ -113,7 +113,7 @@ twisted                 25.5.0            python
 typeguard               4.3.0             python                   
 typing-extensions       4.12.2            python                   
 typing-extensions       4.15.0            python                   
-tzdata                  2025b-r0          apk                      
+tzdata                  2025c-r0          apk                      
 utmps-libs              0.1.2.3-r2        apk                      
 wheel                   0.45.1            python  (+1 duplicate)   
 xz-libs                 5.6.3-r1          apk                      
