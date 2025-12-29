@@ -40,7 +40,11 @@ opt_param_usage_include_ports: true
 opt_param_ports:
   - {external_port: "58846", internal_port: "58846", port_desc: "Default deluged port for thin client connectivity"}
 readonly_supported: true
+readonly_message: |
+  * Automatic GeoIP updates will not work
 nonroot_supported: true
+nonroot_message: |
+  * Automatic GeoIP updates will not work
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -95,7 +99,8 @@ init_diagram: |
   "deluge:libtorrentv1" <- Base Images
 # changelog
 changelogs:
-  - {date: "12.01.25:", desc: "Rebase libtorrentv1 branch to Alpine 3.21."}
+  - {date: "29.12.25:", desc: "Rebase to Alpine 3.23, update GeoIP provider, add weekly cronjob to update."}
+  - {date: "12.01.25:", desc: "Rebase to Alpine 3.21."}
   - {date: "19.09.24:", desc: "Prevent race condition related delay during container stop."}
   - {date: "26.08.24:", desc: "Add libtorrentv1 tag."}
   - {date: "26.12.23:", desc: "Replace source for GeoIP database."}
