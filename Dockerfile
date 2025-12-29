@@ -44,7 +44,7 @@ RUN \
     pygeoip && \
   echo "**** grab GeoIP database ****" && \
   curl -L --retry 10 --retry-max-time 60 --retry-all-errors \
-    "https://geo.el0.org/GeoIP.dat.gz" \
+    "https://geoip.linuxserver.io/GeoIP.dat.gz" \
     | gunzip > /usr/share/GeoIP/GeoIP.dat && \
   printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
