@@ -76,6 +76,7 @@ init_diagram: |
     init-config -> init-crontab-config
     init-mods-end -> init-custom-files
     init-config -> init-deluge-config
+    init-crontab-config -> init-deluge-config
     init-adduser -> init-device-perms
     base -> init-envfile
     base -> init-migrations
