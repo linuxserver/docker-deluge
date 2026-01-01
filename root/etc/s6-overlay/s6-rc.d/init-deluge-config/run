@@ -12,6 +12,13 @@ if [[ ! -d /config/torrents ]]; then
     mkdir -p /config/torrents
 fi
 
+if [[ -z ${LSIO_READ_ONLY_FS} ]] && [[ -z ${LSIO_NON_ROOT_USER} ]]; then
+    # Pick a random day and hour to update the GeoIP DB
+    X=$(shuf -i 0-23 -n 1)
+    Y=$(shuf -i 0-6 -n 1)
+    (crontab -l 2>/dev/null; echo "0 ${X} * * ${Y} /app/geoip-update.sh 2>&1") | crontab -
+fi
+
 if [[ -z ${LSIO_NON_ROOT_USER} ]]; then
     # permissions
     lsiown -R abc:abc \
