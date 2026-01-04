@@ -75,6 +75,7 @@ init_diagram: |
     init-config -> init-crontab-config
     init-mods-end -> init-custom-files
     init-config -> init-deluge-config
+    init-crontab-config -> init-deluge-config
     init-adduser -> init-device-perms
     base -> init-envfile
     base -> init-migrations
@@ -94,7 +95,7 @@ init_diagram: |
     svc-deluged -> legacy-services
   }
   Base Images: {
-    "baseimage-alpine:3.21"
+    "baseimage-alpine:3.23"
   }
   "deluge:libtorrentv1" <- Base Images
 # changelog
