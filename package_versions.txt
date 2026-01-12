@@ -12,7 +12,7 @@ automat                     24.8.1            python
 backports-tarfile           1.2.0             python        
 bash                        5.3.3-r1          apk           
 bitflags                    2.4.1             rust-crate    
-boost1.84-python3           1.84.0-r3         apk           
+boost1.84-python3           1.84.0-r4         apk           
 brotli-libs                 1.2.0-r0          apk           
 busybox                     1.37.0-r30        apk           
 busybox-binsh               1.37.0-r30        apk           
@@ -35,7 +35,7 @@ crossbeam-deque             0.8.3             rust-crate
 crossbeam-epoch             0.9.15            rust-crate    
 crossbeam-utils             0.8.16            rust-crate    
 cryptography                46.0.3            python        
-curl                        8.17.0-r1         apk           
+curl                        8.18.0-r0         apk           
 deluge                      2.2.0             python        
 deluge                      2.2.0-r1          apk           
 deluge-pyc                  2.2.0-r1          apk           
@@ -69,7 +69,7 @@ libbsd                      0.12.2-r0         apk
 libbz2                      1.0.8-r6          apk           
 libc                        0.2.149           rust-crate    
 libcrypto3                  3.5.4-r0          apk           
-libcurl                     8.17.0-r1         apk           
+libcurl                     8.18.0-r0         apk           
 libexpat                    2.7.3-r0          apk           
 libffi                      3.5.2-r0          apk           
 libgcc                      15.2.0-r2         apk           
@@ -78,8 +78,8 @@ libimagequant               4.2.2-r0          apk
 libintl                     0.24.1-r1         apk           
 libjpeg-turbo               3.1.3-r0          apk           
 libmd                       1.1.0-r0          apk           
-libncursesw                 6.5_p20251123-r0  apk           
-libpanelw                   6.5_p20251123-r0  apk           
+libncursesw                 6.6_p20251231-r0  apk           
+libpanelw                   6.6_p20251231-r0  apk           
 libpng                      1.6.53-r0         apk           
 libproc2                    4.0.5-r0          apk           
 libpsl                      0.21.5-r3         apk           
@@ -104,7 +104,7 @@ mpdecimal                   4.0.1-r0          apk
 musl                        1.2.5-r21         apk           
 musl-utils                  1.2.5-r21         apk           
 my-test-package             1.0               python        
-ncurses-terminfo-base       6.5_p20251123-r0  apk           
+ncurses-terminfo-base       6.6_p20251231-r0  apk           
 netcat-openbsd              1.234.1-r0        apk           
 nghttp2-libs                1.68.0-r0         apk           
 nghttp3                     1.13.1-r0         apk           
@@ -134,8 +134,8 @@ py3-charset-normalizer      3.4.4-r0          apk
 py3-charset-normalizer-pyc  3.4.4-r0          apk           
 py3-constantly              23.10.4-r2        apk           
 py3-constantly-pyc          23.10.4-r2        apk           
-py3-cparser                 2.22-r1           apk           
-py3-cparser-pyc             2.22-r1           apk           
+py3-cparser                 2.23-r0           apk           
+py3-cparser-pyc             2.23-r0           apk           
 py3-cryptography            46.0.3-r0         apk           
 py3-cryptography-pyc        46.0.3-r0         apk           
 py3-distro                  1.9.0-r2          apk           
@@ -186,8 +186,8 @@ py3-twisted                 25.5.0-r0         apk
 py3-twisted-pyc             25.5.0-r0         apk           
 py3-typing-extensions       4.15.0-r0         apk           
 py3-typing-extensions-pyc   4.15.0-r0         apk           
-py3-urllib3                 2.5.0-r0          apk           
-py3-urllib3-pyc             2.5.0-r0          apk           
+py3-urllib3                 2.6.2-r0          apk           
+py3-urllib3-pyc             2.6.2-r0          apk           
 py3-wheel                   0.46.1-r0         apk           
 py3-wheel-pyc               0.46.1-r0         apk           
 py3-xdg                     0.28-r5           apk           
@@ -197,7 +197,7 @@ py3-zope-interface-pyc      7.2-r0            apk
 pyasn1                      0.6.1             python        
 pyasn1-modules              0.4.2             python        
 pyc                         3.12.12-r0        apk           
-pycparser                   2.22              python        
+pycparser                   2.23              python        
 pyhamcrest                  2.1.0             python        
 pyopenssl                   25.3.0            python        
 pyparsing                   3.2.3             python        
@@ -212,14 +212,14 @@ readline                    8.3.3-r0          apk
 rencode                     1.0.8             python        
 requests                    2.32.5            python        
 rgb                         0.8.36            rust-crate    
-scanelf                     1.3.8-r2          apk           
+scanelf                     1.3.9-r0          apk           
 scopeguard                  1.2.0             rust-crate    
 service-identity            24.2.0            python        
 setproctitle                1.3.7             python        
 setuptools                  80.9.0            python        
 shadow                      4.18.0-r0         apk           
 skalibs-libs                2.14.5.0-r0       apk           
-sqlite-libs                 3.51.1-r0         apk           
+sqlite-libs                 3.51.2-r0         apk           
 ssl_client                  1.37.0-r30        apk           
 thread_local                1.1.7             rust-crate    
 tiff                        4.7.1-r0          apk           
@@ -229,7 +229,7 @@ typeguard                   4.3.0             python
 typing-extensions           4.12.2            python        
 typing-extensions           4.15.0            python        
 tzdata                      2025c-r0          apk           
-urllib3                     2.5.0             python        
+urllib3                     2.6.2             python        
 utmps-libs                  0.1.3.2-r0        apk           
 wheel                       0.45.1            python        
 wheel                       0.46.1            python        
