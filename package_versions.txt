@@ -4,7 +4,7 @@ acl-libs                    2.3.2-r1          apk
 alpine-baselayout           3.7.1-r10         apk           
 alpine-baselayout-data      3.7.1-r10         apk           
 alpine-keys                 2.6-r0            apk           
-apk-tools                   3.0.3-r1          apk           
+apk-tools                   3.0.3-r2          apk           
 arrayvec                    0.7.4             rust-crate    
 attrs                       25.3.0            python        
 autocommand                 2.2.2             python        
@@ -12,10 +12,10 @@ automat                     24.8.1            python
 backports-tarfile           1.2.0             python        
 bash                        5.3.3-r1          apk           
 bitflags                    2.4.1             rust-crate    
-boost1.84-python3           1.84.0-r4         apk           
+boost1.84-python3           1.84.0-r5         apk           
 brotli-libs                 1.2.0-r0          apk           
-busybox                     1.37.0-r30        apk           
-busybox-binsh               1.37.0-r30        apk           
+busybox                     1.37.0-r31        apk           
+busybox-binsh               1.37.0-r31        apk           
 bytemuck                    1.14.0            rust-crate    
 c-ares                      1.34.6-r0         apk           
 ca-certificates             20251003-r0       apk           
@@ -63,7 +63,7 @@ jaraco-functools            4.0.1             python
 jaraco-text                 3.12.1            python        
 jq                          1.8.1-r0          apk           
 lcms2                       2.17-r0           apk           
-libapk                      3.0.3-r1          apk           
+libapk                      3.0.3-r2          apk           
 libattr                     2.5.2-r2          apk           
 libbsd                      0.12.2-r0         apk           
 libbz2                      1.0.8-r6          apk           
@@ -164,8 +164,8 @@ py3-openssl                 25.3.0-r0         apk
 py3-openssl-pyc             25.3.0-r0         apk           
 py3-packaging               25.0-r0           apk           
 py3-packaging-pyc           25.0-r0           apk           
-py3-parsing                 3.2.3-r0          apk           
-py3-parsing-pyc             3.2.3-r0          apk           
+py3-parsing                 3.3.1-r0          apk           
+py3-parsing-pyc             3.3.1-r0          apk           
 py3-pillow                  12.1.0-r0         apk           
 py3-pillow-pyc              12.1.0-r0         apk           
 py3-pyhamcrest              2.1.0-r1          apk           
@@ -186,8 +186,8 @@ py3-twisted                 25.5.0-r0         apk
 py3-twisted-pyc             25.5.0-r0         apk           
 py3-typing-extensions       4.15.0-r0         apk           
 py3-typing-extensions-pyc   4.15.0-r0         apk           
-py3-urllib3                 2.6.2-r0          apk           
-py3-urllib3-pyc             2.6.2-r0          apk           
+py3-urllib3                 2.6.3-r0          apk           
+py3-urllib3-pyc             2.6.3-r0          apk           
 py3-wheel                   0.46.1-r0         apk           
 py3-wheel-pyc               0.46.1-r0         apk           
 py3-xdg                     0.28-r5           apk           
@@ -200,7 +200,7 @@ pyc                         3.12.12-r0        apk
 pycparser                   2.23              python        
 pyhamcrest                  2.1.0             python        
 pyopenssl                   25.3.0            python        
-pyparsing                   3.2.3             python        
+pyparsing                   3.3.1             python        
 pyserial                    3.5               python        
 python3                     3.12.12-r0        apk           
 python3-pyc                 3.12.12-r0        apk           
@@ -220,7 +220,7 @@ setuptools                  80.9.0            python
 shadow                      4.18.0-r0         apk           
 skalibs-libs                2.14.5.0-r0       apk           
 sqlite-libs                 3.51.2-r0         apk           
-ssl_client                  1.37.0-r30        apk           
+ssl_client                  1.37.0-r31        apk           
 thread_local                1.1.7             rust-crate    
 tiff                        4.7.1-r0          apk           
 tomli                       2.0.1             python        
@@ -229,11 +229,11 @@ typeguard                   4.3.0             python
 typing-extensions           4.12.2            python        
 typing-extensions           4.15.0            python        
 tzdata                      2025c-r0          apk           
-urllib3                     2.6.2             python        
+urllib3                     2.6.3             python        
 utmps-libs                  0.1.3.2-r0        apk           
 wheel                       0.45.1            python        
 wheel                       0.46.1            python        
-xz-libs                     5.8.1-r0          apk           
+xz-libs                     5.8.2-r0          apk           
 zipp                        3.19.2            python        
 zlib                        1.3.1-r2          apk           
 zope-interface              7.2               python        
