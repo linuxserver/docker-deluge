@@ -31,7 +31,7 @@ coreutils               9.8-r1            apk
 coreutils-env           9.8-r1            apk                      
 coreutils-fmt           9.8-r1            apk                      
 coreutils-sha512sum     9.8-r1            apk                      
-cryptography            46.0.4            python                   
+cryptography            46.0.5            python                   
 curl                    8.17.0-r1         apk                      
 deluge                  2.2.0             python                   
 findutils               4.10.0-r0         apk                      
@@ -82,7 +82,7 @@ nghttp2-libs            1.68.0-r0         apk
 nghttp3                 1.13.1-r0         apk                      
 oniguruma               6.9.10-r0         apk                      
 packaging               26.0              python  (+1 duplicate)   
-pillow                  12.1.0            python                   
+pillow                  12.1.1            python                   
 pip                     26.0.1            python                   
 platformdirs            4.4.0             python                   
 procps-ng               4.0.5-r0          apk                      
