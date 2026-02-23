@@ -21,7 +21,7 @@ ca-certificates         20251003-r0       apk
 ca-certificates-bundle  20251003-r0       apk                      
 catatonit               0.2.1-r0          apk                      
 cffi                    2.0.0             python                   
-chardet                 5.2.0             python                   
+chardet                 6.0.0.post1       python                   
 cli                     UNKNOWN           binary                   
 cli-32                  UNKNOWN           binary                   
 cli-64                  UNKNOWN           binary                   
