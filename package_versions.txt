@@ -21,7 +21,7 @@ ca-certificates         20251003-r0       apk
 ca-certificates-bundle  20251003-r0       apk                      
 catatonit               0.2.1-r0          apk                      
 cffi                    2.0.0             python                   
-chardet                 7.0.1             python                   
+chardet                 7.1.0             python                   
 cli                     UNKNOWN           binary                   
 cli-32                  UNKNOWN           binary                   
 cli-64                  UNKNOWN           binary                   
@@ -91,7 +91,7 @@ pyasn1-modules          0.4.2             python
 pyc                     3.12.12-r0        apk                      
 pycparser               3.0               python                   
 pygeoip                 0.3.2             python                   
-pyopenssl               25.3.0            python                   
+pyopenssl               26.0.0            python                   
 python3                 3.12.12-r0        apk                      
 python3-pyc             3.12.12-r0        apk                      
 python3-pycache-pyc0    3.12.12-r0        apk                      
