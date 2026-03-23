@@ -7,7 +7,7 @@ alpine-baselayout-data  3.7.1-r8          apk
 alpine-keys             2.6-r0            apk                      
 alpine-release          3.23.3-r0         apk                      
 apk-tools               3.0.5-r0          apk                      
-attrs                   25.4.0            python                   
+attrs                   26.1.0            python                   
 autocommand             2.2.2             python                   
 automat                 25.4.16           python                   
 backports-tarfile       1.2.0             python                   
@@ -21,7 +21,7 @@ ca-certificates         20251003-r0       apk
 ca-certificates-bundle  20251003-r0       apk                      
 catatonit               0.2.1-r0          apk                      
 cffi                    2.0.0             python                   
-chardet                 7.1.0             python                   
+chardet                 7.2.0             python                   
 cli                     UNKNOWN           binary                   
 cli-32                  UNKNOWN           binary                   
 cli-64                  UNKNOWN           binary                   
@@ -56,7 +56,7 @@ libbsd                  0.12.2-r0         apk
 libbz2                  1.0.8-r6          apk                      
 libcrypto3              3.5.5-r0          apk                      
 libcurl                 8.17.0-r1         apk                      
-libexpat                2.7.4-r0          apk                      
+libexpat                2.7.5-r0          apk                      
 libffi                  3.5.2-r0          apk                      
 libgcc                  15.2.0-r2         apk                      
 libidn2                 2.3.8-r0          apk                      
@@ -86,7 +86,7 @@ pillow                  12.1.1            python
 pip                     26.0.1            python                   
 platformdirs            4.4.0             python                   
 procps-ng               4.0.5-r0          apk                      
-pyasn1                  0.6.2             python                   
+pyasn1                  0.6.3             python                   
 pyasn1-modules          0.4.2             python                   
 pyc                     3.12.12-r0        apk                      
 pycparser               3.0               python                   
