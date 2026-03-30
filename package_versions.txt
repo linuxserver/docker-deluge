@@ -2,8 +2,8 @@ NAME                    VERSION           TYPE
 7zip                    25.01-r0          apk                      
 Simple Launcher         1.1.0.14          binary  (+5 duplicates)  
 acl-libs                2.3.2-r1          apk                      
-alpine-baselayout       3.7.1-r8          apk                      
-alpine-baselayout-data  3.7.1-r8          apk                      
+alpine-baselayout       3.7.2-r0          apk                      
+alpine-baselayout-data  3.7.2-r0          apk                      
 alpine-keys             2.6-r0            apk                      
 alpine-release          3.23.3-r0         apk                      
 apk-tools               3.0.5-r0          apk                      
@@ -21,7 +21,7 @@ ca-certificates         20251003-r0       apk
 ca-certificates-bundle  20251003-r0       apk                      
 catatonit               0.2.1-r0          apk                      
 cffi                    2.0.0             python                   
-chardet                 7.2.0             python                   
+chardet                 7.4.0.post2       python                   
 cli                     UNKNOWN           binary                   
 cli-32                  UNKNOWN           binary                   
 cli-64                  UNKNOWN           binary                   
@@ -31,7 +31,7 @@ coreutils               9.8-r1            apk
 coreutils-env           9.8-r1            apk                      
 coreutils-fmt           9.8-r1            apk                      
 coreutils-sha512sum     9.8-r1            apk                      
-cryptography            46.0.5            python                   
+cryptography            46.0.6            python                   
 curl                    8.17.0-r1         apk                      
 deluge                  2.2.0             python                   
 findutils               4.10.0-r0         apk                      
