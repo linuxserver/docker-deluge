@@ -323,6 +323,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **02.04.26:** - Install from pypi due to Alpine geoip package deprecation.
 * **29.12.25:** - Fix some issues with GeoIP updates.
 * **23.08.25:** - Update GeoIP provider, add weekly cronjob to update.
 * **12.01.25:** - Rebase libtorrentv1 branch to Alpine 3.21.
