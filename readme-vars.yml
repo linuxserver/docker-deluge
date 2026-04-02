@@ -100,6 +100,7 @@ init_diagram: |
   "deluge:libtorrentv1" <- Base Images
 # changelog
 changelogs:
+  - {date: "02.04.26:", desc: "Pin setuptools to 81."}
   - {date: "29.12.25:", desc: "Rebase to Alpine 3.23, update GeoIP provider, add weekly cronjob to update."}
   - {date: "12.01.25:", desc: "Rebase to Alpine 3.21."}
   - {date: "19.09.24:", desc: "Prevent race condition related delay during container stop."}
