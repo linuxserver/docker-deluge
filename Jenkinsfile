@@ -20,6 +20,7 @@ pipeline {
     QUAYIO_API_TOKEN=credentials('quayio-repo-api-token')
     GIT_SIGNING_KEY=credentials('484fbca6-9a4f-455e-b9e3-97ac98785f5f')
     BUILD_VERSION_ARG = 'DELUGE_VERSION'
+    EXT_PIP='deluge'
     LS_USER = 'linuxserver'
     LS_REPO = 'docker-deluge'
     CONTAINER_NAME = 'deluge'
@@ -27,9 +28,6 @@ pipeline {
     DEV_DOCKERHUB_IMAGE = 'lsiodev/deluge'
     PR_DOCKERHUB_IMAGE = 'lspipepr/deluge'
     DIST_IMAGE = 'alpine'
-    DIST_TAG = 'edge'
-    DIST_REPO = 'http://dl-cdn.alpinelinux.org/alpine/edge/community/'
-    DIST_REPO_PACKAGES = 'deluge'
     MULTIARCH='true'
     CI='true'
     CI_WEB='true'
@@ -145,19 +143,17 @@ pipeline {
     /* ########################
        External Release Tagging
        ######################## */
-    // If this is an alpine repo change for external version determine an md5 from the version string
-    stage("Set tag Alpine Repo"){
+    // If this is a pip release set the external tag to the pip version
+    stage("Set ENV pip_version"){
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: '''curl -sL "${DIST_REPO}x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
-                       && awk '/^P:'"${DIST_REPO_PACKAGES}"'$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://' ''',
+            script: '''curl -sL  https://pypi.python.org/pypi/${EXT_PIP}/json |jq -r '. | .info.version' ''',
             returnStdout: true).trim()
-            env.RELEASE_LINK = 'alpine_repo'
+          env.RELEASE_LINK = 'https://pypi.python.org/pypi/' + env.EXT_PIP
         }
       }
-    }
-    // Sanitize the release tag and strip illegal docker or github characters
+    }    // Sanitize the release tag and strip illegal docker or github characters
     stage("Sanitize tag"){
       steps{
         script{
@@ -1024,7 +1020,7 @@ pipeline {
                   "type": "commit",\
                   "tagger": {"name": "LinuxServer-CI","email": "ci@linuxserver.io","date": "'${GITHUB_DATE}'"}}'
               echo "Pushing New release for Tag"
-              echo "Updating external repo packages to ${EXT_RELEASE_CLEAN}" > releasebody.json
+              echo "Updating PIP version of ${EXT_PIP} to ${EXT_RELEASE_CLEAN}" > releasebody.json
               jq -n \
                 --arg tag_name "$META_TAG" \
                 --arg target_commitish "master" \
