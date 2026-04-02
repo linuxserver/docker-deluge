@@ -10,9 +10,9 @@ fi
 if [[ -z ${LSIO_NON_ROOT_USER} ]]; then
     exec \
         s6-notifyoncheck -d -n 300 -w 1000 -c "nc -z 127.0.0.1 ${DELUGED_PORT:-58846}" \
-            s6-setuidgid abc /usr/bin/deluged -c /config -d --loglevel="${DELUGE_LOGLEVEL}"
+            s6-setuidgid abc /lsiopy/bin/deluged -c /config -d --loglevel="${DELUGE_LOGLEVEL}"
 else
     exec \
         s6-notifyoncheck -d -n 300 -w 1000 -c "nc -z 127.0.0.1 ${DELUGED_PORT:-58846}" \
-            /usr/bin/deluged -c /config -d --loglevel="${DELUGE_LOGLEVEL}"
+            /lsiopy/bin/deluged -c /config -d --loglevel="${DELUGE_LOGLEVEL}"
 fi
