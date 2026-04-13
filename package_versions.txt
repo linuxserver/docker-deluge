@@ -21,7 +21,7 @@ ca-certificates         20251003-r0       apk
 ca-certificates-bundle  20251003-r0       apk                      
 catatonit               0.2.1-r0          apk                      
 cffi                    2.0.0             python                   
-chardet                 7.4.0.post2       python                   
+chardet                 7.4.2             python                   
 cli                     UNKNOWN           binary                   
 cli-32                  UNKNOWN           binary                   
 cli-64                  UNKNOWN           binary                   
@@ -31,7 +31,7 @@ coreutils               9.8-r1            apk
 coreutils-env           9.8-r1            apk                      
 coreutils-fmt           9.8-r1            apk                      
 coreutils-sha512sum     9.8-r1            apk                      
-cryptography            46.0.6            python                   
+cryptography            46.0.7            python                   
 curl                    8.17.0-r1         apk                      
 deluge                  2.2.0             python                   
 findutils               4.10.0-r0         apk                      
@@ -54,7 +54,7 @@ libapk                  3.0.5-r0          apk
 libattr                 2.5.2-r2          apk                      
 libbsd                  0.12.2-r0         apk                      
 libbz2                  1.0.8-r6          apk                      
-libcrypto3              3.5.5-r0          apk                      
+libcrypto3              3.5.6-r0          apk                      
 libcurl                 8.17.0-r1         apk                      
 libexpat                2.7.5-r0          apk                      
 libffi                  3.5.2-r0          apk                      
@@ -66,7 +66,7 @@ libncursesw             6.5_p20251123-r0  apk
 libpanelw               6.5_p20251123-r0  apk                      
 libproc2                4.0.5-r0          apk                      
 libpsl                  0.21.5-r3         apk                      
-libssl3                 3.5.5-r0          apk                      
+libssl3                 3.5.6-r0          apk                      
 libstdc++               15.2.0-r2         apk                      
 libunistring            1.4.1-r0          apk                      
 linux-pam               1.7.1-r2          apk                      
@@ -74,8 +74,8 @@ mako                    1.3.10            python
 markupsafe              3.0.3             python                   
 more-itertools          10.8.0            python                   
 mpdecimal               4.0.1-r0          apk                      
-musl                    1.2.5-r21         apk                      
-musl-utils              1.2.5-r21         apk                      
+musl                    1.2.5-r23         apk                      
+musl-utils              1.2.5-r23         apk                      
 my-test-package         1.0               python                   
 ncurses-terminfo-base   6.5_p20251123-r0  apk                      
 netcat-openbsd          1.234.1-r0        apk                      
@@ -89,13 +89,13 @@ platformdirs            4.4.0             python
 procps-ng               4.0.5-r0          apk                      
 pyasn1                  0.6.3             python                   
 pyasn1-modules          0.4.2             python                   
-pyc                     3.12.12-r0        apk                      
+pyc                     3.12.13-r0        apk                      
 pycparser               3.0               python                   
 pygeoip                 0.3.2             python                   
 pyopenssl               26.0.0            python                   
-python3                 3.12.12-r0        apk                      
-python3-pyc             3.12.12-r0        apk                      
-python3-pycache-pyc0    3.12.12-r0        apk                      
+python3                 3.12.13-r0        apk                      
+python3-pyc             3.12.13-r0        apk                      
+python3-pycache-pyc0    3.12.13-r0        apk                      
 pyxdg                   0.28              python                   
 readline                8.3.1-r0          apk                      
 rencode                 1.0.6             python                   
@@ -116,5 +116,5 @@ wheel                   0.46.3            python
 xz-libs                 5.8.2-r0          apk                      
 zipp                    3.23.0            python                   
 zlib                    1.3.2-r0          apk                      
-zope-interface          8.2               python                   
+zope-interface          8.3               python                   
 zstd-libs               1.5.7-r2          apk                      
