@@ -42,7 +42,7 @@ gui-32                  UNKNOWN           binary
 gui-64                  UNKNOWN           binary                   
 gui-arm64               UNKNOWN           binary                   
 hyperlink               21.0.0            python                   
-idna                    3.16              python                   
+idna                    3.17              python                   
 ifaddr                  0.2.0             python                   
 importlib-metadata      8.7.1             python                   
 incremental             24.11.0           python                   
@@ -84,11 +84,10 @@ oniguruma               6.9.10-r0         apk
 packaging               26.0              python                   
 packaging               26.2              python                   
 pillow                  12.2.0            python                   
-pip                     26.1.1            python                   
+pip                     26.1.2            python                   
 platformdirs            4.4.0             python                   
 procps-ng               4.0.5-r0          apk                      
 pyasn1                  0.6.3             python                   
-pyasn1-modules          0.4.2             python                   
 pyc                     3.12.13-r0        apk                      
 pycparser               3.0               python                   
 pygeoip                 0.3.2             python                   
@@ -100,7 +99,7 @@ pyxdg                   0.28              python
 readline                8.3.1-r0          apk                      
 rencode                 1.0.6             python                   
 scanelf                 1.3.8-r2          apk                      
-service-identity        24.2.0            python                   
+service-identity        26.1.0            python                   
 setproctitle            1.3.7             python                   
 setuptools              81.0.0            python                   
 shadow                  4.18.0-r0         apk                      
@@ -116,5 +115,5 @@ wheel                   0.46.3            python
 xz-libs                 5.8.3-r0          apk                      
 zipp                    3.23.0            python                   
 zlib                    1.3.2-r0          apk                      
-zope-interface          8.4               python                   
+zope-interface          8.5               python                   
 zstd-libs               1.5.7-r2          apk                      
