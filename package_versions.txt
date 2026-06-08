@@ -42,7 +42,7 @@ gui-32                  UNKNOWN           binary
 gui-64                  UNKNOWN           binary                   
 gui-arm64               UNKNOWN           binary                   
 hyperlink               21.0.0            python                   
-idna                    3.17              python                   
+idna                    3.18              python                   
 ifaddr                  0.2.0             python                   
 importlib-metadata      8.7.1             python                   
 incremental             24.11.0           python                   
