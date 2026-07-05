@@ -37,6 +37,7 @@ RUN \
     pip \
     'setuptools==81' && \
   pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.23/ \
+    pyopenssl==26.2.0 \
     rencode==1.0.6 && \
   pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.23/ \
     deluge[all]==${DELUGE_VERSION} \
