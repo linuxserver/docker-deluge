@@ -101,6 +101,7 @@ init_diagram: |
   "deluge:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "05.07.26:", desc: "Rebase to Alpine 3.24."}
   - {date: "02.04.26:", desc: "Install from pypi due to Alpine geoip package deprecation."}
   - {date: "29.12.25:", desc: "Fix some issues with GeoIP updates."}
   - {date: "23.08.25:", desc: "Update GeoIP provider, add weekly cronjob to update."}
