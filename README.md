@@ -323,6 +323,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **05.07.26:** - Rebase to Alpine 3.24.
 * **02.04.26:** - Pin setuptools to 81.
 * **29.12.25:** - Rebase to Alpine 3.23, update GeoIP provider, add weekly cronjob to update.
 * **12.01.25:** - Rebase to Alpine 3.21.

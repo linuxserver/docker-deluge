@@ -2,9 +2,9 @@
 
 FROM ghcr.io/linuxserver/unrar:latest AS unrar
 
-FROM ghcr.io/by275/libtorrent:1-alpine3.23 AS libtorrent
+FROM ghcr.io/by275/libtorrent:1-alpine3.24 AS libtorrent
 
-FROM ghcr.io/linuxserver/baseimage-alpine:3.23
+FROM ghcr.io/linuxserver/baseimage-alpine:3.24
 
 # set version label
 ARG BUILD_DATE
@@ -36,9 +36,9 @@ RUN \
   pip install -U --no-cache-dir \
     pip \
     'setuptools==81' && \
-  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.23/ \
+  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.24/ \
     rencode==1.0.6 && \
-  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.23/ \
+  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.24/ \
     deluge[all]==${DELUGE_VERSION} \
     pygeoip && \
   echo "**** grab GeoIP database ****" && \
@@ -55,7 +55,7 @@ RUN \
 
   COPY --from=libtorrent /libtorrent-build/usr/lib/libtorrent-rasterbar.* /usr/lib/
 
-  COPY --from=libtorrent /libtorrent-build/usr/lib/python3.12 /lsiopy/lib/python3.12
+  COPY --from=libtorrent /libtorrent-build/usr/lib/python3.14 /lsiopy/lib/python3.14
 
 # add local files
 COPY root/ /
