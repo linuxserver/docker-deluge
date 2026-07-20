@@ -16,11 +16,11 @@ boost1.84-python3       1.84.0-r3         apk
 brotli-libs             1.2.0-r0          apk                      
 busybox                 1.37.0-r30        apk                      
 busybox-binsh           1.37.0-r30        apk                      
-c-ares                  1.34.6-r0         apk                      
+c-ares                  1.34.8-r0         apk                      
 ca-certificates         20260611-r0       apk                      
 ca-certificates-bundle  20260611-r0       apk                      
 catatonit               0.2.1-r0          apk                      
-cffi                    2.0.0             python                   
+cffi                    2.1.0             python                   
 chardet                 7.4.3             python                   
 cli                     UNKNOWN           binary                   
 cli-32                  UNKNOWN           binary                   
@@ -32,7 +32,7 @@ coreutils-env           9.8-r1            apk
 coreutils-fmt           9.8-r1            apk                      
 coreutils-sha512sum     9.8-r1            apk                      
 cryptography            48.0.1            python                   
-curl                    8.19.0-r0         apk                      
+curl                    8.20.0-r0         apk                      
 deluge                  2.2.0             python                   
 findutils               4.10.0-r0         apk                      
 gdbm                    1.26-r0           apk                      
@@ -55,7 +55,7 @@ libattr                 2.5.2-r2          apk
 libbsd                  0.12.2-r0         apk                      
 libbz2                  1.0.8-r6          apk                      
 libcrypto3              3.5.7-r0          apk                      
-libcurl                 8.19.0-r0         apk                      
+libcurl                 8.20.0-r0         apk                      
 libexpat                2.8.2-r0          apk                      
 libffi                  3.5.2-r0          apk                      
 libgcc                  15.2.0-r2         apk                      
@@ -87,7 +87,7 @@ pillow                  12.3.0            python
 pip                     26.1.2            python                   
 platformdirs            4.4.0             python                   
 procps-ng               4.0.5-r0          apk                      
-pyasn1                  0.6.3             python                   
+pyasn1                  0.6.4             python                   
 pyc                     3.12.13-r0        apk                      
 pycparser               3.0               python                   
 pygeoip                 0.3.2             python                   
@@ -109,7 +109,7 @@ ssl_client              1.37.0-r30        apk
 tomli                   2.4.0             python                   
 twisted                 26.4.0            python                   
 typing-extensions       4.16.0            python                   
-tzdata                  2026b-r0          apk                      
+tzdata                  2026c-r0          apk                      
 utmps-libs              0.1.3.1-r0        apk                      
 wheel                   0.46.3            python                   
 xz-libs                 5.8.3-r0          apk                      
