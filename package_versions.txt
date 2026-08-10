@@ -20,8 +20,8 @@ c-ares                  1.34.8-r0         apk
 ca-certificates         20260611-r0       apk                      
 ca-certificates-bundle  20260611-r0       apk                      
 catatonit               0.2.1-r0          apk                      
-cffi                    2.1.0             python                   
-chardet                 7.4.3             python                   
+cffi                    2.1.1             python                   
+chardet                 7.5.1             python                   
 cli                     UNKNOWN           binary                   
 cli-32                  UNKNOWN           binary                   
 cli-64                  UNKNOWN           binary                   
@@ -70,7 +70,7 @@ libssl3                 3.5.7-r0          apk
 libstdc++               15.2.0-r2         apk                      
 libunistring            1.4.1-r0          apk                      
 linux-pam               1.7.1-r2          apk                      
-mako                    1.3.12            python                   
+mako                    1.4.1             python                   
 markupsafe              3.0.3             python                   
 more-itertools          10.8.0            python                   
 mpdecimal               4.0.1-r0          apk                      
@@ -82,9 +82,9 @@ netcat-openbsd          1.234.1-r0        apk
 nghttp2-libs            1.69.0-r0         apk                      
 oniguruma               6.9.10-r0         apk                      
 packaging               26.0              python                   
-packaging               26.2              python                   
+packaging               26.3              python                   
 pillow                  12.3.0            python                   
-pip                     26.2              python                   
+pip                     26.2.1            python                   
 platformdirs            4.4.0             python                   
 procps-ng               4.0.5-r0          apk                      
 pyasn1                  0.6.4             python                   
