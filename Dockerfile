@@ -2,7 +2,7 @@
 
 FROM ghcr.io/linuxserver/unrar:latest AS unrar
 
-FROM ghcr.io/by275/libtorrent:2-alpine3.23 AS libtorrent
+FROM ghcr.io/by275/libtorrent:2.0.13-alpine3.23 AS libtorrent
 
 FROM ghcr.io/linuxserver/baseimage-alpine:3.23
 
