@@ -54,10 +54,10 @@ libapk                  3.0.9-r0          apk
 libattr                 2.5.2-r2          apk                      
 libbsd                  0.12.2-r0         apk                      
 libbz2                  1.0.8-r6          apk                      
-libcrypto3              3.5.9-r0          apk                      
+libcrypto3              3.5.9-r1          apk                      
 libcurl                 8.23.0-r0         apk                      
 libexpat                2.10.0-r0         apk                      
-libffi                  3.5.2-r0          apk                      
+libffi                  3.8.1-r0          apk                      
 libgcc                  15.2.0-r2         apk                      
 libidn2                 2.3.8-r0          apk                      
 libintl                 0.24.1-r1         apk                      
@@ -66,7 +66,7 @@ libncursesw             6.5_p20251123-r0  apk
 libpanelw               6.5_p20251123-r0  apk                      
 libproc2                4.0.5-r0          apk                      
 libpsl                  0.21.5-r3         apk                      
-libssl3                 3.5.9-r0          apk                      
+libssl3                 3.5.9-r1          apk                      
 libstdc++               15.2.0-r2         apk                      
 libunistring            1.4.1-r0          apk                      
 linux-pam               1.7.1-r2          apk                      
@@ -82,7 +82,7 @@ netcat-openbsd          1.234.1-r0        apk
 nghttp2-libs            1.69.0-r0         apk                      
 oniguruma               6.9.10-r0         apk                      
 packaging               26.0              python                   
-packaging               26.3              python                   
+packaging               26.4              python                   
 pillow                  13.0.0            python                   
 pip                     26.3              python                   
 platformdirs            4.4.0             python                   
